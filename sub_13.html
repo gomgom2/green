@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>그린매거진</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta property="og:title" content="그린매거진">
+	<meta property="og:description" content="그린매거진 웹진을 만나보세요.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta property="og:image" content="contents/thumbnail.jpg">
+	<link rel="shortcut icon" href="green_icon/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="green_icon/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/common.css?ver=202502" />
+	<link rel="stylesheet" type="text/css" href="css/sub.css?ver=202502" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/script2.js?ver202502"></script>
+<style>
+	:root {
+		--main-color: #B99E64;
+		--text-color-small: #fff;
+		--text-color-title: #FADC6B;
+	}
+body {
+	background-color: var(--main-color);
+}
+.header-dual .article-header-container {
+	grid-template-columns: 1.25fr 1fr;
+}
+.header-dual .article-header-text {
+	order: 2;
+	padding-right: 0;
+	padding-bottom: 0;
+}
+.article-header-image {
+	order: 1;
+}
+.article-header-text h2 {
+	font-size: 4rem;
+}
+.article-header-text h4 {
+	font-size: 3rem;
+	font-weight: 700;
+}
+.header-dual .article-header-image figure img {
+	width: 100%;
+	height: auto;
+	top: auto;
+	left: 50%;
+	bottom: 2rem;
+	transform: translateX(-50%);
+}
+.article-text h4 {
+	color: var(--text-color-title);
+}
+.article-text p {
+	color: var(--text-color-small);
+}
+.article-text h5 {
+	color: var(--text-color-title);
+	text-decoration: none;
+	margin-bottom: 0;
+}
+.article-image.big-image,
+.article-image.qr-image {
+	width: 120%;
+}
+.article-image.small-image {
+	width: 50%;
+	transform: translateX(-30%);
+}
+.article-image.small-image2 {
+	width: 30%;
+	transform: translateX(-100%);
+}
+.article-image.dual-image .article-image-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2rem;
+}
+.article-image.no-mg {
+	margin-bottom: 0;
+}
+.article-image + .article-image.dual-image {
+	margin-top: 2rem;
+}
+.article-image.border figure {
+	border: 5px solid #fff;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	position: relative;
+}
+.article-image.border figure figcaption {
+	position: absolute;
+	right: 1rem;
+	bottom: 1rem;
+	color: #fff;
+}
+
+.article-image.qr-image .article-image-container {
+	display: grid;
+	grid-template-columns: 1.5fr 10fr;
+	gap: 1rem;
+	align-items: center; 
+}
+.table-normal {
+    margin: 3rem 0;
+}
+.table-normal td {
+    border: 1px solid #fff;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    padding: 1rem;
+    vertical-align: middle;
+    color: #fff;
+}
+.table-normal tbody tr td:first-child {
+	border-top-color: var(--text-color-title);
+	border-bottom-color: var(--main-color);
+	border-left-color: var(--text-color-title);
+	border-right-color: var(--main-color);
+	border-right-width: 0.4rem;
+	background-color: var(--text-color-title);
+	color: var(--main-color);
+	font-weight: 700;
+}
+.table-normal tbody tr:nth-last-child(1) td:first-child {
+	border-bottom-color: var(--text-color-title);
+}
+.table-normal tbody tr td:nth-last-child(1) {
+	border-right-color: var(--main-color);
+}
+.caption {
+	margin-top: 1rem;
+}
+.caption h4 {
+	font-size: 1.6rem;
+	margin: 0;
+}
+.caption p {
+	font-size: 1.4rem;
+	margin: 0;
+}
+.article-image-text {
+	display: flex;
+	gap: 1rem;
+}
+.article-image-text-text {
+	flex: 1;
+	margin-right: 1rem;
+}
+.qr-text {
+	flex-shrink: 0;
+	width: 8rem;
+	color: #785880;
+	font-family: GmarketSansMedium;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	border-radius: 0.5rem;
+	gap: 0;
+}
+.article-image-text-qr {
+	flex-shrink: 0;
+	width: 6rem;
+}
+@media (max-width:767px) {
+	.article-text {
+		padding-top: 0rem;
+		margin-top: 3rem;
+	}
+	.article-image {
+		width: 100%;
+	}
+	.article-image.small-image {
+		transform: translateX(-50%);
+	}
+	.insight-table {
+		width: 100%;
+	}
+	.insight-table table td {
+		font-size: 1.3rem;
+	}
+	.header-dual .article-header-container {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	.header-dual .article-header-text {
+		order: 1;
+	}
+	.article-image.qr-image .article-image-container {
+		grid-template-columns: 1fr 3.5fr;
+	}
+}
+
+</style>
+</head>
+<body>
+	<header class="header" id="header"></header>
+	<main>
+		<section class="article-header header-dual">
+			<div class="article-header-wrap">
+				<div class="article-header-container">
+					<div class="article-header-text">
+						<span>Theme Insight</span>
+						<h2>
+							국민에게는 건강한 축산을,<br>농가에는 지속 가능한 해법을!
+						</h2>
+						<!-- <h4>밥상 위의 작은 혁명</h4> -->
+						<p>
+							기후변화와 노동력 부족, 사료비 부담은 오늘날 축산 농가가 직면한 가장 큰 과제다. 농촌진흥청은 이러한 문제를 해결하고, 국민에게 더 안전하고 건강한 축산물을 보급하기 위해 현장의 변화를 이끄는 다양한 노력을 이어가고 있다. 추위에도 끄떡없는 신품종 풀사료 개발부터, 농가 스스로 사료를 제조할 수 있는 기술 보급, 자동화·데이터 기반의 스마트 축산 확산, 나아가 동물복지를 담보하는 방목생태축산 활성화까지. 건강한 식탁을 제공하는 밑거름이 되기 위해, 농촌진흥청은 지속 가능한 축산의 길을 열어가고 있다.  
+						</p>
+						<div class="article-meta">
+							<span class="b">글</span>
+							<span>장희주</span><br>
+							<span class="b">검토</span>
+							<span>축산자원개발부 기획실</span>
+						</div>
+					</div>
+					<div class="article-header-image">
+						<figure>
+							<img src="contents/sub_13_top.png" />
+						</figure>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="article-body">
+			<div class="article-body-wrap">
+				<div class="article-text">
+					<h4>
+						추위에도 끄떡없는 신품종 풀사료, 국산 조사료의 힘 
+					</h4>
+					<p>
+						농촌진흥청은 국산 풀사료 자급률을 높이고 축산 농가의 사료비 부담을 덜기 위해 다양한 신품종 사료 작물을 개발해 왔다. 그중에서도 주목할 만한 것은 트리티케일, 알팔파, 사료피 신품종(조온·다온)이다. 국산 풀사료 산업은 이제 단순히 자급률 확보를 넘어 ‘품질 경쟁력’으로 나아가고 있다. 농촌진흥청은 추위에 강한 트리티케일, 발효 안정성을 높인 알팔파, 여름철 논에서도 재배 가능한 사료피 ‘조온’, ‘다온’ 같은 신품종 개발을 통해 농가의 선택지를 넓히고 있다. 
+					</p>
+					<h5>
+						① 겨울에도 거뜬한 트리티케일
+					</h5>
+					<p>
+						트리티케일은 호밀의 강한 내한성과 밀의 높은 영양가를 합친 작물이다. 추위에 강해 강원도 고랭지를 제외한 전국 어디서나 재배할 수 있고, 최근 재배 면적이 빠르게 늘고 있다. 농촌진흥청은 특히 ‘한미소1호’와 ‘한영’ 같은 신품종을 개발해 기존보다 마른풀 수확량을 10% 이상 높였다.
+					</p>
+					<p>
+						트리티케일의 적정 파종 시기는 10월 중순에서 하순 사이이다. 이 시기에 파종해 이삭이 팬 뒤 4월 중·하순에 수확했을 때, 9월 하순에 이른 파종이나 11월 상순 늦은 파종보다 최소 14% 이상 수확량이 많다. 수확 시기는 출수기(이삭이 패는 시기) 또는 황숙초기(출수 후 20~30일)로 이용 목적에 따라 조절할 수 있다. 가축의 종류와 생장기에 따라 필요한 영양소가 달라지기 때문. 마른풀로 이용할 경우에는 영양가가 높은 출수기에 수확하는 것이 좋고, 배합사료용으로는 출수 후 20~30일쯤에 수확하는 것이 알맞다.
+					</p>
+					<h5>
+						② 발효 안정성을 높인 알팔파
+					</h5>
+					<p>
+						알팔파는 ‘단백질 왕’이라 불릴 정도로 영양가가 높아, 오래전부터 축산 농가가 선호해온 사료작물이다. 하지만 발효사료(사일리지)로 만들 때 발효가 잘 안 되어 상하기 쉽다는 단점이 있었다. 이를 해결하기 위해 농촌진흥청은 알팔파에 특화된 유산균 첨가제 ‘케이시시-44’를 개발했다.
+					</p>
+					<p>
+						이 유산균을 곤포 사일리지 제조 과정에 소량 뿌리면 산도가 빠르게 낮아져 부패균이 억제되고 저장성이 향상된다. 덕분에 풀사료를 오래 보관하며 안정적으로 알팔파 사료를 확보해 경영비를 절감할 수 있다. 
+					</p>
+					<div class="article-image border no-mg">
+						<div class="article-image-container">
+							<figure>
+								<img src="contents/sub_13_image_1.jpg">
+								<figcaption>알팔파 수확 모습</figcaption>
+							</figure>
+						</div>
+					</div>
+					<div class="article-image dual-image border">
+						<div class="article-image-container">
+							<figure>
+								<img src="contents/sub_13_image_2.jpg">
+								<figcaption>사료피 신품종 ‘조온’</figcaption>
+							</figure>
+							<figure>
+								<img src="contents/sub_13_image_3.jpg">
+								<figcaption>사료피 신품종 ‘다온’</figcaption>
+							</figure>
+						</div>
+					</div>
+					<h5>
+						③ 여름 논에서도 키우는 조온·다온
+					</h5>
+					<p>
+						사료피 ‘조온’과 ‘다온’은 여름철에도 안정적으로 풀사료를 확보할 수 있도록 농촌진흥청이 개발한 품종이다. ‘조온’은 생육 기간이 짧아 기상이변이나 긴급 상황에 대비할 수 있는 조기 수확형 품종이다. 반면 ‘다온’은 수확량이 많고 진한 자주색 이삭이 특징으로, 기존 품종보다 8% 이상 높은 수량성을 보인다. 두 품종 모두 논에서도 잘 자라기 때문에, 여름철에도 건초나 사일리지로 활용할 수 있다. 현재는 실증 재배를 통해 생산성을 검증 중이며, 2026년부터는 본격적으로 종자가 보급될 예정이다.
+					</p>
+					<h5>
+						④ 스마트하게 만드는 섬유질배합사료(TMR)
+					</h5>
+					<p>
+						농촌진흥청은 한우의 영양소 요구량에 맞춰 농가가 직접 사료를 제조할 수 있도록 섬유질배합사료(TMR) 자가 제조 기술을 개발·보급하고 있다. 쌀겨, 맥주박 등 농식품 부산물을 활용해 농가에서 직접 배합·급여할 수 있는 방식으로, 일반 배합사료보다 사료비를 10~40% 절감할 수 있다.
+					</p>
+					<p>
+						다만 원료의 영양 정보를 잘 이해하고, 가축에 맞는 배합비를 작성하는 기술이 필요하다. 이를 돕기 위해 농촌진흥청은 ‘농가 배합비 작성 프로그램’을 누리집에서 제공하고, 지역별로 ‘한우 자가 TMR 기술 전수 거점농장’을 운영하며 현장 교육을 강화하고 있다. 현재 전국 9개 거점농장이 운영 중으로, 농가가 직접 기술을 배우고 적용할 수 있는 실습의 장이 되고 있다.
+					</p>
+					<div class="article-image-text">
+						<figure class="article-image-text-text">
+							<img src="contents/sub_13_text_1.png">
+						</figure>
+						<div class="qr-text">
+							농가 배합비<br>작성 프로그램<br>다운로드 하기
+						</div>
+						<figure class="article-image-text-qr">
+							<img src="contents/sub_13_qr_1.png">
+						</figure>
+					</div>
+					<h4>
+						스마트 축산으로 가는 길
+					</h4>
+					<p>
+						축산업은 지금, 전환의 길 위에 서 있다. 노동력 부족과 기후 변화, 사료비 부담 같은 문제들은 농가의 지속 가능성을 위협하고 있다. 이에 농촌진흥청은 스마트 축산 기술을 앞세워 새로운 해법을 제시하고 있다.
+					</p>
+					<div class="article-image small-image">
+						<div class="article-image-container">
+							<figure>
+								<img src="contents/sub_13_image_4.png">
+							</figure>
+						</div>
+					</div>
+					<h5>
+						① 낙농의 부담을 줄이다, ‘국산 로봇착유기’
+					</h5>
+					<p>
+						젖소를 기르는 낙농가에게 착유 작업은 전체 노동의 40%를 차지할 만큼 큰 부담이다. 하루도 빠짐없이 반복되는 일이라 시간과 비용도 많이 든다. 농촌진흥청은 이러한 현실을 바꾸기 위해 국산 로봇착유기를 개발해 보급하고 있다.
+					</p>
+					<p>
+						로봇착유기는 젖소의 유방을 자동으로 세척하고, 유두 위치를 인식해 착유기를 스스로 끼운 뒤 우유를 짜낸다. 젖소 한 마리 한 마리의 착유 횟수와 착유량도 자동으로 기록된다. 50두 규모 농가 기준으로 연간 착유 비용을 37%(약 1,700만 원) 절감할 수 있다는 계산이 나왔다. 단순한 노동 절감뿐 아니라, 데이터가 쌓이면 사료 급여 조절이나 건강 관리에도 활용할 수 있어 농가 경영에 도움이 된다.
+					</p>
+					<p>
+						농촌진흥청 국립축산과학원은 로봇착유기에 필요한 핵심 기술을 직접 확보하고 있다. 유두탐지, 세척, 유질 검사 등 20여 건의 특허 기술을 보유하고 있으며, 특히 딥러닝을 적용한 유두탐지 기술은 정확도를 99.0%까지 끌어올렸다. 이렇게 수집된 데이터는 농촌진흥청의 연구개발 데이터 플랫폼에 축적돼, 젖소의 유방염 위험도, 우유 생산성, 사료 급이 현황 등을 확인할 수 있는 지표로 활용된다. 향후에는 농협과 연계해 젖소 개량에도 기여할 전망이다.
+					</p>
+					<div class="article-image">
+						<div class="article-image-container">
+							<figure>
+								<img src="contents/sub_13_image_5.png">
+							</figure>
+						</div>
+					</div>				
+					<h5>
+						② 가축도 폭염에 지친다, ‘가축사육기상정보시스템’
+					</h5>
+					<p>
+						한여름 무더위는 사람뿐 아니라 가축에게도 큰 스트레스다. 농촌진흥청은 이를 예방하기 위해 ‘가축사육기상정보시스템’을 운영하고 있다. 이 프로그램은 한우, 젖소, 돼지, 닭의 가축더위지수(THI)를 기온과 습도를 바탕으로 실시간 제공한다. 농가는 휴대전화나 컴퓨터로 손쉽게 지수를 확인하고, 기온 변화에 맞춰 사양관리 방법을 조정할 수 있다. 여름철 고온 피해를 줄이는 맞춤형 관리 요령도 함께 안내해 실질적인 도움을 준다. 시스템은 국립축산과학원 누리집 ‘축사로(chuksaro.nias.go.kr)’에서 무료로 이용할 수 있다.
+					</p>
+					<h5>
+						③ 디엔에이 기반 젖소 유전능력평가, 정확도 2배 향상
+					</h5>
+					<p>
+						젖소의 혈통과 생산기록에 디엔에이(DNA) 정보를 더한 ‘유전체 유전능력평가 체계’가 도입됐다. 농촌진흥청은 2만4,000두의 유전체 자료를 분석해 신뢰성을 확보하고, 개체별 능력을 정밀하게 구분할 수 있게 했다. 이를 통해 송아지 유전능력평가의 정확도가 25%에서 60%로 높아졌으며, 씨수소 선발 기간도 평균 5.5년에서 1.5년으로 단축됐다. 낙농가는 조기 평가를 통해 우수 개체를 선별·교배하거나 불필요한 사육비를 줄일 수 있다.
+					</p>
+					<h5>
+						④ 한우 메탄 18% 줄이는 신소재 ‘티아민 이인산’
+					</h5>
+					<p>
+						농촌진흥청은 비타민 B1의 활성형 물질 ‘티아민 이인산’을 활용해 한우의 메탄 배출량을 평균 18% 줄이는 효과를 확인했다. 반추위 내 메탄 생성 조효소와 결합해 발생을 억제하며, 사료 섭취량과 성장률은 유지됐다. 전국 한우 341만 두에 적용 시 연간 약 86만 톤의 온실가스를 줄일 수 있어 축산 분야 탄소 감축 목표의 26% 달성이 가능하다. 농촌진흥청은 특허 출원과 함께 상용화를 추진 중이다.
+					</p>
+					<h4>
+						건강한 축산으로 가는 길, ‘방목생태축산’
+					</h4>
+					<p>
+						농촌진흥청은 최근 ‘방목생태축산’을 활성화하기 위해 제도 개선과 함께 현장 지원을 강화하고 있다. 방목생태축산은 유휴 산지나 농지를 활용해 초지를 조성하고 가축을 방목하는 방식으로, 친환경적이면서도 동물복지와 지속 가능성을 모두 담보할 수 있는 축산 모델이다.
+					</p>
+					<p>
+						이를 위해 농촌진흥청 국립축산과학원은 방목생태축산 지정 농가를 대상으로 국산 목초 ‘그린마스터 4호’를 시범 공급하고 있다. 이 품종은 여름철 고온다습한 환경에 강하고, 수입 품종보다 생산성이 5% 이상 높은 톨 페스큐 신품종이다. 톨 페스큐는 전 세계적으로 초지 조성에 많이 쓰이는 풀인데, 가뭄이나 여름철 고온에도 강해 우리 기후에도 잘 맞는다. 이번에 공급된 종자는 10헥타르 규모의 초지를 만들 수 있는 양으로, 농촌진흥청은 파종 시기에 맞춰 초지 조성과 관리 기술도 함께 지원하고 있다.
+					</p>
+					<p>
+						초지 조성을 위해서는 산지 전용을 해야 하지만 절차가 복잡하고 행정적 비용이 많이 들기 때문에 산지 일시사용 승인을 통해 산지전용 없이 초지를 일시적으로 이용할 수 있다. 하지만 방목 시 보호시설 설치를 해야 하므로 농가 활용도가 저조했다. 농촌진흥청은 산림청·농림축산식품부와 협력해 「산지관리법 시행령」을 개정, 산지 방목 시 의무적으로 설치해야 했던 보호시설 규제를 완화했다. 기존에는 모든 가축에 대해 보호시설을 설치해야 했지만, 소·말·염소·사슴 등 산림 피해 가능성이 낮은 45종은 설치 의무가 면제됐다. 덕분에 농가는 초지를 전용하지 않고도 산지를 활용할 수 있게 되었고, 설비비용과 행정 부담이 크게 줄어들었다.
+					</p>
+					<p>
+						특히 연구 결과, 한우를 산지에 방목했을 때 축사 사육 대비 사료 사용량이 약 10% 절감됐다. 이는 방목생태축산이 단순히 환경에 좋은 것뿐 아니라, 농가의 사료비 절감에도 효과적이라는 의미다. 농촌진흥청은 앞으로도 제도 기반 위에 맞춤형 기술지원을 더해, 농가가 체감할 수 있는 실질적 효과를 높여 나갈 계획이다. 
+						<i class="icon_last"></i>
+					</p>
+					<div class="article-image-text">
+						<figure class="article-image-text-text">
+							<img src="contents/sub_13_text_2.png">
+						</figure>
+						<div class="qr-text">
+							가축사육<br>기상정보시스템<br>다운로드 하기
+						</div>
+						<figure class="article-image-text-qr">
+							<img src="contents/sub_13_qr_2.png">
+						</figure>
+					</div>
+					<div class="article-image big-image">
+						<div class="article-image-container">
+							<figure>
+								<img src="contents/sub_13_image_6.png">
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer" id="footer"></footer>
+</body>
+</html>

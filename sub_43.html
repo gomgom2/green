@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>그린매거진</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta property="og:title" content="그린매거진">
+	<meta property="og:description" content="그린매거진 웹진을 만나보세요.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta property="og:image" content="contents/thumbnail.jpg">
+	<link rel="shortcut icon" href="green_icon/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="green_icon/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/common.css?ver=202502" />
+	<link rel="stylesheet" type="text/css" href="css/sub.css?ver=202502" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/script2.js?ver202502"></script>
+<style>
+	:root {
+		--main-color: #fff;
+		--text-color-title: #113975;
+		--text-color-title2: #94C152;
+		--text-color-title3: #9E5BA3;
+	}
+
+.header-mono .article-header-text h2,
+.article-meta span {
+	color: var(--text-color-title);
+}
+.farm-top h6 {
+	font-size: 1.2rem;
+}
+.circle-farm {
+	line-height: 1.1;
+	font-size: 1.1rem;
+	padding-bottom: 1rem;
+}
+.farm-box h3 {
+	margin-bottom: 0rem;
+}
+.farm-box h4 {
+    font-size: 4rem;
+    font-family: 'Paperlogy-6SemiBold';
+    color: var(--text-color-title2);
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    margin: 0 0 5rem 3rem;
+    letter-spacing: -1px;
+}
+.farm-image-last {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
+.farm-qr span {
+	margin-top: 1.5rem;
+}
+.farm-qr figure {
+	border: 0;
+}
+@media (max-width:767px) {
+	.article-meta {
+		text-align: center;
+		padding: 1rem 0 3rem;
+	}
+	.article-meta span {
+		margin-bottom: 0;
+		line-height: 1.8rem;
+	}
+	.article-meta span.dot {
+		display: block;
+		font-size: 0;
+		line-height: 0.1rem;
+	}
+	.farm-top {
+		width: calc(100% - 4rem);
+	}
+	.farm-box::before {
+		right: 2rem;
+	}
+	.farm-box h3, .farm-box h4 {
+		font-size: 2rem;
+		margin-left: 2rem;
+	}
+	.farm-grid {
+		gap: 2rem;
+	}
+	.farm-info {
+		border-left: 0;
+	}
+	.farm-text {
+		padding-right: 2rem;
+	}
+	.quote-farm {
+		font-size: 1.6rem;
+	}
+}
+
+</style>
+</head>
+<body>
+	<header class="header black" id="header"></header>
+	<main>
+		<section class="article-header">
+			<div class="article-header-wrap">
+				<div class="article-header-container header-mono">
+					<div class="article-header-text">
+						<h2>치유농장</h2>
+						<div class="article-meta">
+							<span class="b">글</span>
+							<span>구혜진</span>
+							<span class="pipe">ㅣ</span>
+							<span class="b">사진 제공</span>
+							<span>대전광역시 농업기술센터, 부산광역시 농업기술센터</span>
+							<span class="pipe">ㅣ</span>
+							<span class="b">자료 도움</span>
+							<span>농촌자원과 김진주 농촌지도사</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="article-body">
+			<div class="farm-top">
+				<h4>치유농업센터</h4>
+				<!-- <h5>치유농업 정보가 한곳에 <span>치유농업 <em>ON</em></span></h5> -->
+				<h6>몸이 쉬고 마음이 자라는 곳<br>치유농업의 모든 이야기를 한곳에서</h6>
+				<!-- <a href="https://www.agrohealing.go.kr/sf/main/main.do" target="_blank"><span>www.agrohealing.go.kr</span></a> -->
+				<div class="circle-farm">HEALING<br>AGRICULTURE<br>CENTER</div>
+			</div>
+			<div class="farm-box headling-farm">
+				<h3>
+					대전광역시 치유농업센터
+				</h3>
+				<h4>
+					행복 농장 & 케어팜
+				</h4>
+				<div class="farm-image-top">
+					<figure>
+						<img src="contents/sub_43_top_1.jpg">
+					</figure>
+				</div>
+				<div class="farm-image-dual">
+					<figure>
+						<img src="contents/sub_43_image_1.jpg">
+					</figure>
+					<figure>
+						<img src="contents/sub_43_image_2.jpg">
+					</figure>
+				</div>
+				<div class="farm-grid">
+					<div class="farm-text">
+						<blockquote class="quote-farm">
+							단순히 식물을 심는 경험을 넘어, 자연이 주는 리듬 안에서<br>
+							마음을 회복하는 시간을 갖는다.
+						</blockquote>
+						<h6>
+							도심 속 나만의 밭에서 찾는 일상의 치유
+						</h6>
+						<p>
+							도심 속에서도 흙내음 가득한 삶을 만날 수 있다면 어떨까. 대전광역시 농업기술센터가 운영하는 행복농장과 케어팜은 바쁜 일상에 지친 시민들에게 작은 쉼표 같은 공간을 선물한다.
+						</p>
+						<p>
+							행복농장은 시민들이 직접 텃밭을 가꾸며 계절의 변화를 몸으로 느낄 수 있는 공간이다. 매년 봄, 대전 시민이라면 누구나 신청할 수 있으며 면적별로 20㎡ 구획 45개, 10㎡ 구획 65개로 구성되어 있다. 상추, 고추, 배추 같은 작물을 직접 심고 수확하다 보면 먹거리를 얻는 것은 물론, 흙을 만지는 과정에서 마음이 차분해지고 한 주의 피로가 자연스레 풀린다. 가족과 함께 와서 아이들에게 자연을 경험하게 하려는 이들도 많다. 함께 물을 주고 김을 매며 대화를 나누는 시간이 일상의 소소한 행복이자 따뜻한 치유가 된다.
+						</p>
+						<p>
+							케어팜은 취약계층을 위한 치유 프로그램을 집중적으로 운영한다. 도시농업 전문가와 함께하는 가족 텃밭 치유농업 활동은 원예 활동을 통해 정서적 안정을 돕는다. 단순히 식물을 심는 경험을 넘어, 자연이 주는 리듬 속에서 마음을 회복하는 시간을 갖는다. 
+							<i class="icon_last"></i>
+						</p>
+						<div class="farm-image-last">
+							<figure>
+								<img src="contents/sub_43_image_5.jpg">
+							</figure>
+						</div>
+					</div>
+					<div class="farm-info">
+						<div class="farm-info-text">
+							<h6>Information</h6>
+							<p>
+								<span>주소</span><br>
+								대전광역시 유성구 교촌대정로 97
+							</p>
+							<p>
+								<span>문의</span><br>
+								042-270-6982
+							</p>
+							<!-- <p>
+								<span>프로그램 가격(예상)</span><br>
+								1인 10,000원 <br>
+								(프로그램별 상이)
+							</p> -->
+						</div>
+						<!-- <div class="farm-qr">							
+							<span>네이버 블로그</span>
+							<figure>
+								<a href="https://blog.naver.com/oak0940" target="_blank"><img src="contents/sub_43_qr_11.png"></a>
+							</figure>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="farm-top">
+				<h4>치유농업센터</h4>
+				<h6>몸이 쉬고 마음이 자라는 곳<br>치유농업의 모든 이야기를 한곳에서</h6>
+				<div class="circle-farm">HEALING<br>AGRICULTURE<br>CENTER</div>
+			</div>
+			<div class="farm-box pet-farm">
+				<h3>
+					부산광역시 치유농업센터
+				</h3>
+				<h4>
+					우리 가족 치유농업 서비스
+				</h4>
+				<div class="farm-image-top">
+					<figure>
+						<img src="contents/sub_43_top_2.jpg">
+					</figure>
+				</div>
+				<div class="farm-image-dual">
+					<figure>
+						<img src="contents/sub_43_image_3.jpg">
+					</figure>
+					<figure>
+						<img src="contents/sub_43_image_4.jpg">
+					</figure>
+				</div>
+				<div class="farm-grid">
+					<div class="farm-text">
+						<blockquote class="quote-farm">
+							작은 씨앗을 심듯, 식물과의 만남이 시민의 마음에도 <br>
+							따뜻한 변화의 싹을 틔우길 기대한다. 
+						</blockquote>
+						<h6>
+							우리 가족의 든든한 치유 서비스
+						</h6>
+						<p>
+							부산광역시 농업기술센터는 올해부터 시민들을 위한 ‘우리 가족 치유농업 서비스’를 운영하고 있다. 치유농업사 자격을 가진 전문가들의 지도로 식물과 교감하며 정서적 안정을 찾는 프로그램이다. 대상에 따라 두 가지 과정으로 구성되며, 각 과정은 3월부터 6월까지 총 16회에 걸쳐 진행된다. 정서적 안정, 심리적 치유, 스트레스 해소 등 농업 활동의 치유 효과를 안내하고 실질적인 도움을 제공한다.
+						</p>
+						<p>
+							성인을 위한 과정은 우울증이나 스트레스를 겪고 있는 참여자들을 대상으로 진행된다. 흙을 만지고 작물을 기르는 활동을 통해 마음을 치유하고, 삶의 질을 한층 더 높이는 시간을 선물한다.
+						</p>
+						<p>
+							아동을 위한 과정은 학업이나 가정에서 쌓이는 심리적 부담을 덜어주는 프로그램이다. 아이들은 즐겁게 뛰어놀며 안정감을 되찾고, 스스로에 대한 자존감도 키울 수 있다.
+						</p>
+						<p>
+							자연과 함께하는 치유의 힘을 통해 시민들이 일상 속에서 마음의 여유와 활력을 되찾을 수 있도록 앞으로도 다양한 프로그램을 이어갈 예정이다. 작은 씨앗을 심듯, 식물과의 만남이 시민들의 마음에도 따뜻한 변화의 싹을 틔우길 기대한다. 
+							<i class="icon_last"></i>
+						</p>
+						<div class="farm-image-last">
+							<figure>
+								<img src="contents/sub_43_image_6.jpg">
+							</figure>
+							<figure>
+								<img src="contents/sub_43_image_7.jpg">
+							</figure>
+						</div>
+					</div>
+					<div class="farm-info">
+						<div class="farm-info-text">
+							<h6>Information</h6>
+							<p>
+								<span>주소</span><br>
+								부산광역시 강서구 공항로 1285
+							</p>
+							<p>
+								<span>예약 문의</span><br>
+								051-970-3744
+							</p>
+							<!-- <p>
+								<span>프로그램 가격(예상)</span><br>
+								1인 40,000원<br>
+								(프로그램별 상이)
+							</p> -->
+						</div>
+						<!-- <div class="farm-qr">
+							<span>네이버 블로그</span>
+							<figure>
+								<a href="https://blog.naver.com/slowfarmers" target="_blank"><img src="contents/sub_43_qr_21.png"></a>
+							</figure>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer black" id="footer"></footer>
+</body>
+</html>

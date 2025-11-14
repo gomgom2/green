@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>그린매거진</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta property="og:title" content="그린매거진">
+	<meta property="og:description" content="그린매거진 웹진을 만나보세요.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta property="og:image" content="contents/thumbnail.jpg">
+	<link rel="shortcut icon" href="green_icon/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="green_icon/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/common.css?ver=202502" />
+	<link rel="stylesheet" type="text/css" href="css/sub.css?ver=202502" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/script2.js?ver202502"></script>
+<style>
+	:root {
+		--main-color: #E4EDE9;
+		--text-color-small: #000;
+		--text-color-title: #008B72;
+		--text-color-title2: #008B72;
+	}
+body {
+	background-color: var(--main-color);
+}
+.article-header-text h2 {
+	font-size: 4.5rem;
+}
+.article-header-text h2 b {
+	line-height: 1.5;
+	margin-left: 0;
+	display: block;
+	color: var(--text-color-title);
+}
+.article-body-wrap {
+	padding-top: 10rem;
+}
+.quote-normal,
+.quote-normal::before,
+.quote-normal::after,
+.article-text p {
+	color: var(--text-color-title);
+}
+.quote-normal {
+	margin-top: 3rem;
+	margin-bottom: 10rem;
+	text-align: center;
+}
+.quote-normal::before,
+.quote-normal::after {
+	left: 50%;
+	transform: translateX(-50%);
+}
+.article-text h4 {
+	color: var(--text-color-title);
+}
+.hip-recipe {
+	margin-top: 2rem;
+	position: relative;
+	width: 100%;
+	border-top: 1px solid;
+	border-image: repeating-linear-gradient(90deg, var(--text-color-title2) 0, var(--text-color-title2) 3px, transparent 3px, transparent 4px) 1;
+	padding-top: 0.8rem;
+	color: var(--text-color-title);
+}
+.hip-recipe::before {
+	content: '';
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	background: url(contents/sub_46_icon.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateY(-100%);
+}
+.hip-recipe h6 {
+	font-size: 2rem;
+	font-family: 'Paperlogy-3Light';
+	color: var(--text-color-title);
+}
+.hip-recipe h6 b {
+	font-family: 'Paperlogy-7Bold';
+}
+.hip-recipe h6 span {
+	font-size: 1.5rem;
+	font-family: 'Paperlogy-2ExtraLight';
+	margin-left: 1rem;
+}
+.hip-recipe p {
+	font-size: 1.5rem;
+	margin-top: 1rem;
+	margin-bottom: 0;
+	line-height: 1.6;
+	color: var(--text-color-title);
+}
+.hip-recipe p + p {
+	margin-top: 0.5rem;
+}
+.hip-recipe p span {
+	font-weight: 600;
+	margin-right: 0.5rem;
+}
+.hip-recipe ul {
+	margin-top: 1rem;
+}
+.hip-recipe li {
+	font-size: 1.5rem;
+	display: flex;
+	gap: 0.5rem;
+	margin-top: 0.5rem;
+	color: var(--text-color-title);
+	word-break: keep-all;
+}
+.hip-recipe li span {
+	display: block;
+	font-size: 1rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	color: var(--main-color);
+	background-color: var(--text-color-title);
+	border-radius: 50%;
+	text-align: center;
+	margin-top: 0.4rem;
+	flex-shrink: 0;
+}
+.hip-recipe-image {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 7rem;
+}
+.hip-recipe-image figure {
+	width: 40%;
+	text-align: right;
+	transform: translateY(20%);
+	position: relative;
+	z-index: 10;
+}
+.htp-recipe-image figcaption {
+	text-align: right;
+}
+.article-image.small-image {
+	width: 50%;
+	margin-bottom: 0;
+}
+@media (max-width:767px) {
+	.article-image-text {
+		width: 80%;
+	}
+}
+
+</style>
+</head>
+<body>
+	<header class="header black" id="header"></header>
+	<main>
+		<section class="article-header">
+			<div class="article-header-wrap">
+				<div class="article-header-container header-normal">
+					<div class="article-header-text">
+						<span>힙한 맛남</span>
+						<h2>
+							오늘도 든든하게,<br>
+							고소한 한 알에 담긴 맛
+							<b>
+								Feat. 콩
+							</b>
+						</h2>
+						<p>
+							콩자반, 두부, 된장 등 건강식의 대명사였던 콩이 이제는 MZ 세대가 즐겨 찾는 단백질 식재료로 자리 잡았다. 카페 메뉴와 간식, 심지어 비건 음식까지 폭넓게 확장된 콩 레시피의 새로운 변화를 살펴본다.
+						</p>
+						<div class="article-meta">
+							<span class="b">글</span>
+							<span>구혜진</span>
+							<span class="pipe">ㅣ</span>
+							<span class="b">참고 자료와 사진 출처</span>
+							<span>농촌진흥청</span>
+						</div>
+					</div>
+					<div class="article-header-image">
+						<figure>
+							<img src="contents/sub_46_top.jpg" />
+						</figure>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="article-body">
+			<div class="article-body-wrap">
+				<div class="article-text">
+					<p>
+						우리나라의 콩 재배 역사는 삼국시대까지 거슬러 올라간다. 『삼국사기』와 『향약집성방』에도 콩의 재배와 효능이 기록되어 있으며, 조선시대에는 된장·간장·청국장 등 발효식품의 주원료로 사용되었다. 콩은 오랜 세월 한국인의 식생활과 건강을 지탱해 온 핵심 작물로, 지역마다 토종 품종이 이어져 내려오며 각기 다른 맛과 특색을 자랑해 왔다. 비옥한 토양과 뚜렷한 사계절은 콩이 잘 자라기 좋은 환경을 제공해, 지금도 다양한 품종의 국산 콩이 꾸준히 재배되고 있다.
+					</p>
+					<p>
+						콩은 단백질, 이소플라본, 레시틴, 항산화 물질이 풍부해 근육과 뼈, 혈관, 뇌 건강을 지키는 슈퍼푸드로 알려져 있다. 또한 식이섬유와 미네랄이 가득해 장 건강 개선과 빈혈 예방에도 도움이 된다. 전통적으로는 두부, 된장, 콩나물로 즐겨왔지만, 최근에는 디저트·드레싱·콩고기·두부면 등 트렌디한 식재료로 활용 범위가 넓어지고 있다. 고소한 맛과 든든한 영양을 모두 담은 콩 레시피를 소개한다.
+					</p>
+					<blockquote class="quote-normal">
+						콩은 단백질과 이소플라본, 레시틴, 항산화 물질이 풍부해 근육과 뼈, 혈관과 뇌 건강을 지키는 슈퍼푸드로 알려져 있다.
+					</blockquote>
+					<article>
+						<div class="hip-recipe-image">
+							<figure>
+								<img src="contents/sub_46_image_1.png">
+							</figure>
+						</div>
+						<div class="hip-recipe">
+							<h6>
+								탄수화물을 적게! 단백질 디저트<br>
+								<b>
+									콩 쿠키
+								</b>
+								<span>RECIPE</span>
+							</h6>
+							<p>
+								<span>재료</span>
+								삶은 콩 1컵, 달걀 1개, 꿀 2큰술, 아몬드 가루 2큰술,  소금 약간, 견과류 약간, 초코칩 약간
+							</p>
+							<ul>
+								<li>
+									<span>1</span>
+									삶은 콩을 곱게 으깬 뒤 달걀, 꿀, 아몬드 가루를 섞는다.
+								</li>
+								<li>
+									<span>2</span>
+									기호에 따라 견과류와 초코칩을 넣는다.
+								</li>
+								<li>
+									<span>3</span>
+									반죽을 숟가락으로 떠서 팬 위에 동그랗게 올린다.
+								</li>
+								<li>
+									<span>4</span>
+									170℃ 오븐에서 12~15분간 구워 완성한다.
+								</li>
+							</ul>
+						</div>
+						<div class="hip-recipe-image">
+							<figure>
+								<img src="contents/sub_46_image_2.png">
+							</figure>
+						</div>
+						<div class="hip-recipe">
+							<h6>
+								채소와 빵에 곁들여 즐기는 건강한 소스<br>
+								<b>
+									콩 후무스
+								</b>
+								<span>RECIPE</span>
+							</h6>
+							<p>
+								<span>재료</span>
+								콩 1컵, 콩 삶은 물 2큰술, 참깨 1큰술, 올리브유 3큰술,  마늘 1쪽, 레몬즙 2큰술, 소금 약간
+							</p>
+							<ul>
+								<li>
+									<span>1</span>
+									콩은 부드럽게 삶아 준비한다.
+								</li>
+								<li>
+									<span>2</span>
+									믹서기에 콩, 올리브오일, 레몬즙, 마늘, 참깨, 소금을 넣고 곱게 갈아준다.
+								</li>
+								<li>
+									<span>3</span>
+									콩 삶은 물을 조금씩 넣어 원하는 농도로 맞춘다.
+								</li>
+								<li>
+									<span>4</span>
+									빵, 크래커, 신선한 채소와 함께 곁들인다.
+								</li>
+							</ul>
+						</div>
+						<div class="hip-recipe-image">
+							<figure>
+								<img src="contents/sub_46_image_3.png">
+								<!-- <figcaption>©세미네부엌</figcaption> -->
+							</figure>
+						</div>
+						<div class="hip-recipe">
+							<h6>
+								담백한 두부면과 신선한 채소가 어우러진<br>
+								<b>
+									두부면 샐러드 파스타
+								</b>
+								<span>RECIPE</span>
+							</h6>
+							<p>
+								<span>재료</span>
+								두부면 200g, 샐러드 채소 한 줌, 오이 1/4개, 방울토마토 3알, 소금·후추 약간, 오리엔탈드레싱 적당량
+							</p>
+							<ul>
+								<li>
+									<span>1</span>
+									두부면을 흐르는 물에 충분히 헹구고, 끓는 물에 1~2분 데친 뒤 찬물에 헹궈 물기를 빼준다.
+								</li>
+								<li>
+									<span>2</span>
+									샐러드 채소, 오이, 방울토마토를 깨끗이 씻어 물기를 제거한 뒤, 먹기 좋은 크기로 자른다.
+								</li>
+								<li>
+									<span>3</span>
+									물기를 뺀 두부면과 손질한 채소를 그릇에 넣고 준비된 드레싱을 뿌려준다.
+									<i class="icon_last"></i>
+								</li>
+							</ul>
+						</div>
+
+					</article>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer black" id="footer"></footer>
+</body>
+</html>

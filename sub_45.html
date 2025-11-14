@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>그린매거진</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta property="og:title" content="그린매거진">
+	<meta property="og:description" content="그린매거진 웹진을 만나보세요.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta property="og:image" content="contents/thumbnail.jpg">
+	<link rel="shortcut icon" href="green_icon/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="green_icon/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/common.css?ver=202502" />
+	<link rel="stylesheet" type="text/css" href="css/sub.css?ver=202502" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/script2.js?ver202502"></script>
+<style>
+:root {
+	--main-color: #7593A6;
+	--text-color-small: #fff;
+	--text-color-title: #fff;
+	--text-color-title2: #fff;
+}
+.article-header-text h2 {
+	font-family: 'YUniverse-B';
+	font-size: 4.8rem;
+	font-weight: 600;
+	letter-spacing: -0.1rem;
+}
+.article-text {
+	position: relative;
+}
+.article-image-container {
+	position: relative;
+}
+figure.absolute {
+	position: absolute;
+	width: 40%;
+	bottom: 0;
+	right: 0;
+	transform: translateX(50%) translateY(50%);
+}
+.article-text p em {
+	background-color: #F0F4CF;
+}
+.article-text h5 {
+	text-align: center;
+	margin-top: 5rem;
+}
+.article-text h6 {
+    color: var(--main-color);
+    font-family: Paperlogy-5Medium;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    letter-spacing: -0.01rem;
+    margin: 2rem 0 1rem;
+    text-align: center;
+}
+p.description {
+	font-size: 1.2rem;
+	text-align: right;
+}
+p.description b {
+	font-weight: 700;
+}
+.nutri-grid-text {
+	display: block;
+	text-align: right;
+}
+.nutri-grid {
+  display:grid;
+  border-bottom: 1px solid var(--main-color);
+}
+.grid-1 {
+  grid-template-columns:repeat(6, minmax(0,1fr));
+}
+.grid-2 {
+  grid-template-columns:repeat(4, minmax(0,1fr));
+  margin-bottom: 2rem;
+}
+.nutri-grid .cell {
+  background:#fff;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+}
+.nutri-grid .cell-title {
+  background:var(--main-color);
+  color:#fff;
+  font-weight:700;
+  font-size:1.2rem;
+  padding: 1rem 0;
+  border-right: 1px solid #fff;
+}
+.cell .cell-value {
+	border-right: 1px solid var(--main-color);
+	height: 100%;
+	word-break: keep-all;
+}
+.grid-1 .cell:nth-child(6n) .cell-title,
+.grid-1 .cell:nth-child(6n) .cell-value {
+	border: 0;
+}
+.grid-2 .cell:nth-child(4n) .cell-title,
+.grid-2 .cell:nth-child(4n) .cell-value {
+	border-color: #fff;
+}
+.grid-1 .cell-value {
+  padding:1rem 0;
+  font-size:1.2rem;
+}
+.grid-2 .cell-value {
+  padding: 0;
+}
+.grid-2 .cell-value p {
+	font-size: 1.3rem;
+	line-height: 1.4;
+	padding: 0.8rem;
+	margin: 0;
+}
+
+@media (max-width:767px) {
+	.article-image {
+        width: 100%;
+    }
+    figure.absolute {
+    	transform: translateX(0) translateY(90%);
+    }
+    .nutri-grid.grid-1 {
+    	grid-template-columns:repeat(3, minmax(0,1fr));
+    	border-bottom: 0;
+    }
+    .nutri-grid.grid-2 {
+    	grid-template-columns:repeat(2, minmax(0,1fr));
+    }
+    .grid-1 .cell-value {
+    	border-right: 0;
+    }
+    .grid-2 .cell-value {
+    	border-right-color: #fff;
+    }
+    .grid-2 .cell:last-child .cell-title,
+    .grid-2 .cell:last-child .cell-value {
+    	border-right: 1px solid #fff;
+    }
+}
+</style>
+</head>
+<body>
+	<header class="header" id="header"></header>
+	<main>
+		<section class="article-header">
+			<div class="article-header-wrap">
+				<div class="article-header-container header-normal">
+					<div class="article-header-text">
+						<span>푸드테라피</span>
+						<h2>
+							작지만 영양은 꽉 찬, 콩
+						</h2>
+						<!-- <h4>부토 오너 셰프</h4> -->
+						<!-- <h3>땅의 여자</h3> -->
+						<div class="article-meta">
+							<span class="b">글</span>
+							<span>구혜진</span>
+							<span class="pipe">ㅣ</span>
+							<span class="b">참고자료</span>
+							<span>농사로</span>
+						</div>
+					</div>
+					<div class="article-header-image">
+						<figure>
+							<img src="contents/sub_45_top.jpg" />
+						</figure>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="article-body">
+			<div class="article-body-wrap">
+				<div class="article-prologue">
+					<p>
+						콩은 ‘밭에서 나는 고기’라 불릴 만큼 단백질이 풍부한 세계적인 건강 식재료다. 한국인의 밥상에 늘 함께해온 콩은 단백질뿐 아니라 지방과 탄수화물까지 균형 있게 갖추고 있다. 또한 된장, 두부, 두유 등 다양한 형태로 가공되어 우리의 식문화 속에 깊숙이 자리 잡았다. 오랜 세월 한국인의 삶과 건강을 지탱해 온 대표 농산물, 콩의 가치를 다시금 들여다본다. 
+					</p>
+				</div>
+				<div class="article-text">
+					<h5>
+						슈퍼푸드, 콩의 재발견
+					</h5>
+					<p>
+						콩은 인류가 오래전부터 사랑해 온 대표적인 슈퍼푸드다. 단백질 35~40%, 탄수화물 30%, 지방 15~20%로 구성되어 있으며, 그중 단백질 함량이 가장 높다. 이 때문에 ‘밭에서 나는 고기’라는 별명으로 불리기도 한다. 단백질은 우리 몸의 주요 에너지원으로, 근육을 형성하고 체력을 유지하는 데 중요한 역할을 한다. <br>
+						또한 콩에 풍부한 식이섬유는 장 운동을 활발하게 해 변비를 예방하고, 이소플라본은 여성 호르몬과 유사하게 작용해 골다공증 예방과 갱년기 증상 완화에 도움을 준다. 기억력 개선에 효과적인 레시틴 성분이 풍부하며, 검정콩에 들어 있는 안토시아닌 등 항산화 물질은 피부와 눈 건강을 지키는 데에도 유익하다.
+					</p>
+					<h6>
+						< 콩(대두) 영양성분 >
+					</h6>
+					<span class="nutri-grid-text">
+						(100g 기준)
+					</span>
+					<div class="nutri-grid grid-1">
+					  <div class="cell">
+					    <div class="cell-title">니아신</div>
+					    <div class="cell-value">2.507mg</div>
+					  </div>
+					  <div class="cell">
+					    <div class="cell-title">단백질</div>
+					    <div class="cell-value">38.5g</div>
+					  </div>
+					  <div class="cell">
+					    <div class="cell-title">당질</div>
+					    <div class="cell-value">28.40g</div>
+					  </div>
+					  <div class="cell">
+					    <div class="cell-title">비타민 E</div>
+					    <div class="cell-value">2.93mg</div>
+					  </div>
+					  <div class="cell">
+					    <div class="cell-title">식이섬유</div>
+					    <div class="cell-value">22.1g</div>
+					  </div>
+					  <div class="cell">
+					    <div class="cell-title">아연</div>
+					    <div class="cell-value">4.69mg</div>
+					  </div>
+					  <div class="cell">
+					    <div class="cell-title">엽산</div>
+					    <div class="cell-value">392.00㎍</div>
+					  </div>
+					  <div class="cell">
+					    <div class="cell-title">인</div>
+					    <div class="cell-value">678.00mg</div>
+					  </div>
+					  <div class="cell">
+					    <div class="cell-title">지질</div>
+					    <div class="cell-value">18.60g</div>
+					  </div>
+					  <div class="cell">
+					    <div class="cell-title">철분</div>
+					    <div class="cell-value">11.38mg</div>
+					  </div>
+					  <div class="cell">
+					    <div class="cell-title">칼륨</div>
+					    <div class="cell-value">1,964mg</div>
+					  </div>
+					  <div class="cell">
+					    <div class="cell-title">칼슘</div>
+					    <div class="cell-value">3236.00mg</div>
+					  </div>
+					</div>
+					<p class="description">* 출처: 국립식량과학원</p> 
+					<h5>
+						모양도 색깔도 다양한 콩의 세계 
+					</h5>
+					
+					<h6>
+						< 품종명(수확시기) >
+					</h6>
+					<div class="nutri-grid grid-2">
+					  <div class="cell">
+					    <div class="cell-title">다드림</div>
+					    <div class="cell-value">
+					    	<figure>
+					    		<img src="contents/sub_45_image_1.jpg">
+					    	</figure>
+					    	<p>
+					    		두부 수율이 높고 맛과 식감이 우수한 품종이다. 만생종으로 알 크기가 굵다.
+					    	</p>
+					    </div>
+					  </div>
+					  <div class="cell">
+					    <div class="cell-title">선풍</div>
+					    <div class="cell-value">
+					    	<figure>
+					    		<img src="contents/sub_45_image_2.jpg">
+					    	</figure>
+					    	<p>
+					    		논 재배 기계수확에 유리하다. 장류, 두부용으로 이용되는 품종이다.
+					    	</p>
+					    </div>
+					  </div>
+					  <div class="cell">
+					    <div class="cell-title">아람</div>
+					    <div class="cell-value">
+					    	<figure>
+					    		<img src="contents/sub_45_image_3.jpg">
+					    	</figure>
+					    	<p>
+					    		콩나물 수율이 우수하고, 재배 시 적절한 양·수분 관리가 필요하다. 
+					    	</p>
+					    </div>
+					  </div>
+					  <div class="cell">
+					    <div class="cell-title">청자5호</div>
+					    <div class="cell-value">
+					    	<figure>
+					    		<img src="contents/sub_45_image_4.jpg">
+					    	</figure>
+					    	<p>
+					    		기능성이 우수해 비만과 대사 증후군 예방 효과가 밝혀졌으며, 불마름병과 꼬투리 터짐에 강하다.
+					    	</p>
+					    </div>
+					  </div>
+					</div>
+					<p>
+						농촌진흥청은 이전 연구를 통해 검정콩 ‘청자5호’의 비만 및 대사증후군 예방 효과를 밝혀냈다. 또한 두부 가공에 적합한 ‘선풍’과 ‘대찬’, 콩나물용으로 활용되며 이소플라본과 가바(GABA) 등 기능성 성분 함량이 높은 ‘아람’ 등 용도별 맞춤 품종을 개발·보급하고 있다.
+					</p>
+					<h5>
+						생활 속에서 즐기는 콩 
+					</h5>
+					<p>
+						맛있고 고소한 콩을 고르려면 알이 고르고 색이 선명하며, 껍질이 매끈한 것을 선택하는 것이 좋다. 수분이 많아 눅눅한 콩은 곰팡이가 생기기 쉬우므로 건조하고 단단한 상태로 보관해야 한다.<br>
+						조리법도 다양하다. 밥에 넣어 먹으면 담백한 풍미와 영양을 더할 수 있고, 삶아 샐러드에 곁들이면 간단하게 단백질을 보충할 수 있다. 또한 콩을 볶아 차로 즐기거나, 갈아 두유나 콩국수로 만들어 먹는 등 일상 속에서 폭넓게 활용할 수 있어 건강한 식생활을 지켜주는 든든한 식재료다. 
+						<i class="icon_last"></i>
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer" id="footer"></footer>
+</body>
+</html>

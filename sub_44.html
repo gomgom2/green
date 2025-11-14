@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>그린매거진</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta property="og:title" content="그린매거진">
+	<meta property="og:description" content="그린매거진 웹진을 만나보세요.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta property="og:image" content="contents/thumbnail.jpg">
+	<link rel="shortcut icon" href="green_icon/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="green_icon/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/common.css?ver=202502" />
+	<link rel="stylesheet" type="text/css" href="css/sub.css?ver=202502" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="js/script2.js?ver202502"></script>
+<style>
+	:root {
+		--main-color: #769EB3;
+		--text-color-small: #fff;
+		--text-color-title: #fff;
+		--text-color-title2: #fff;
+		--input-box-color: #769EB3;
+	}
+
+
+.article-header-text h2 {
+	font-family: 'YUniverse-B';
+	font-size: 4.8rem;
+	font-weight: 600;
+	letter-spacing: -0.1rem;
+	color: #000;
+}
+.article-header-text h3 {
+	font-family: Paperlogy-5Medium;
+	font-size: 4rem;
+}
+.article-header-text h4 {
+	margin-bottom: 0.2rem;
+}
+.article-text {
+	margin-top: 10rem;
+	margin-bottom: 15rem;
+}
+.quote-normal {
+	font-size: 2.5rem;
+	font-family: 'YUniverse-B';
+	font-weight: 600;
+	width: 70%;
+	word-break: keep-all;
+}
+.quote-normal::before, .quote-normal::after {
+	display: none;
+}
+.town-left {
+	position: relative;
+	z-index: 3;
+}
+.town-right {
+	position: relative;
+	z-index: 1;
+}
+.town-box {
+	margin-bottom: 4rem;
+	grid-template-columns: 1fr 1.2fr;
+	position: relative;
+}
+.bottom-image {
+	position: relative;
+}
+.town-graphic {
+	position: absolute;
+	z-index: 2;
+}
+.article-image.big-image {
+	margin-bottom: 10rem;
+}
+.article-image.big-image figure {
+	margin-bottom: 0.5rem;
+}
+.town-right.bottom-image {
+	justify-content: flex-end;
+}
+.graphic-1 {
+	top: -3%;
+	left: 36%;
+	width: 10%;
+}
+figure.graphic-2 {
+	bottom: 0%;
+	right: 5%;
+	width: 20%;
+}
+figure.graphic-3 {
+	top: 0%;
+	right: 0%;
+	width: 40%;
+}
+figure.graphic-4 {
+	bottom: -3%;
+	left: -5%;
+	width: 15%;
+}
+@media (max-width:767px) { 
+	.article-header-text h2 {
+		font-size: 2.5rem;
+	}
+	.article-image.big-image {
+		width: 100%;
+		margin-top: 0.5rem;
+	}
+	.town-box {
+		margin-bottom: 0.5rem;
+	}
+	figure.graphic-1 {
+		width: 30%;
+		right: 0;
+		top: 0;
+		left: auto;
+		bottom: auto;
+		transform: translateY(-100%);
+	}
+	figure.graphic-2 {
+	    top: 50%;
+	    bottom: auto;
+	    right: 0;
+	    left: auto;
+	    width: 40%;
+	}
+	figure.graphic-3 {
+	    top: -20%;
+	}
+	figure.graphic-4 {
+	    bottom: 0;
+	    width: 20%;
+	}
+}
+
+</style>
+</head>
+<body>
+	<header class="header" id="header"></header>
+	<main>
+		<section class="article-header">
+			<div class="article-header-wrap">
+				<div class="article-header-container header-normal">
+					<div class="article-header-text">
+						<span>방구석 시골 영화관</span>
+						<h2>
+							경계 없는 자연,<br>
+							그 곁의 사람들에 관한 시
+						</h2>
+						<!-- <h4>부토 오너 셰프</h4> -->
+						<h3>
+							다큐 영화 무경계
+						</h3>
+						<p>
+							하늘에서 내려다본 섬으로 시작하는 <무경계>는 자연 다큐멘터리의 형식을 빌리면서도 그 너머를 응시하게 만드는 철학적 성찰의 영화다. 단순히 산과 바다의 풍경에 머물지 않고, 해가 떠오르는 순간과 구름 위로 번지는 빛, 비 뒤에 드러나는 맑은 하늘, 그리고 그 속에서 살아가는 사람과 곤충, 동물들의 모습까지. 경계 없는 자연의 얼굴을 스크린 위에 담아낸다.
+						</p>
+						<div class="article-meta">
+							<span class="b">글</span>
+							<span>장희주</span>
+							<span class="pipe">ㅣ</span>
+							<span class="b">사진</span>
+							<span>네이버 영화</span><br>
+							<span class="b">자료</span>
+							<span>한국관광공사 포토코리아, 전태현, 김지호, IR스튜디오, 라이브스튜디오</span><br>
+						</div>
+					</div>
+					<div class="article-header-image">
+						<figure>
+							<img src="contents/sub_44_top.jpg" />
+						</figure>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="article-body">
+			<div class="article-body-wrap">
+				<div class="article-text">
+					<div class="article-image">
+						<div class="article-image-container">
+							<figure>
+								<img src="contents/sub_44_image_1.jpg">
+							</figure>
+						</div>
+					</div>
+					<h4>
+						국립공원의 시간을 담다
+					</h4>
+					<p>
+						<무경계>는 2023년 국립공원 지정 55주년을 기념해 제작됐다. 당초 TV 다큐멘터리 3부작 ‘한반도의 보석, 국립공원’으로 기획됐다가 이를 재편집해 스크린에 옮긴 것이다. 제작팀은 영화를 위해 1년 동안 전국 23개 국립공원 중 18곳을 다니며 4K 초고화질로 자연을 기록했다. 구름의 움직임을 담기 위해 설악산과 소백산을 수차례 오르고, 토왕성폭포에서는 드론을 띄워 단 한 줄기 햇살을 화면에 담았다.
+					</p>
+					<p>
+						이 치열한 기록과 섬세한 연출은 국제적으로도 인정받았다. 독일, 홍콩, 아랍에미리트, 인도 등 여러 국제영화제에서 다큐멘터리상과 촬영상을 수상하며 작품성을 입증했다. 최근에는 2024 뉴욕 페스티벌에서 ‘다큐멘터리 자연과 야생 부문’ 은상을 수상하며 여전히 호평을 이어가고 있다. 
+					</p>
+					<!-- <blockquote class="quote-normal">
+						“다음에 다시 태어나도 네 친구 할 끼야.”
+					</blockquote> -->
+					<div class="article-image">
+						<div class="article-image-container">
+							<figure>
+								<img src="contents/sub_44_image_2.jpg">
+							</figure>
+						</div>
+					</div>
+					<h4>
+						한편의 연시처럼, 풍경과 사람을 읊다 
+					</h4>
+					<p>
+						영화는 국립공원의 산과 바다를 단순한 경관으로 소비하지 않는다. 자연의 변주에 따라 시시각각 달라지는 풍경을 담아낼 뿐 아니라, 그곳을 삶터로 살아가는 인간과 동물, 곤충들의 모습까지 함께 보여준다. 그래서 제목 그대로, 자연과 인간 사이의 ‘경계 없음’을 촘촘한 이미지의 문법으로 설파한다. 
+					</p>
+					<p>
+						무엇보다 이처럼 웅대한 풍경 뒤에는 늘 자연과 더불어 살아온 사람들이 있다. 영화는 그들의 목소리를 따라가며 국립공원의 또 다른 얼굴을 보여준다. 안개 낀 경주 칠불암, 마루에 걸터앉은 스님은 자연을 바라보며 이렇게 말한다. “소리는 지나가고 바람도 지나가는데, 그 지나가는 소리와 바람에 걸리고 얽매여 집착만 하고 있구나.” 그러고는 덧붙인다. “그래서 옛사람들은 자연을 보고 법문을 들은 거야.” 
+					</p>
+					<p>
+						이어지는 지리산 천왕봉 장면에서는 새소리와 풀벌레 소리가 어우러져 산 전체를 가득 채운다. 영화의 정서를 구체적으로 드러내는 인물은 바로 이곳, 지리산에서 살아가는 산악인 남난희다. “내 앞의 길은 내가 걷지 않으면 줄어들지 않는다”는 말처럼 그는 매일 지리산을 오른다. 나무를 끌어안고 “잘 계셨습니까” 인사하는 장면은 숭고하다 못해 다정하다. 그러나 80년이 지나도록 아물지 않은 송진 수탈의 상처 앞에서는 “죄송합니다” 라는 말이 먼저 튀어나온다. 자연을 경배의 ‘대상’이자 경배의 ‘무대’로 바라보는 영화의 시선은, 이렇게 겸손과 죄책의 진폭을 함께 흔든다.
+					</p>
+					<p>
+						영화의 호흡은 산에서 바다로 자연스레 넘어간다. 조수간만, 일출과 노을, 물결 위에 먼저 피어나는 ‘물별’까지. 바다는 두려움의 장벽이자 생명의 터전이다. 제주 해녀 김복순의 숨비소리는 이 바다의 시간을 인간의 시간으로 번역해 준다. “바당만 보며 자랐수다”라는 고백 뒤로, 절벽의 풍경과 무너짐조차 두려워하지 않는 태도가 겹친다. 
+					</p>
+					<p>
+						이어지는 장면들은 월악산 충주호, 지리산, 주왕산, 변산반도 등으로 촘촘히 연결된다. 여우와 곤충, 약초꾼과 스님, 섬 박사와 할머니들, 죽염을 굽는 장인까지. 영화는 ‘자연 곁에서’ 혹은 ‘자연을 빌려’ 살아온 사람들의 얼굴을 오래 바라본다. 
+					</p>
+					<p>
+						〈무경계〉가 흥미로운 지점은 기존 자연 다큐의 문법을 과감히 비켜선 구성이다. 정보는 최소화하고, 내레이션은 시처럼 ‘덜어’ 말한다. 그 결과 1시간 29분이라는 러닝타임이 장면마다 하나의 연시(聯詩)처럼 이어진다. 바다의 신인 용왕에게 기원하는 용왕제, 단군을 모시는 제례 행사인 개천대제, 승려들의 바라춤, 동백꽃의 붉은 몽우리 속 노란 수술이 드러나는 순간들까지. 의식과 계절, 식물의 미세한 시간이 한 편의 시처럼 흘러간다.
+					</p>
+					<p>
+						자연을 한 편의 시처럼 연출한 <무경계>는 국립공원을 낯설고도 새로운 눈으로 바라보게 한다. 그곳은 어떤 풍경일까. 지금, 그 장면 속으로 함께 걸어가 보자. 
+						<i class="icon_last"></i>
+					</p>
+				</div>
+				<article>
+					<div class="town-box reverse">
+						<div class="town-left">
+							<h6>
+								남한에서 가장 높은 봉우리이자 대한민국 1호 국립공원
+							</h6>
+							<h5>
+								지리산국립공원
+							</h5>
+							<p>
+								영화에서 가장 비중 있게 다뤄지는 곳은 지리산국립공원이다. 산악인 남난희가 매일같이 오르던 산 역시 지리산이다.
+							</p>
+							<p>
+								1967년 우리나라 제1호 국립공원으로 지정된 지리산은, 남한에서 가장 높은 봉우리를 품고 있는 산이기도 하다. 전북특별자치도 남원시와 전남 구례군, 경남 하동·산청·함양군에 걸쳐 있으며, 천왕봉(1,915m)을 비롯해 제석봉, 반야봉, 노고단 등 해발 1,500m 이상의 고산 준봉들이 줄지어 서 있다.
+							</p>
+							<p>
+								총면적 483.02㎢에 달하는 이곳은 ‘한반도 생태계의 보고’ 라 불릴 만큼 다양한 동식물이 서식한다. 그만큼 지리산의 풍광은 생태만이 아니라 지형과 문화까지 품고 있다. 뱀사골과 칠선계곡 같은 깊은 협곡, 구룡·불일·용추·등선폭포 등 이름난 폭포들이 어우러져, 발걸음을 옮길 때마다 전혀 다른 풍광이 펼쳐진다. 곳곳에는 화엄사, 쌍계사, 실상사 같은 유서 깊은 사찰과 수많은 암자가 자리해, 단순한 산행을 넘어선 사색의 여정을 선물한다.
+							</p>
+							<p>
+								대표적인 등산 코스로는 천왕봉, 반야봉, 노고단이 있다. 지리산 최고봉인 천왕봉(1,915m)은 한반도에서 세 번째로 높은 산으로, ‘지리산 3대 주봉’ 가운데 하나다. 난이도는 다소 높지만 정상에 서면 시야가 확 트이는 장관을 만끽할 수 있다. 반야봉(1,732m)은 일몰 명소로 유명해 많은 등산객이 찾는다. 노고단 코스는 접근성이 좋아 비교적 쉽게 오를 수 있으며, 완만한 경사와 아름다운 풍경 덕분에 특히 인기가 높다.
+							</p>
+							<ul>
+								<!-- <li>
+									<span>전화</span>
+									064-728-7783
+								</li> -->
+								<li>
+									<span>주소</span>
+									경상남도 하동군 화개면 화개로 541-9
+								</li>
+							</ul>
+						</div>
+						<div class="town-right">
+							<figure>
+								<img src="contents/sub_44_town_11.jpg">
+							</figure>
+							<figure>
+								<img src="contents/sub_44_town_12.jpg">
+							</figure>
+						</div>
+						<figure class="graphic-1 town-graphic">
+							<img src="contents/sub_44_town_graphic_1.png">
+						</figure>
+						<figure class="graphic-2 town-graphic">
+							<img src="contents/sub_44_town_graphic_2.png">
+						</figure>
+					</div>
+					<div class="article-image big-image bottom-image">
+						<div class="article-image-container">
+							<figure>
+								<img src="contents/sub_44_town_13.jpg">
+							</figure>
+						</div>
+					</div>
+					<div class="town-box reverse">
+						<div class="town-left">
+							<h6>
+								섬의 보고(寶庫)이자 열 네번째로 지정된 국립공원
+							</h6>
+							<h5>
+								다도해해상국립공원
+							</h5>
+							<p>
+								1981년, 우리나라 14번째 국립공원으로 지정된 다도해해상국립공원은 이름 그대로 수많은 섬과 바다가 어우러진 공간이다. 전남 홍도에서 신안·진도·완도·고흥을 거쳐 여수 돌산에 이르기까지. 크고 작은 섬들이 바다 위에 흩뿌려져 있다. 여수의 백도, 신안의 칠발도, 흑산도와 거문도는 그중에서도 손꼽히는 명소다.
+							</p>
+							<p>
+								바다가 숨을 고르듯 밀려났다 밀려들면, 갯벌은 광활하게 드러나고 다시 잠긴다. 해식애와 절벽은 오랜 세월 바람과 파도가 빚어낸 작품처럼 서 있고, 다양한 암석층은 지질의 교과서처럼 펼쳐진다. 그래서 다도해해상국립공원은 흔히 ‘섬의 보고(寶庫)’라 불린다.
+							</p>
+							<p>
+								섬마다 다른 표정을 지닌 풍경은, 바다가 품고 있는 시간의 깊이를 새삼 느끼게 한다. 
+								<i class="icon_last"></i>
+							</p>
+							<ul>
+								<!-- <li>
+									<span>전화</span>
+									064-787-1305
+								</li> -->
+								<li>
+									<span>주소</span>
+									전라남도 완도군 완도읍 구계등길 48
+								</li>
+							</ul>
+						</div>
+						<div class="town-right bottom-image">
+							<figure>
+								<img src="contents/sub_44_town_21.jpg">
+							</figure>
+							<figure class="graphic-4 town-graphic">
+								<img src="contents/sub_44_town_graphic_4.png">
+							</figure>
+							<figure class="graphic-3 town-graphic">
+								<img src="contents/sub_44_town_graphic_3.png">
+							</figure>
+						</div>
+					</div>
+					<div class="article-image big-image">
+						<div class="article-image-container">
+							<figure>
+								<img src="contents/sub_44_town_22.jpg">
+							</figure>
+							<figure>
+								<img src="contents/sub_44_town_23.jpg">
+							</figure>
+						</div>
+					</div>
+				</article>
+			</div>
+		</section>
+	</main>
+	<footer class="footer" id="footer"></footer>
+</body>
+</html>
