@@ -17,18 +17,19 @@
 	<script src="js/script2.js?ver202502"></script>
 <style>
 :root {
-	--main-color: #F8DD7C; 
-	--text-color-small: #C1585A; 
+	--main-color: #E9F3FA; 
+	--text-color-small: #c85a5a; 
 	--brand: #F2F2F1;
+	--padding-size: 2.5rem;
+	--border: 2px solid #3B3C3B;
 }
 .nav-wrap {
 	background-color: var(--text-color-small);
 }
 body {
-	background-color: #EDDFCA;
+	background-color: #E9F3FA;
 }
-.article-header-wrap,
-.article-body-wrap {
+.article-header-wrap {
 	max-width: 750px;
 	padding-left: 0;
 	padding-right: 0;
@@ -37,30 +38,40 @@ body {
 .article-header-container {
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 0 0 10rem 0;
-    margin-bottom: 0.4rem;
+    padding: 0;
+    margin-bottom: 0;
     position: relative;
 }
+.article-header-text {
+	padding-left: 20%;
+	padding-right: 10%;
+	position: relative;
+}
+.article-header-text::before {
+	content: "";
+	display: block;
+	width: 17%;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	background: url("contents/sub_20_top_2.png") 0 0 no-repeat;
+	background-size: cover;
+	aspect-ratio: 52 / 26;
+	transform: translateY(-100%);
+}
 .article-header-text span {
-	margin: 2rem auto;
+	margin: 0;
 }
 .article-header-text p {
-	width: 90%;
-	margin: 0 auto;
-	text-align: center;
+	width: 100%;
+	margin: 1.5rem auto;
 	color: #000;
 	font-size: 1.5rem;
 }
-.article-header-text h3 {
-	text-align: center;
-	font-size: 3rem;
-	margin: 2rem 0 0.5rem;
-	color: var(--text-color-small);
-}
 .article-header-text h2 {
 	font-size: 5rem;
-	text-align: center;
 	color: var(--text-color-small);
+	margin-bottom: 0;
 }
 .article-header-text h2 strong {
 	color: #fff;
@@ -69,113 +80,153 @@ body {
 	text-decoration-thickness: 1.5px;
 }
 .article-meta {
-	margin: 0 auto 2rem;
-}
-.article-header-image {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 20%;
+	margin-top: 1rem;
 }
 .article-header-image figure {
     border-radius: 0;
     transform: rotate(0deg) translateY(0);
 }
-.trand-box-wrap {
+.article-body-wrap {
 	max-width: 600px;
-	margin: 0 auto;
-	padding: 5rem 0;
+	padding: 1rem;
 }
 .trand-box {
-	/*border: 1px solid #bc9d63;*/
-	background-color: #fff;
+	border: var(--border);
+	background-color: #FEFBF3;
 	position: relative;
 	margin-bottom: 5rem;
 }
-.trand-box-top {
-	display: flex;
-	position: relative;
-	background-color: #595757;
-	color: var(--main-color);
+.trand-box-title {
+	border-bottom: var(--border);
+	background-color: #fff;
 	font-family: KbizHanmaumGothic;
-}
-.trand-box-top::before {
-	content: "";
-	position: absolute;
-	width: 15px;
-	height: 100%;
-	background-color: #595757;
-	top: 0;
-	right: -15px;
-}
-.trand-box-top::after {
-	content: "";
-	position: absolute;
-	bottom: -10px;
-	right: -15px; /* right 대신 left로 변경 */
-	width: 0;
-	height: 0;
-	border-right: 15px solid transparent;
-	border-top: 10px solid #201f1f;
-}
-.box-2 .trand-box-top,
-.box-2 .trand-box-top::before  {
-	background-color: #7893A6;
-}
-.box-2 .trand-box-top::after {
-	border-top-color: #195676;
-}
-.box-3 .trand-box-top,
-.box-3 .trand-box-top::before  {
-	background-color: #c87259;
-}
-.box-3 .trand-box-top::after {
-	border-top-color: #801e1b;
-}
-.trand-box-icon {
-	flex-shrink: 0;
-	width: 10rem;
-	padding: 2rem 3rem;
+	color: var(--text-color-small);
+	padding: 1rem var(--padding-size);
 	position: relative;
 }
-.trand-box-icon::after {
+.trand-box-title::before {
 	content: "";
 	display: block;
-	width: 0.1rem;
-	height: calc(100% - 4rem);
-	background-color: #fff;
+	width: 4.8rem;
+	height: 1.2rem;
+	background: url(contents/sub_20_dot.png) 0 0 no-repeat;
+	background-size: contain;
 	position: absolute;
-	right: 0;
+	right: var(--padding-size);
 	top: 50%;
 	transform: translateY(-50%);
 }
-.trand-box-top-text {
-	padding: 2rem;
-	font-size: 3rem;
+.trand-box-title::after {
+	content: "";
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	background: url(contents/sub_20_pointer.png) 0 0 no-repeat;
+	background-size: contain;
+	position: absolute;
+	right: -1rem;
+	top: 50%;
+	transform: translateY(20%);
 }
-.trand-box-top-text span {
+.trand-box-title h3 {
 	font-size: 2rem;
 }
-.trand-box-top-image {
-	width: 12rem;
-	position: absolute;
-	top: 0;
-	right: 0;
-	transform: translateY(10%);
-}
-.trand-box-text {
-	border: 1px solid #bc9d63;
-	padding: 5rem 3rem 2rem;
-}
-.trand-box-text p {
+.trand-box-in p {
+	padding: var(--padding-size) var(--padding-size) 0;
 	font-size: 1.8rem;
-    margin-bottom: 2rem;
     line-height: 1.76;
     color: #2a2a2a;
 }
-.trand-box-text p span {
-	background-color: var(--main-color);
+.trand-box-in figure {
+	width: 50%;
+	margin: 3rem 0 2rem var(--padding-size);
 }
+.trand-section {
+	background-color: #F6DADA;
+	position: relative;
+}
+.trand-section::before {
+	content: "";
+	display: block;
+	width: 3rem;
+	aspect-ratio: 1 / 4;
+	background: url(contents/sub_20_scrollbar.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	border-top: var(--border);
+	border-bottom: var(--border);
+	position: absolute;
+	right: 0;
+	top: 20%;
+}
+.trand-section::after {
+	content: "";
+	display: block;
+	width: 3rem;
+	aspect-ratio: 30 / 62;
+	background: url(contents/sub_20_btn.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	border-top: var(--border);
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.trand-section-in {
+	padding-bottom: 3rem;
+	background-color: #FBECEB;
+	position: relative;
+	border-right: var(--border);
+	margin-right: 3rem;
+	position: relative;
+}
+.section-2 .trand-section-in {
+	padding-bottom: 8rem;
+}
+.trand-section-in figure {
+	position: absolute;
+	margin: 0;
+	right: var(--padding-size);
+	bottom: 2rem;
+	width: 50%;
+}
+.section-2 .trand-section-in figure {
+	width: 30%;
+}
+.trand-section-title {
+	border-top: var(--border);
+	border-bottom: var(--border);
+	background-color: #fff;
+	padding: 0.5rem var(--padding-size);
+	color: var(--text-color-small);
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	font-size: 1.5rem;
+	line-height: 1.2;
+	font-family: KbizHanmaumGothic;
+}
+.trand-section-title h4 {
+	font-size: 4rem;
+	line-height: 1;
+	padding-top: .3rem;
+}
+.trand-section-in {
+	
+}
+.trand-tag {
+	margin: 2rem 0 3rem var(--padding-size);
+}
+.trand-tag span {
+	display: block;
+	width: fit-content;
+	border: var(--border);
+	background-color: #fff;
+	font-size: 1.6rem;
+	line-height: 1;
+	padding: .8rem 1rem;
+	border-radius: 1.8rem;
+	margin-bottom: 1rem;
+}
+
 br.mobile {
 	display: none;
 }
@@ -183,32 +234,6 @@ br.mobile {
 	br.mobile {
 		display: block;
 	}
-	.article-header-image {
-        width: 23%;
-    }
-    .article-header-image figure {
-    	width: 100%;
-    }
-    .trand-box-wrap {
-    	padding: 5rem 2rem 0;
-    }
-    .trand-box-icon {
-    	padding: 2rem 2rem;
-    }
-    .trand-box-top-text,
-    .trand-box-top-text span {
-    	line-height: 1.1;
-    }
-    .t-img-1 {
-    	top: 4.5rem;
-    }
-    .t-img-2 {
-    	top: 1.5rem;
-    }
-    .t-img-3 {
-    	top: 2rem;
-    }
-	
 }
 	
 </style>
@@ -219,22 +244,18 @@ br.mobile {
 	<main>
 		<section class="article-header">
 			<div class="article-header-wrap">
-				<div class="article-header-container header-normal">
+				<div class="article-header-container">
 					<div class="article-header-text">
 						<span>트렌드 탐구</span>
 						<p>
-							과거 ‘발효’하면 떠오르는 이미지는 정겨운 시골 마을, 쿰쿰한 향기, 장인 정신 같은 모습이었다. 하지만최근 발효는 훨씬 젊고 트렌디해졌다. 전통주, 콤부차, 그릭 요거트 등 발효를 기반으로 한 메뉴들이 다채롭게 확산되면서, 발효는 더 이상 전통만의 영역이 아니게 됐다. 이제 발효는 카페 한 구석에서 만나는 디저트로, SNS를 통해 공유되는 라이프스타일로, 건강과 미식의 경계를 잇는 새로운 문화로 자리잡아가고 있다.
+							최근 ‘저속 노화’와 ‘건강한 식습관’이 새로운 라이프스타일로 자리 잡으면서, 일상 속에서 혈당 관리를 실천하는 젊은 세대가 늘고 있다. 예전에는 ‘혈당’ 하면 당뇨병 환자에게만 중요한 수치로 여겨졌지만, 이제는 하루의 컨디션과 에너지, 장기적인 건강을 가늠하는 지표로 인식되고 있다.
 						</p>
-						<h3>발효의 재발견!</h3>
 						<h2>
-							힙해진 <strong>한</strong> 모금과 <br class="mobile"><strong>한</strong> 스푼
+							건강을 넘어<br>몸의 리듬을 세우는 문화로
 						</h2>
 						<div class="article-meta">
 							<span class="b">글</span>
 							<span>장희주</span>
-							<!-- <span class="pipe">ㅣ</span>
-							<span class="b">자료</span>
-							<span>식품의약품안전처, 질병관리청 국가건강정보포털</span> -->
 						</div>
 					</div>
 					<div class="article-header-image">
@@ -247,100 +268,83 @@ br.mobile {
 		</section>
 		<section class="article-body">
 			<div class="article-body-wrap">
-				<div class="trand-box-wrap">
-					<div class="trand-box box-1">
-						<figure class="trand-box-image">
-							<img src="contents/sub_20_image_1.jpg">
-						</figure>
-						<div class="trand-box-top">
-							<figure class="trand-box-icon">
-								<img src="contents/sub_20_icon_1.png">
-							</figure>
-							<div class="trand-box-top-text">
-								<span>골라먹는 재미가 더해지다,</span><br class="mobile">
-								전통주
-							</div>
-							<figure class="trand-box-top-image t-img-1">
-								<img src="contents/sub_20_image_4.png">
-							</figure>
-						</div>
-						<div class="trand-box-text">
-							<p>
-								전통주는 대표적인 발효 음식이다. 쌀이나 보리 같은 곡물에 누룩을 넣어 발효시키면, 당분이 알코올로 전환되면서 술이 탄생한다. 이 과정에서 효모와 미생물은 술에만 깃든 향과 풍미를 더하고, 발효의 깊이를 만들어낸다. 즉, <span>단순한 음료가 아니라 곡물과 미생물이 오랜 시간 빚어내는 발효의 결정체가 바로 전통주인 것이다.</span>
-							</p> 
-							<p>
-								최근 들어 MZ 세대에게 전통주는 ‘힙한 술’로 통한다. 다양한 양조장에서 개성 넘치는 전통주들이 쏟아져 나오면서, 특별함을 추구하는 MZ 세대는 전통주 속에서 나만의 취향을 발견하고 즐거움을 누린다. 전통주 한 잔에는 남들과 다른 나를 표현할 수 있는 작은 자유가 숨어 있는 셈이다.
-							</p>
-							<p>
-								전통주를 만나는 방법도 한층 가까워졌다. 식당에서 음식에 맞춰 골라 즐길 수도 있고, 마트 보틀숍 코너에서 가볍게 집어 올 수도 있다. 새로운 시도를 원한다면 전통주 전문 보틀숍을 찾아가거나, 마음에 드는 술을 온라인에서 주문해 집으로 받아볼 수도 있다. 특히 온라인 구매가 가능한 술이라는 점은, 다른 주류와는 다른 전통주만의 매력 포인트다.
-							</p>
-						</div>
+				<div class="trand-box box-1">
+					<div class="trand-box-title">
+						<h3>
+							혈당, 건강을 넘어 건강의 언어가 되다 
+						</h3>
 					</div>
-					<div class="trand-box box-2">
-						<figure class="trand-box-image">
-							<img src="contents/sub_20_image_2.jpg">
-						</figure>
-						<div class="trand-box-top">
-							<figure class="trand-box-icon">
-								<img src="contents/sub_20_icon_2.png">
-							</figure>
-							<div class="trand-box-top-text">
-								<span>
-									건강한 탄산,
-								</span><br class="mobile">
-								콤부차
-							</div>
-							<figure class="trand-box-top-image t-img-2">
-								<img src="contents/sub_20_image_5.png">
-							</figure>
-						</div>
-						<div class="trand-box-text">
-							<p>
-								최근 MZ 세대의 키워드는 ‘즐겁고 맛있게 건강 관리’다. 몸에 좋기만 한 음식보다는, 맛있으면서도 부담 없이 즐길 수 있는 건강식을 찾는 것이 이들의 방식이다. 그래서 인스턴트나 고칼로리 음식 대신, 기분 좋게 즐길 수 있는 새로운 선택지가 각광받고 있다.
-							</p>
-							<p>
-								그 중심에 떠오른 것이 바로 콤부차다. ‘건강한 탄산’이라 불리는 이 발효 음료는 톡 쏘는 청량감과 과일처럼 다채로운 맛으로 MZ 세대의 입맛을 단번에 사로잡았다. 그렇다면 콤부차는 어떻게 만들어질까?
-							</p>
-							<p>
-								콤부차의 시작은 단순하다. 녹차든 홍차든, 같은 차나무 잎을 발효와 산화 정도에 따라 구분해 우려낸 차 한 잔. 여기에 설탕과 유기산, 그리고 핵심 재료인 스코비(SCOBY)를 넣으면 1차 발효가 시작된다. 스코비는 효모와 박테리아가 공생하는 발효 균체로, 발효 과정에서 유산균과 천연 탄산을 만들어내며 표면에 말랑거리는 막을 형성한다. 시간이 지날수록 스코비는 두꺼워지고, 차는 더욱 깊은 풍미를 갖게 된다. 여기에 과일이나 허브를 더해 2차 발효를 거치면, 콤부차는 쿰쿰한 발효 향 대신 새콤달콤하고 상쾌한 맛으로 재탄생한다. 약 2~3주의 기다림 끝에 완성된 한 잔의 콤부차는 단순한 음료를 넘어, 건강과 취향을 동시에 만족시키는 ‘힙한 탄산’이 된다.
-							</p>
-							<p>
-								무엇보다 주목할 점은 발효 과정에서 만들어지는 유산균과 다양한 유익 성분이다. <span>우리가 익히 아는 프로바이오틱스(유산균)뿐 아니라, 그 먹이가 되는 프리바이오틱스, 그리고 유산균이 만들어내는 대사산물인 포스트바이오틱스까지 함께 생성된다.</span> 이 세 가지가 어우러져 장 환경 개선과 면역력 강화에 도움을 주면서, 콤부차는 맛과 건강을 동시에 책임지는 음료로 자리매김했다.
-							</p>
-						</div>
+					<div class="trand-box-in">
+						<p>
+							혈당(血糖)은 말 그대로 ‘혈액 속에 포함된 당’, 즉 포도당의 농도를 뜻한다. 포도당은 우리가 섭취한 탄수화물이 분해되어 만들어지는 물질로, 뇌와 적혈구가 움직이는 데 필요한 에너지의 근원이 된다. 병원에서 “혈당 검사를 했다”는 말은 혈액 속 포도당의 농도를 측정했다는 뜻으로, 이 수치는 몸의 대사 상태를 보여주는 일종의 ‘건강 신호등’ 역할을 한다.
+						</p>
+						<p>
+							과거에는 혈당 관리가 당뇨병 환자에게만 필요한 것으로 여겨졌지만, 최근에는 청년층 사이에서도 ‘조기 혈당 관리’가 일상화되고 있다. 설탕 대신 대체당을 사용하고, 백미 대신 현미나 잡곡을 선택하며, 음료 대신 무가당 커피나 차를 마시는 식이다. 
+						</p>
+						<p>
+							이처럼 이제 혈당 관리는 단순한 습관을 넘어 대사 건강을 지키는 새로운 생활 루틴으로 자리 잡았다. 불안정한 혈당은 피로와 무기력감, 체중 증가를 초래하고, 심혈관 질환·고혈압·지방간 등 각종 만성질환의 위험을 높이기 때문. 결국 혈당 관리야말로 건강한 삶으로 나아가는 첫걸음이다.
+						</p>
+						<p>
+							그렇다면 혈당은 왜 높아질까? 식사를 하면 음식 속 탄수화물이 포도당으로 분해되어 혈액에 흡수된다. 이때 췌장에서 분비되는 인슐린이 포도당을 세포 속으로 옮겨 에너지로 쓰게 한다. 그러나 인슐린 분비가 부족하거나 기능이 저하되면 포도당이 세포 안으로 들어가지 못하고 혈액에 남게 되어 혈당이 상승하게 되는 것이다. 즉 과식이나 단 음식의 잦은 섭취, 운동 부족 등이 혈당을 높이는 주요 원인이다.
+						</p>
 					</div>
-					<div class="trand-box box-3">
-						<figure class="trand-box-image">
-							<img src="contents/sub_20_image_3.jpg">
+				</div>
+				<div class="trand-box box-2">
+					<div class="trand-box-title">
+						<h3>
+							건강한 하루를 위한 작은 습관 
+						</h3>
+					</div>
+					<div class="trand-box-in">
+						<p>
+							혈당을 안정시키기 위해서는 ‘기본’만 지키면 된다. ‘적당히 먹고 꾸준히 움직이는 것’이 가장 중요하다. 탄수화물 섭취를 조절하고, 식이섬유가 풍부한 음식을 선택하며, 식사 후 가벼운 산책이나 규칙적인 유산소 운동을 하는 것이 도움이 된다. 최근에는 혈당 측정기를 통해 실시간 변화를 확인하고, 그 데이터를 바탕으로 식단을 조정하는 ‘데이터 기반 건강 관리’도 늘고 있다.
+						</p>
+						<figure>
+							<img src="contents/sub_20_image_1.png">
 						</figure>
-						<div class="trand-box-top">
-							<figure class="trand-box-icon">
-								<img src="contents/sub_20_icon_3.png">
-							</figure>
-							<div class="trand-box-top-text">
-								<span>
-									꾸덕함이 매력,
-								</span><br class="mobile">
-								그릭 요거트
+						<div class="trand-section">
+							<div class="trand-section-title">
+								<h4>01</h4>
+								<div>
+									균형 잡힌 식단
+								</div>
 							</div>
-							<figure class="trand-box-top-image t-img-3">
-								<img src="contents/sub_20_image_6.png">
-							</figure>
+							<div class="trand-section-in">
+								<p>
+									혈당 관리를 위해서는 탄수화물, 단백질, 지방이 고르게 균형을 이룬 식단이 기본이다. 특히 탄수화물은 흰쌀밥보다는 현미·보리·잡곡 등 정제되지 않은 곡류가 좋으며, 정제당이나 가공 밀가루, 설탕이 많이 들어간 음식은 피하는 것이 바람직하다. 지방은 동물성 지방이나 트랜스지방보다 식물성 지방을 선택하는 것이 좋다. 대표적으로 등푸른 생선에 풍부한 오메가-3 지방산, 올리브유, 들기름 등이 있다. 단백질은 콩이나 두부 같은 식물성 단백질 또는 기름기가 적은 살코기로 섭취하고, 여기에 채소나 해조류 등 식이섬유가 풍부한 식품을 충분히 곁들이면 좋다.
+								</p>
+								<div class="trand-tag">
+									<span>식이섬유가 풍부한 식품</span>
+									<span>정제되지 않은 곡류</span>
+									<span>식물성 지방</span>
+								</div>
+								<figure>
+									<img src="contents/sub_20_image_2.png">
+								</figure>
+							</div>
 						</div>
-						<div class="trand-box-text">
-							<p>
-								아침 식사 대용으로, 혹은 다이어트 식품으로. 요즘 유튜브나 인스타그램에서 자주 보이는 메뉴가 있다. 바로 꾸덕한 질감의 그릭 요거트다.
-							</p>
-							<p>
-								요거트는 대표적인 발효 식품 가운데 하나다. 유럽에서 시작해 지금은 전 세계인에게 사랑받는 건강식으로 자리 잡았다. 풍부한 유산균 덕분에 장 건강을 지켜주는 효자 식품이기도 하다. 하지만 요거트라고 다 같은 요거트가 아니다. 그리스와 지중해 연안에서 전통 방식으로 만들어온 요거트를 그릭 요거트라 부르는데, 일반 요거트보다 수분을 덜어내는 과정이 까다롭지만 그만큼 단백질이 풍부해 다이어터들에게는 최고의 식품으로 꼽힌다. 
-							</p>
-							<p>
-								그릭 요거트의 장점은 다양하다. 칼슘과 인이 풍부해 뼈 건강에 도움이 되고, 장 건강을 지켜주는 프로바이오틱스가 가득해 변비 예방에도 탁월하다. 꾸덕한 질감과 진한 맛은 일반 요거트와는 또 다른 매력. 단맛은 덜하고 신맛이 강해 깔끔하며, 유당 함유량이 낮아 유당 불내증이 있는 사람도 부담 없이 즐길 수 있다.
-							</p>
-							<p>
-								그릭 요거트의 또 다른 매력은, 다양하게 즐길 수 있다는 데 있다. 소스나 수프로 즐기고, 빵에 발라 스프레드처럼 곁들이기도 한다. 단순한 디저트가 아니라, 건강을 동시에 챙길 수 있는 한 그릇. 그래서 오늘도 많은 이들이 아침 식탁 위에 ‘꾸덕한 그릭 요거트’를 올린다. 
-								<i class="icon_last"></i>
-							</p>
+						<div class="trand-section section-2">
+							<div class="trand-section-title">
+								<h4>02</h4>
+								<div>
+									식후 15분의 기적!<br>가벼운 운동이 만드는 혈당 안정 효과
+								</div>
+							</div>
+							<div class="trand-section-in">
+								<p>
+									혈당은 음식을 섭취한 뒤 상승하기 때문에 식후 30분에서 1시간 사이에 가장 높은 수치를 보인다. 이때 가벼운 운동만으로도 혈당이 급격하게 오르는 ‘혈당 스파이크’를 예방할 수 있다. 미국당뇨병학회 학술지 DIABETES CARE에 따르면, 식사 후 15분간 걷는 것이 식사 전 아침에 45분간 걷는 것보다 혈당 개선 효과가 더 크다고 보고된 바 있다. 
+								</p>
+								<p>
+									운동은 무리한 고강도 운동보다는 산책과 같은 저강도 운동이 적합하다. 이때 근육이 움직이면서 음식으로 섭취한 포도당을 에너지원으로 사용하기 때문에, 혈당이 자연스럽게 조절되는 효과가 나타난다. 특히 혈중 포도당이 소비되지 않고 남으면 간에서 중성지방으로 전환되어 체내에 축적되는데, 식후 가벼운 운동은 이 과정을 미리 차단해 지방 축적을 예방하는 데도 도움이 된다.
+								</p>
+								<div class="trand-tag">
+									<span>고강도 운동 X</span>
+									<span>저강도 운동 O</span>
+								</div>
+								<figure>
+									<img src="contents/sub_20_image_3.png">
+								</figure>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -127,6 +127,12 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Cafe24Surround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
     font-family: 'HallymMjo-Regular';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymMjo-Regular.woff2') format('woff2');
     font-weight: 400;
