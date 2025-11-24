@@ -230,7 +230,8 @@ figure img {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	font-size: 1.4rem;
-	color: #fff;
+	color: white;
+  mix-blend-mode: difference;
 	max-width: 120rem;
 	margin: 0 auto;
 }
