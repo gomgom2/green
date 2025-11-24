@@ -434,8 +434,8 @@
     content: '';
     display: block;
     width: 5rem;
-    height: 5rem;
-    background-image: url(../images/sub_23_icon.png);
+    height: 5.5rem;
+    background-image: url(../contents/sub_23_icon.png);
     background-size: cover;
     position: absolute;
     top: -6rem;
