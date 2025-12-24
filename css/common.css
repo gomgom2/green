@@ -187,6 +187,7 @@ figure img {
 	color: #fff;
 	background-color: var(--main-color);
 	z-index: 100;
+	top: 0;
 }
 
 .nav-container {
