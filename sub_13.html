@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>그린매거진</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="그린매거진">
 	<meta property="og:description" content="그린매거진 웹진을 만나보세요.">
@@ -14,194 +15,279 @@
 	<link rel="stylesheet" type="text/css" href="css/sub.css?ver=202502" />
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/script2.js?ver202502"></script>
-<style>
-	:root {
-		--main-color: #75AF9B;
-		--text-color-small: #fff;
-		--text-color-title: #B2521D;
-	}
-body {
-	background-color: var(--main-color);
-}
-.header-dual .article-header-container {
-	grid-template-columns: 1.25fr 1fr;
-}
-.header-dual .article-header-text {
-	order: 2;
-	padding-right: 0;
-	padding-bottom: 0;
-}
-.article-header-image {
-	order: 1;
-}
-.article-header-text h2 {
-	font-size: 4rem;
-}
-.article-header-text h4 {
-	font-size: 3rem;
-	font-weight: 700;
-}
-.header-dual .article-header-image figure img {
-	width: 100%;
-	height: auto;
-	top: auto;
-	left: 50%;
-	bottom: 2rem;
-	transform: translateX(-50%);
-}
-.article-text h4 {
-	color: var(--text-color-title);
-}
-.article-text p {
-	color: var(--text-color-small);
-}
-.article-text h5 {
-	color: var(--text-color-title);
-	text-decoration: none;
-	margin-bottom: 0;
-}
-.article-image.big-image,
-.article-image.qr-image {
-	width: 120%;
-}
-.article-image.small-image {
-	width: 50%;
-	transform: translateX(-30%);
-}
-.article-image.small-image2 {
-	width: 30%;
-	transform: translateX(-100%);
-}
-.article-image.dual-image .article-image-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 2rem;
-}
-.article-image.no-mg {
-	margin-bottom: 0;
-}
-.article-image + .article-image.dual-image {
-	margin-top: 2rem;
-}
-.article-image.border figure {
-	border: 5px solid #fff;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-	position: relative;
-}
-.article-image.border figure figcaption {
-	position: absolute;
-	right: 1rem;
-	bottom: 1rem;
-	color: #fff;
-}
-.article-image-text .article-image-text-text {
-    justify-content: flex-end;
-    padding-bottom: 0.2rem;
-}
-.article-image.qr-image .article-image-container {
-	display: grid;
-	grid-template-columns: 1.5fr 10fr;
-	gap: 1rem;
-	align-items: center; 
-}
-.table-normal {
-    margin: 3rem 0;
-}
-.table-normal td {
-    border: 1px solid #fff;
-    font-size: 1.5rem;
-    line-height: 1.4;
-    padding: 1rem;
-    vertical-align: middle;
-    color: #fff;
-}
-.table-normal tbody tr td:first-child {
-	border-top-color: var(--text-color-title);
-	border-bottom-color: var(--main-color);
-	border-left-color: var(--text-color-title);
-	border-right-color: var(--main-color);
-	border-right-width: 0.4rem;
-	background-color: var(--text-color-title);
-	color: var(--main-color);
-	font-weight: 700;
-}
-.table-normal tbody tr:nth-last-child(1) td:first-child {
-	border-bottom-color: var(--text-color-title);
-}
-.table-normal tbody tr td:nth-last-child(1) {
-	border-right-color: var(--main-color);
-}
-.caption {
-	margin-top: 1rem;
-}
-.caption h4 {
-	font-size: 1.6rem;
-	margin: 0;
-}
-.caption p {
-	font-size: 1.4rem;
-	margin: 0;
-}
-.article-image-text {
-	display: flex;
-	gap: 1rem;
-}
-.article-image-text-text {
-	flex: 1;
-	margin-right: 1rem;
-}
-.qr-text {
-	flex-shrink: 0;
-	width: 8rem;
-	color: #785880;
-	font-family: GmarketSansMedium;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background-color: #fff;
-	border-radius: 0.5rem;
-	gap: 0;
-}
-.article-image-text-qr {
-	flex-shrink: 0;
-	width: 6rem;
-}
-@media (max-width:767px) {
-	.article-text {
-		padding-top: 0rem;
-		margin-top: 3rem;
-	}
-	.article-image {
-		width: 100%;
-	}
-	.article-image.small-image {
-		transform: translateX(-50%);
-	}
-	.insight-table {
-		width: 100%;
-	}
-	.insight-table table td {
-		font-size: 1.3rem;
-	}
-	.header-dual .article-header-container {
-		display: grid;
-		grid-template-columns: 1fr;
-	}
-	.header-dual .article-header-text {
-		order: 1;
-	}
-	.article-image.qr-image .article-image-container {
-		grid-template-columns: 1fr 3.5fr;
-	}
-	.footer-bottom-text span, .copyright {
-        color: #fff;
-    }
-}
+	<style>
+		:root {
+			--main-color: #64859D;
+			--text-color-small: #fff;
+			--text-color-title: #811711;
+		}
 
-</style>
+		body {
+			background-color: var(--main-color);
+		}
+
+		.header-dual .article-header-wrap {
+			height: 75vh;
+		}
+
+		.header-dual .article-header-container {
+			grid-template-columns: 1.25fr 1fr;
+		}
+
+		.header-dual .article-header-text {
+			order: 2;
+			padding-right: 0;
+			padding-bottom: 0;
+		}
+
+		.article-header-image {
+			order: 1;
+		}
+
+		.article-header-text h2 {
+			font-size: 4rem;
+		}
+
+		.article-header-text h4 {
+			font-size: 3rem;
+			font-weight: 700;
+		}
+
+		.header-dual .article-header-image figure img {
+			width: 100%;
+			height: auto;
+			top: auto;
+			left: 50%;
+			bottom: 2rem;
+			transform: translateX(-50%);
+		}
+
+		.article-body {
+			margin-top: 10rem;
+		}
+
+		.article-text h4 {
+			color: var(--text-color-title);
+		}
+
+		.article-text p {
+			color: var(--text-color-small);
+		}
+
+		.article-text h5 {
+			color: var(--text-color-title);
+			text-decoration: none;
+			margin-bottom: 0;
+		}
+
+		.article-image.big-image,
+		.article-image.qr-image {
+			width: 120%;
+		}
+
+		.article-image.small-image {
+			width: 50%;
+			transform: translateX(-30%);
+		}
+
+		.article-image.small-image2 {
+			width: 30%;
+			transform: translateX(-100%);
+		}
+
+		.article-image.dual-image .article-image-container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 2rem;
+		}
+
+		.article-image.no-mg {
+			margin-bottom: 0;
+		}
+
+		.article-image+.article-image.dual-image {
+			margin-top: 2rem;
+		}
+
+		.article-image.border figure {
+			border: 5px solid #fff;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+			position: relative;
+		}
+
+		.article-image.border figure figcaption {
+			position: absolute;
+			right: 1rem;
+			bottom: 1rem;
+			color: #fff;
+		}
+
+		.article-image-text .article-image-text-text {
+			justify-content: flex-end;
+			padding-bottom: 0.2rem;
+		}
+
+		.article-image.qr-image .article-image-container {
+			display: grid;
+			grid-template-columns: 1.5fr 10fr;
+			gap: 1rem;
+			align-items: center;
+		}
+
+		.table-normal {
+			margin: 3rem 0;
+		}
+
+		.table-normal td {
+			border: 1px solid #fff;
+			font-size: 1.5rem;
+			line-height: 1.4;
+			padding: 1rem;
+			vertical-align: middle;
+			color: #fff;
+		}
+
+		.table-normal tbody tr td:first-child {
+			border-top-color: var(--text-color-title);
+			border-bottom-color: var(--main-color);
+			border-left-color: var(--text-color-title);
+			border-right-color: var(--main-color);
+			border-right-width: 0.4rem;
+			background-color: var(--text-color-title);
+			color: var(--main-color);
+			font-weight: 700;
+		}
+
+		.table-normal tbody tr:nth-last-child(1) td:first-child {
+			border-bottom-color: var(--text-color-title);
+		}
+
+		.table-normal tbody tr td:nth-last-child(1) {
+			border-right-color: var(--main-color);
+		}
+
+		.caption {
+			margin-top: 1rem;
+		}
+
+		.caption h4 {
+			font-size: 1.6rem;
+			margin: 0;
+		}
+
+		.caption p {
+			font-size: 1.4rem;
+			margin: 0;
+		}
+
+		.article-image-text {
+			display: flex;
+			gap: 1rem;
+		}
+
+		.article-image-text-text {
+			flex: 1;
+			margin-right: 1rem;
+		}
+
+		.qr-text {
+			flex-shrink: 0;
+			width: 8rem;
+			color: #785880;
+			font-family: GmarketSansMedium;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background-color: #fff;
+			border-radius: 0.5rem;
+			gap: 0;
+		}
+
+		.article-image-text-qr {
+			flex-shrink: 0;
+			width: 6rem;
+		}
+
+		.box {
+			padding: 3rem;
+			text-align: center;
+			color: #59859F;
+			font-size: 2.6rem;
+			font-family: GowunDodum-Regular;
+			background-color: rgba(255, 255, 255, 0.7);
+			border-radius: 1rem;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			margin: 5rem 0;
+		}
+
+		.box div {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.box .big {
+			font-size: 3rem;
+		}
+
+		.box .small {
+			font-size: 2rem;
+		}
+
+		.article-image-container .half {
+			width: 50%;
+			transform: translateX(90%);
+		}
+
+
+
+		@media (max-width:767px) {
+			.article-text {
+				padding-top: 0rem;
+				margin-top: 3rem;
+			}
+
+			.article-image {
+				width: 100%;
+			}
+
+			.article-image.small-image {
+				transform: translateX(-50%);
+			}
+
+			.insight-table {
+				width: 100%;
+			}
+
+			.insight-table table td {
+				font-size: 1.3rem;
+			}
+
+			.header-dual .article-header-container {
+				display: grid;
+				grid-template-columns: 1fr;
+			}
+
+			.header-dual .article-header-text {
+				order: 1;
+			}
+
+			.article-image.qr-image .article-image-container {
+				grid-template-columns: 1fr 3.5fr;
+			}
+
+			.footer-bottom-text span,
+			.copyright {
+				color: #fff;
+			}
+		}
+	</style>
 </head>
+
 <body>
 	<header class="header" id="header"></header>
 	<main>
@@ -211,22 +297,24 @@ body {
 					<div class="article-header-text">
 						<span>Theme Insight</span>
 						<h2>
-							국산 농산물로 여는<br>기능성 식의약 소재의 미래
+							RDA승용마,<br>
+							과학과 현장이 만든 새로운 가능성
 						</h2>
 						<!-- <h4>밥상 위의 작은 혁명</h4> -->
 						<p>
-							농촌진흥청은 국내 농산물에 함유된 기능성 성분을 과학적으로 분석하고, 그 결과를 토대로 식의약 소재로 발전시켜 국산 자원의 새로운 가치를 창출하고 있다. 플라보노이드·페놀산·사포닌 등 주요 기능성분 DB 구축에서부터, 참당귀·팥순·흑삼 등 기능성 원료의 인체 적용 시험, 그리고 감초·황기·병풀 등 국산 작물의 재배 표준화까지. 농촌진흥청은 ‘기능성 식의약 소재 국산화’를 통해 국민 건강과 미래 산업의 경쟁력을 동시에 키워가고 있다.
+							국산 승용마 ‘RDA승용마’가 탄생하기까지는 단순한 품종 개량을 넘어, 한국의 지형·생활문화·승마 환경을 고려한 세밀한 연구와 현장 실증이 함께했다. 제주 초지에서의
+							방목 사육, 공공부문 최초 도입을 통한 실용성 검증, 그리고 말의 성장 과정까지 분석하는 과학 연구가 더해지며 국산 승용마 개발은 새로운 단계에 접어들고 있다.
 						</p>
 						<div class="article-meta">
 							<span class="b">글</span>
 							<span>장희주</span><br>
 							<span class="b">도움</span>
-							<span>특용작물이용과 한신희 농업연구관</span>
+							<span>난지축산연구센터 최재영 농업연구사</span>
 						</div>
 					</div>
 					<div class="article-header-image">
 						<figure>
-							<img src="contents/sub_13_top.png" />
+							<img src="contents/sub_13_top.jpg" />
 						</figure>
 					</div>
 				</div>
@@ -236,99 +324,104 @@ body {
 			<div class="article-body-wrap">
 				<div class="article-text">
 					<h4>
-						한국형 농식품 기능성분 DB 
+						RDA승용마의 탄생
 					</h4>
 					<p>
-						농촌진흥청은 국민의 건강한 식생활을 지원하고, 식품의 기능 성분에 대한 정보 요구를 충족하기 위해 ‘한국형 농식품 기능성분 DB’를 농식품올바로를 통해 공개하고 있다. 이 DB는 우리 농산물에 함유된 주요 기능성 성분의 정보를 집약한 것으로, 현재 플라보노이드, 페놀산, 사포닌 등 국민적 관심이 높은 3대 기능 성분이 포함돼 있다.
+						국산 승용마 RDA승용마는 우리 고유 품종인 제주마와 경주마 ‘더러브렛’을 교배해 한국인의 체형과 생활 승마 환경에 맞춰 개량한 말이다. 제주마는 체고 115~125cm로
+						작으나 강건한 특성이 있으며, 더러브렛은 160cm 이상으로 크고 민첩해 서로 다른 장점을 갖고 있다. 농촌진흥청은 두 품종이 가진 강점을 조합해 성마 기준 체고
+						145~150cm를 목표로 개량을 진행 중이다.
 					</p>
-					<div class="article-image">
-						<div class="article-image-container">
-							<figure>
-								<img src="contents/sub_13_image_1.png">
-							</figure>
+					<p>
+						국산 승용마 RDA승용마는 한국인 체형에 잘 맞는 크기와 성격을 갖춰 생활 승마를 비롯해 재활 승마 분야에서도 활용 가능성이 높다. 무엇보다 지속적인 기술 개발과 현장
+						협력을 통해 국민이 더 쉽게 승마를 접하고, 일상 속에서 말과 함께하는 문화가 뿌리내릴 수 있도록 농촌진흥청 국립축산과학원은 다음 단계를 준비하고 있다.
+					</p>
+					<div class="box">
+						<div>제주마 &times; 더러브렛</div>
+						<div>=</div>
+						<div>
+							<span class="big">RDA승용마</span>
+							<span class="small">Rural Development Administration</span>
 						</div>
 					</div>
-					<h5>
-						① 플라보노이드 DB
-					</h5>
-					<p>
-						시금치, 양파 등 플라보노이드를 많이 함유하고 있는 국내 농산물 268점에 함유된 476종의 플라보노이드 성분 정보를 제공한다. 플라보노이드는 항산화, 항염, 면역 조절 등 다양한 생리활성을 지닌 물질로 알려져 있으며, DB에는 플라보놀(케르세틴, 캠페롤 등), 플라바논(헤스페리틴, 나린제닌 등), 이소플라본(다이드제인, 제니스틴 등), 플라바놀(카테킨, 에피카테킨 등), 플라본(루테올린, 크리신 등)의 상세 정보가 수록돼 있다.
-					</p>
-					<h5>
-						② 페놀산 DB
-					</h5>
-					<p>
-						페놀산의 종류와 분류, 화학구조, 질량, 자외선 흡광 패턴 등 화학적 특성뿐 아니라, 한국인이 실제 섭취하는 농식품 308점에 함유된 171종의 페놀산 함량 분석 결과가 포함돼 있다. 이 데이터는 우리 농산물의 기능적 가치를 평가하고, 건강기능식품 및 고부가가치 식품 소재 발굴에 활용될 수 있는 기초 자료로 주목받고 있다.
-					</p>
-					<h5>
-						③ 사포닌 DB
-					</h5>
-					<p>
-						고추, 도라지, 인삼, 콩 등 사포닌이 풍부한 국내 농식품 자원 169점을 대상으로 구축됐다. 이 DB에는 총 539종의 사포닌 개별 유도체 화합물에 대한 정보가 수록되어 있으며, 각 화합물의 일반명, 분류, 분자식, 분자량, 화학구조, 배당체 수, 정량값 등이 포함된다.
-					</p>
-					<p>
-						한국형 농식품 기능성분 DB는 농식품올바로 누리집에 접속해 ‘식품영양·기능성정보 → 기능성성분 검색’ 메뉴를 통해 누구나 확인할 수 있다. 한편, 우리 국민이 즐겨 섭취하는 주요 농식품 700여 점을 대상으로 안토시아닌, 리그난, 알칼로이드, 인지질, 카로티노이드, 파이토스테롤, 식이황화합물 등 7개 신규 기능성분 DB를 추가로 구축하고 있으며, 향후 국민에게 제공되는 기능성분 정보 제공 범위를 지속적으로 확대해 나갈 계획이다.
-					</p>
-					<div class="article-image-text">
-						<figure class="article-image-text-text">
-							<img src="contents/sub_13_text_1.png">
-						</figure>
-						<figure class="article-image-text-qr">
-							<img src="contents/sub_13_qr_1.png">
-						</figure>
-					</div>
 					<h4>
-						기능성 식의약 소재 ‘국산화’로<br>건강 산업의 미래를 열다
+						자연 속에서 자라는 말,<br>방목 사육의 효과
 					</h4>
 					<p>
-						농촌진흥청은 국내 농산물에서 유래한 기능성 식의약 소재의 국산화를 목표로, 건강기능식품 원료 인정과 천연의약품 소재 개발을 활발히 추진하고 있다. 2024년까지 14건의 기능성 원료를 인정받았으며, 2027년 20건, 2030년 27건으로 확대할 계획이다. 가장 최근 새롭게 기능성을 인정받은 원료로는 참당귀, 팥순, 흑삼 등이 있다. 이들 소재는 모두 국내 농산물을 기반으로 한 고유 자원으로, 해외 의존도가 높았던 기능성 원료 시장에서 국산 대체 소재로의 성장 가능성을 보여준다.
+						RDA승용마는 4월부터 11월까지 제주도 중산간 지역의 약 247헥타르 초지에서 방목 사육되고 있다. 넓은 자연 환경에서 자유롭게 생활하는 방식은 축사 사육에 비해 스트레스
+						관련 호르몬 수치를 낮춰 말의 스트레스를 효과적으로 완화한다. 또한 무리 생활을 통해 사회적 상호작용이 활성화되면서 이상 행동이 줄어드는 등 긍정적인 행동 변화도 관찰되고
+						있다.
+					</p>
+					<p>
+						자연 초지에서 자란 말은 신선한 풀을 스스로 뜯어 먹으며 양질의 단백질, 비타민, 무기질 등 다양한 영양소를 고르게 섭취해 보다 균형 잡힌 영양 상태를 유지한다. 움직임이
+						자연스럽게 늘어나면서 전신 근육이 발달하고, 심폐 기능이 강화되는 점도 방목 사육의 중요한 장점이다.
+					</p>
+					<p>
+						특히 방목 사육은 사육 효율 면에서도 이점이 있다. 축사에서 관리할 때보다 알곡 사료와 건초 급여량이 크게 줄어 관리 비용 절감 효과까지 기대할 수 있다. 자연 환경 속에서
+						자란 말일수록 건강하고 강인해지는 이유가 여기에 있다.
 					</p>
 					<div class="article-image">
 						<div class="article-image-container">
+							<figure class="half">
+								<img src="contents/sub_13_image_1.png">
+							</figure>
 							<figure>
 								<img src="contents/sub_13_image_2.png">
 							</figure>
-						</div>
-					</div>
-					<h5>
-						① 참당귀·황기 복합물 — 전립선 건강 개선
-					</h5>
-					<p>
-						전립선 건강 기능성 제품의 대부분은 해외 원료에 의존하고 있지만, 농촌진흥청은 국산 참당귀와 황기 복합물을 이용해 대체 가능성을 열었다. ㈜서흥헬스케어와 함께 세브란스병원·동탄성심병원 등과의 공동 인체적용시험에서, 만40~75세 남성 100명을 대상으로 12주간 참당귀·황기 복합물(2:1 비율)을 섭취시킨 결과, 잔뇨감·야간뇨 등 주요 증상이 유의적으로 개선됐다. 이는 복합물이 5-알파 환원효소(5α -reductase) 활성을 억제해 전립선 비대를 유발하는 호르몬 ‘DHT(디하이드로테스토스테론)’ 생성을 줄였기 때문으로 분석된다. 이 연구 결과를 바탕으로 해당 복합물은 식품의약품안전처의 ‘전립선 건강’ 개별인정형 원료(식약처 제2024-28호)로 공식 등록됐다.
-					</p>
-					<div class="article-image">
-						<div class="article-image-container">
 							<figure>
 								<img src="contents/sub_13_image_3.png">
 							</figure>
 						</div>
 					</div>
-					<h5>
-						② 팥순 — 체지방 감소
-					</h5>
+					<h4>
+						RDA승용마,<br>
+						제주 기마대에 첫 공식 투입되다
+					</h4>
 					<p>
-						팥을 약 11일간 싹 틔운 ‘팥순’에는 체지방 감소 효과가 있는 아주키사포닌 II(Azukisaponin II)이 다량 함유돼 있다. 농촌진흥청과 경북대 권은영 교수팀이 공동으로 진행한 실험에서, 지방세포에 독성이 없는 농도로 팥순 추출물을 처리한 결과 지방 형성률이 36% 감소했다. 또한 10주간 팥순 추출물을 섭취한 실험쥐는 대조군보다 체중이 약 14%, 체지방이 25% 감소, 반면 근육량은 10% 증가했다. 이는 팥순이 지질합성과 흡수를 억제하고 근육 내 지방산 산화를 촉진하여 에너지 소비를 높인 결과로, 비만 개선 및 체지방 감소에 효과적임이 과학적으로 입증됐다.
+						난지축산연구센터는 국산 승용마 RDA승용마의 공공부문 활용을 확대하기 위해 제주특별자치도와 업무협약(MOU)을 체결했다. 이번 협약을 통해 RDA승용마는 제주 주요
+						관광지에서 진행되는 제주특별자치도 자치경찰단 기마경찰대 순찰 업무에 공식 투입되며, 생활승마용으로 개량 중인 말이 공공안전 분야에 적용되는 첫 사례로 기록됐다.
+					</p>
+					<p>
+						두 기관은 협약에 따라 승용마 활용 성과를 공유하고, 실용화 기반 마련을 위한 홍보와 협력을 함께 추진할 예정이다. 이를 통해 공공 현장에서의 적응 성과를 검증하고, 국산
+						승용마의 사회적 활용도를 단계적으로 높여간다는 계획이다.
+					</p>
+					<p>
+						농촌진흥청은 이번 도입을 통해 RDA승용마의 공공 분야 활용 가능성을 확인했으며, 제주 자치경찰단의 기마대 운영 결과를 바탕으로 승용마 개량과 실용화 연구에 속도를 낼
+						방침이다. 특히 이번 협약은 국산 승용마가 공공안전 업무에 참여할 수 있는 길을 열었다는 점에서 의미가 크며, 향후 공공부문을 넘어 생활승마 분야까지 활용 영역을 확대하는
+						계기가 될 것으로 기대된다.
 					</p>
 					<div class="article-image">
 						<div class="article-image-container">
 							<figure>
 								<img src="contents/sub_13_image_4.png">
 							</figure>
-						</div>
-					</div>
-					<h5>
-						③ 흑삼 — 호흡기 건강 개선
-					</h5>
-					<p>
-						인삼을 세 번 이상 찌고 말려 만든 흑삼은 전립선 비대증 예방과 간 건강 개선 효과가 확인되며 주목받고 있다. 농촌진흥청은 전립선 비대증(BPH)을 유도한 동물 모델에 4주간 매일 흑삼 추출물을 경구 투여한 결과, 흑삼을 투여하지 않은 대조군에 비해 전립선 무게가 최대 16.9% 감소하였으며, 또한 세포 및 동물모델 실험에서 손상된 간 기능 지표(ALT, AST)가 약 80% 수준까지 회복되는 것으로 나타났다. 이번 연구를 통해 흑삼이 전립선 및 간 건강 유지에 도움을 줄 가능성이 과학적으로 확인되었으며, 2023년에는 제조 및 품질 관리 기준도 표준화되었다.
-					</p>
-					<div class="article-image">
-						<div class="article-image-container">
 							<figure>
 								<img src="contents/sub_13_image_5.png">
 							</figure>
 						</div>
-					</div>					
+					</div>
+					<h4>
+						말의 성장 비밀, 장내 미생물과 유전자의 연결고리를 찾다
+					</h4>
+					<p>
+						장내 미생물은 소화·면역 기능뿐 아니라 행동 발달에도 깊이 관여하며, 동물의 건강 전반을 좌우하는 핵심 요소로 알려져 있다. 주로 먹이 구성의 영향을 받지만, 최근에는
+						미생물과 유전자의 상호작용을 밝히는 연구가 늘고 있다. 농촌진흥청은 특히 성장 속도가 빠른 망아지 시기에 주목해, 필수 영양소 대사와 관련된 장내 미생물을 조절하는 유전자
+						분자표지 3종을 새롭게 발굴했다.
+					</p>
+					<p>
+						연구진은 4~7개월령 망아지의 장내 미생물에서 메타게놈 정보를 확보해 734종의 미생물을 동정했다. 메타게놈은 특정 환경에 존재하는 모든 미생물 유전체를 분석하는 방식으로,
+						차세대 염기서열 분석 기술을 기반으로 한다. 이어 장내 미생물의 발현량이 유전자형에 따라 달라지는 지점을 찾기 위해 단일염기다형성(SNP) 분석을 실시했다. SNP는 DNA
+						염기서열 중 특정 위치의 하나의 염기가 달라 생기는 변이를 의미하며, 이번 연구에서는 14개의 SNP가 장내 미생물과 상관성이 있는 것으로 나타났다. 이 변이에 의해
+						조절되는 미생물은 총 29종이었다.
+					</p>
+					<p>
+						추가 분석 결과, 14개 변이 중 3개(PIWIL3, VWA8, MFSD6)가 유전자 내부에 존재해 분자표지로 활용 가능한 위치에 있음이 확인됐다. 이 유전자들이 조절하는
+						미생물은 탄수화물, 에너지, 단쇄지방산 대사에 관여해 말의 키 성장과 체중 증가에 영향을 주는 것으로 나타났다.
+					</p>
+					<p>
+						농촌진흥청은 이번에 확보한 3종의 분자표지가 향후 성장 능력이 우수한 말 선발 기술로 이어질 것으로 기대하고 있다. 연구 결과는 국제학술지 Genes(IF 3.5)에
+						게재되며 학술적 의미를 인정받았다.
+						<i class="icon_last"></i>
+					</p>
 					<div class="article-image">
 						<div class="article-image-container">
 							<figure>
@@ -336,53 +429,10 @@ body {
 							</figure>
 						</div>
 					</div>
-					<h4>
-						국산 원료로 건강 산업의 뿌리를 세우다
-					</h4>
-					<p>
-						농촌진흥청은 수입 의존도가 높은 한약·건강기능식품·의약·향장용 원료 작물의 국산화와 산업화 기반 구축을 목표로, 재배기술 표준화와 농가–산업체 상생모델을 추진하고 있다. 무엇보다 이는 단순히 수입을 대체하는 수준을 넘어, 농가와 기업이 함께 성장하는 상생형 산업 생태계를 구축해 국산 식의약 소재 산업의 자립을 견인하고 있다.
-					</p>
-					<h5>
-						① 한약 원료 — 수입 대체 작물의 생산단지 조성
-					</h5>
-					<p>
-						한약재 대부분이 중국 등 외국산에 의존하는 현실을 개선하기 위해, 농촌진흥청은 국산 한약 원료 생산단지를 조성하고 있다. 2024년 2곳에서 시작해 2026년에는 3곳, 2027년까지는 7곳으로 확대할 예정이다.
-					</p>
-					<p>
-						현재 제천과 평택에서는 감초(5ha)를, 영천과 제천에서는 황해쑥(8ha)을 중심으로 지역 농가와 함께 생산이 이뤄지고  있다. 이 사업은 중앙–지방–산업체 간 협력체계를 기반으로,  국산 한약재의 안정적인 생산기반과 품질 표준화를 동시에 확보하기 위한 상생 모델이다.
-					</p>
-					<p>
-						특히 제천은 예로부터 약용작물 재배에 적합한 기후와 토양 조건을 고루 갖춘 지역으로, 약용작물 생산의 최적지로 손꼽힌다. 농촌진흥청은 이러한 지역적 강점을 살려 제천을 국내 육성 약용작물 신품종의 보급 및 산업화 거점 지역으로 육성하고 있다. 현재 제천에서는 농촌진흥청이 개발한 신품종을 중심으로 다양한 사업이 추진 중이다. 대표적으로 황기 ‘아성’ 재배 및 종자 채취 시범사업, 감초 ‘원감’·‘다감’ 전문생산단지 조성, 황해쑥 ‘평안애’ 건강기능식품 원료 계약재배 단지 구축 등이 있다. 
-					</p>
-					<div class="article-image">
+					<div class="article-image big-image">
 						<div class="article-image-container">
 							<figure>
 								<img src="contents/sub_13_image_7.png">
-							</figure>
-						</div>
-					</div>				
-					<h5>
-						② 건강기능식품 원료 — 산업체 수요 맞춤형 국산 소재 개발
-					</h5>
-					<p>
-						건강기능식품 산업에서의 국산 원료 경쟁력 확보를 위해, 산업체 수요를 반영한 기능성 작물 개발도 본격화되고 있다. 농촌진흥청은 2024년 1건에서 시작해 2026년 3건, 2027년에는 5건으로 확대할 계획이다. 현재 추진 중인 주요 소재는 등골나물(관절 건강), 멸가치(항비만), 식방풍(인지능 개선) 등으로, 산업체와 협력하여 생산기반과 표준화된 재배기술을 확보하고 있다. 이를 통해 지역 농가에는 새로운 소득 작물을, 산업체에는 안정적인 원료 공급망을 제공하는 상생형 생산모델을 완성해가고 있다.
-					</p>
-					<h5>
-						③ 의약·향장 원료 — 바이오소재 작물 재배기술 확립
-					</h5>
-					<p>
-						의약품과 화장품 산업에서도 천연 바이오소재의 국산화를 위한 노력이 이어지고 있다. 농촌진흥청은 2025년 1건에서 시작해 2026년 2건, 2027년에는 3건으로 확대하며, 주요 재배기술을 확립 중이다. 현재 연구 중인 작물은 하늘타리(관절 개선), 터리풀(주름 개선), 병풀(염증 완화) 등이다. 이들은 각 산업체와의 공동연구를 통해 효능 검증과 표준화 재배기술 확립, 상용화 기반 마련을 목표로 하고 있다. 
-						<i class="icon_last"></i>
-					</p>
-					<div class="article-image">
-						<div class="article-image-container">
-							<figure>
-								<img src="contents/sub_13_text_2.png">
-							</figure>
-						</div>
-						<div class="article-image-container">
-							<figure>
-								<img src="contents/sub_13_image_8.png">
 							</figure>
 						</div>
 					</div>
@@ -392,4 +442,5 @@ body {
 	</main>
 	<footer class="footer" id="footer"></footer>
 </body>
+
 </html>
