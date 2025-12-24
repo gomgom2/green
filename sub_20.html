@@ -40,7 +40,7 @@
 		}
 
 		.article-body-wrap {
-			max-width: 700px;
+			max-width: 800px;
 			background-color: var(--bg-color);
 			border: var(--border);
 			padding: 3rem 1rem 1rem;
@@ -96,15 +96,100 @@
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			gap: 3rem;
-			margin-bottom: 7rem;
+			margin-bottom: 8rem;
+		}
+
+		.trand-box:last-child {
+			margin-bottom: 0;
 		}
 
 		.trand-box-text span {
 			display: inline-block;
 			background-color: var(--orange);
 			color: #fff;
-			font-size: 1.4rem;
+			font-size: 1.3rem;
+			padding: 0 .5rem 0 .5rem;
+			font-weight: 200;
+			position: relative;
+			height: 20px;
+			margin-bottom: 1rem;
+		}
+
+		.pink .trand-box-text span {
+			background-color: var(--pink);
+		}
+
+		.green .trand-box-text span {
+			background-color: var(--green);
+		}
+
+		.pink .trand-box-text span::after {
+			border-left-color: var(--pink)
+		}
+
+		.green .trand-box-text span::after {
+			border-left-color: var(--green)
+		}
+
+		.trand-box-text span::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: -8px;
+			/* 박스 오른쪽에 붙이기 */
+			transform: translateY(-50%);
+			/* 세로 가운데 정렬 */
+
+			/* 삼각형 핵심 코드 */
+			width: 0;
+			height: 0;
+			border-top: 10px solid transparent;
+			/* 위쪽 테두리 투명 */
+			border-bottom: 10px solid transparent;
+			/* 아래쪽 테두리 투명 */
+			border-left: 8px solid var(--orange);
+			/* 왼쪽 테두리 색상 (이게 삼각형 몸통이 됨) */
+		}
+
+		.trand-box-text span b {
+			font-weight: 700;
+		}
+
+		.trand-box-text h2 {
 			font-family: KbizHanmaumGothic;
+			color: var(--orange);
+			font-size: 1.6rem;
+			margin-bottom: 2rem;
+		}
+
+		.pink h2 {
+			color: var(--pink)
+		}
+
+		.green h2 {
+			color: var(--green);
+		}
+
+		.trand-box-text h2 b {
+			font-size: 2rem;
+		}
+
+		.trand-box-text p {
+			font-size: 1.6rem;
+			font-weight: 300;
+		}
+
+		.trand-box-text p em {
+			background-color: var(--orange-bg);
+			font-weight: 500;
+		}
+
+		.pink p em {
+			background-color: var(--pink-bg);
+		}
+
+		.green p em {
+			background-color: var(--green-bg);
 		}
 
 		br.mobile {
