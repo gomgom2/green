@@ -1,9 +1,9 @@
-
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>그린매거진</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="그린매거진">
 	<meta property="og:description" content="그린매거진 웹진을 만나보세요.">
@@ -15,362 +15,213 @@
 	<link rel="stylesheet" type="text/css" href="css/sub.css?ver=202502" />
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/script2.js?ver202502"></script>
-<style>
-:root {
-	--main-color: #E9F3FA; 
-	--text-color-small: #c85a5a; 
-	--brand: #F2F2F1;
-	--padding-size: 2.5rem;
-	--border: 2px solid #3B3C3B;
-}
-.nav-wrap {
-	background-color: var(--text-color-small);
-}
-body {
-	background-color: #E9F3FA;
-}
-.article-header-wrap {
-	max-width: 750px;
-	padding-left: 0;
-	padding-right: 0;
-	padding-bottom: 0;
-}
-.article-header-container {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 2rem 0 0;
-    margin-bottom: 0;
-    position: relative;
-}
-.article-header-text {
-	padding-left: 20%;
-	padding-right: 10%;
-	position: relative;
-}
-.article-header-text::before {
-	content: "";
-	display: block;
-	width: 17%;
-	position: absolute;
-	left: 0;
-	top: 50%;
-	background: url("contents/sub_20_top_2.png") 0 0 no-repeat;
-	background-size: cover;
-	aspect-ratio: 52 / 26;
-	transform: translateY(-100%);
-}
-.article-header-text span {
-	margin: 0;
-}
-.article-header-text p {
-	width: 100%;
-	margin: 1.5rem auto;
-	color: #000;
-	font-size: 1.5rem;
-}
-.article-header-text h2 {
-	font-size: 5rem;
-	color: var(--text-color-small);
-	margin-bottom: 0;
-}
-.article-header-text h2 strong {
-	color: #fff;
-	text-decoration: underline;
-	text-underline-offset: 4px;
-	text-decoration-thickness: 1.5px;
-}
-.article-meta {
-	margin-top: 1rem;
-}
-.article-header-image figure {
-    border-radius: 0;
-    transform: rotate(0deg) translateY(0);
-}
-.article-body-wrap {
-	max-width: 600px;
-	padding: 1rem;
-}
-.trand-box {
-	border: var(--border);
-	background-color: #FEFBF3;
-	position: relative;
-	margin-bottom: 5rem;
-}
-.box-1 {
-	padding-bottom: 3rem;
-}
-.trand-box-title {
-	border-bottom: var(--border);
-	background-color: #fff;
-	font-family: KbizHanmaumGothic;
-	color: var(--text-color-small);
-	padding: 1rem var(--padding-size);
-	position: relative;
-}
-.trand-box-title::before {
-	content: "";
-	display: block;
-	width: 4.8rem;
-	height: 1.2rem;
-	background: url(contents/sub_20_dot.png) 0 0 no-repeat;
-	background-size: contain;
-	position: absolute;
-	right: var(--padding-size);
-	top: 50%;
-	transform: translateY(-50%);
-}
-.trand-box-title::after {
-	content: "";
-	display: block;
-	width: 3rem;
-	height: 3rem;
-	background: url(contents/sub_20_pointer.png) 0 0 no-repeat;
-	background-size: contain;
-	position: absolute;
-	right: -1rem;
-	top: 50%;
-	transform: translateY(20%);
-}
-.trand-box-title h3 {
-	font-size: 2rem;
-}
-.trand-box-in p {
-	padding: var(--padding-size) var(--padding-size) 0;
-	font-size: 1.8rem;
-    line-height: 1.76;
-    color: #2a2a2a;
-}
-.trand-box-in figure {
-	width: 50%;
-	margin: 3rem 0 2rem var(--padding-size);
-}
-.trand-section {
-	background-color: #F6DADA;
-	position: relative;
-}
-.trand-section::before {
-	content: "";
-	display: block;
-	width: 3rem;
-	aspect-ratio: 1 / 4;
-	background: url(contents/sub_20_scrollbar.png) 0 0 no-repeat;
-	background-size: 100% 100%;
-	border-top: var(--border);
-	border-bottom: var(--border);
-	position: absolute;
-	right: 0;
-	top: 20%;
-}
-.trand-section::after {
-	content: "";
-	display: block;
-	width: 3rem;
-	aspect-ratio: 30 / 62;
-	background: url(contents/sub_20_btn.png) 0 0 no-repeat;
-	background-size: 100% 100%;
-	border-top: var(--border);
-	position: absolute;
-	right: 0;
-	bottom: 0;
-}
-.trand-section-in {
-	padding-bottom: 3rem;
-	background-color: #FBECEB;
-	position: relative;
-	border-right: var(--border);
-	margin-right: 3rem;
-	position: relative;
-}
-.section-2 .trand-section-in {
-	padding-bottom: 8rem;
-}
-.trand-section-in figure {
-	position: absolute;
-	margin: 0;
-	right: var(--padding-size);
-	bottom: 2rem;
-	width: 50%;
-}
-.section-2 .trand-section-in figure {
-	width: 30%;
-}
-.trand-section-title {
-	border-top: var(--border);
-	border-bottom: var(--border);
-	background-color: #fff;
-	padding: 0.5rem var(--padding-size);
-	color: var(--text-color-small);
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-	font-size: 1.5rem;
-	line-height: 1.2;
-	font-family: KbizHanmaumGothic;
-}
-.trand-section-title h4 {
-	font-size: 4rem;
-	line-height: 1;
-	padding-top: .3rem;
-}
-.trand-section-in {
-	
-}
-.trand-tag {
-	margin: 2rem 0 3rem var(--padding-size);
-}
-.trand-tag span {
-	display: block;
-	width: fit-content;
-	border: var(--border);
-	background-color: #fff;
-	font-size: 1.6rem;
-	line-height: 1;
-	padding: .8rem 1rem;
-	border-radius: 1.8rem;
-	margin-bottom: 1rem;
-}
+	<style>
+		:root {
+			--bg-color: #69A5CC;
+			--border: 2px solid #10102B;
+			--orange: #E9830B;
+			--orange-bg: #E9BB79;
+			--pink: #E25366;
+			--pink-bg: #E3A5A2;
+			--green: #55A786;
+			--green-bg: #A0CAB5;
+		}
 
-br.mobile {
-	display: none;
-}
-@media (max-width:767px) {
-	br.mobile {
-		display: block;
-	}
-	.article-header-image {
-		margin-top: 0;
-		margin-bottom: 1rem;
-	}
-	.article-header-image figure {
-        width: 100%;
-    }
-    .trand-box-title h3 {
-    	width: 80%;
-    	line-height: 1.2;
-    }
-    .article-header-text {
-    	padding-left: 10%;
-    }
-    .article-header-text h2 {
-	    font-size: 2.8rem;
-	    margin-top: 2.5rem;
-	}
-	.article-header-text::before {
-		top: auto;
-		bottom: 9.2rem;
-		left: 10%;
-	}
-}
-	
-</style>
+		.nav-wrap {
+			background-color: var(--bg-color);
+		}
+
+		body {
+			background-color: #FBF5E4;
+		}
+
+		.article-body {
+			margin-top: 15rem;
+		}
+
+		.article-body-wrap {
+			max-width: 700px;
+			background-color: var(--bg-color);
+			border: var(--border);
+			padding: 3rem 1rem 1rem;
+			position: relative;
+		}
+
+		.article-body-wrap::after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-color: var(--bg-color);
+			border: var(--border);
+			position: absolute;
+			top: -0.7rem;
+			right: -0.7rem;
+			z-index: -1;
+		}
+
+		.trand-wrap {
+			background-color: #fff;
+			border: var(--border);
+			padding: 3rem;
+			position: relative;
+		}
+
+		.trand-header figure {
+			width: 70%;
+			margin: -14rem auto 0;
+		}
+
+		.trand-header {
+			text-align: center;
+			margin-bottom: 5rem;
+		}
+
+		.trand-header h1 {
+			font-size: 4rem;
+			font-family: YeogiOttaeJalnan;
+			line-height: 1.2;
+			margin: 1rem 0;
+			color: #51A6D0;
+		}
+
+		.trand-header p {
+			font-size: 1.6rem;
+			word-break: keep-all;
+			width: 90%;
+			margin: 0 auto;
+		}
+
+		.trand-box {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 3rem;
+			margin-bottom: 7rem;
+		}
+
+		.trand-box-text span {
+			display: inline-block;
+			background-color: var(--orange);
+			color: #fff;
+			font-size: 1.4rem;
+			font-family: KbizHanmaumGothic;
+		}
+
+		br.mobile {
+			display: none;
+		}
+
+		@media (max-width:767px) {
+			br.mobile {
+				display: block;
+			}
+
+		}
+	</style>
 
 </head>
+
 <body>
 	<header class="header" id="header"></header>
 	<main>
-		<section class="article-header">
-			<div class="article-header-wrap">
-				<div class="article-header-container">
-					<div class="article-header-text">
-						<span>트렌드 탐구</span>
-						<p>
-							최근 ‘저속 노화’와 ‘건강한 식습관’이 새로운 라이프스타일로 자리 잡으면서, 일상 속에서 혈당 관리를 실천하는 젊은 세대가 늘고 있다. 예전에는 ‘혈당’ 하면 당뇨병 환자에게만 중요한 수치로 여겨졌지만, 이제는 하루의 컨디션과 에너지, 장기적인 건강을 가늠하는 지표로 인식되고 있다.
-						</p>
-						<h2>
-							건강을 넘어<br>몸의 리듬을 세우는 문화로
-						</h2>
-						<div class="article-meta">
-							<span class="b">글</span>
-							<span>장희주</span>
-						</div>
-					</div>
-					<div class="article-header-image">
-						<figure>
-							<img src="contents/sub_20_top.png" />
-						</figure>
-					</div>
-				</div>
-			</div>
-		</section>
 		<section class="article-body">
 			<div class="article-body-wrap">
-				<div class="trand-box box-1">
-					<div class="trand-box-title">
-						<h3>
-							혈당, 건강을 넘어 건강의 언어가 되다 
-						</h3>
-					</div>
-					<div class="trand-box-in">
+				<div class="trand-wrap">
+					<div class="trand-header">
+						<figure>
+							<img src="contents/sub_20_top.png">
+						</figure>
+						<h1>
+							한 눈에 보는<br>2026년 트렌드 키워드
+						</h1>
 						<p>
-							혈당(血糖)은 말 그대로 ‘혈액 속에 포함된 당’, 즉 포도당의 농도를 뜻한다. 포도당은 우리가 섭취한 탄수화물이 분해되어 만들어지는 물질로, 뇌와 적혈구가 움직이는 데 필요한 에너지의 근원이 된다. 병원에서 “혈당 검사를 했다”는 말은 혈액 속 포도당의 농도를 측정했다는 뜻으로, 이 수치는 몸의 대사 상태를 보여주는 일종의 ‘건강 신호등’ 역할을 한다.
-						</p>
-						<p>
-							과거에는 혈당 관리가 당뇨병 환자에게만 필요한 것으로 여겨졌지만, 최근에는 청년층 사이에서도 ‘조기 혈당 관리’가 일상화되고 있다. 설탕 대신 대체당을 사용하고, 백미 대신 현미나 잡곡을 선택하며, 음료 대신 무가당 커피나 차를 마시는 식이다. 
-						</p>
-						<p>
-							이처럼 이제 혈당 관리는 단순한 습관을 넘어 대사 건강을 지키는 새로운 생활 루틴으로 자리 잡았다. 불안정한 혈당은 피로와 무기력감, 체중 증가를 초래하고, 심혈관 질환·고혈압·지방간 등 각종 만성질환의 위험을 높이기 때문. 결국 혈당 관리야말로 건강한 삶으로 나아가는 첫걸음이다.
-						</p>
-						<p>
-							그렇다면 혈당은 왜 높아질까? 식사를 하면 음식 속 탄수화물이 포도당으로 분해되어 혈액에 흡수된다. 이때 췌장에서 분비되는 인슐린이 포도당을 세포 속으로 옮겨 에너지로 쓰게 한다. 그러나 인슐린 분비가 부족하거나 기능이 저하되면 포도당이 세포 안으로 들어가지 못하고 혈액에 남게 되어 혈당이 상승하게 되는 것이다. 즉 과식이나 단 음식의 잦은 섭취, 운동 부족 등이 혈당을 높이는 주요 원인이다.
+							2026년 우리 식탁과 농업, 그리고 삶의 방식 전반에 새로운 변화의 신호가 포착되고 있다. 단백질 시대를 잇는 ‘섬유질’의 부상, 여성 농업인의 역할을 재조명하는
+							국제적
+							선언, 그리고 스스로 건강을 설계하는 역량을 의미하는 '건강지능 HQ'의 등장까지. 2026년의 키워드는 우리의 일상과 미래를 새롭게 다시 쓰고 있다.
 						</p>
 					</div>
-				</div>
-				<div class="trand-box box-2">
-					<div class="trand-box-title">
-						<h3>
-							건강한 하루를 위한 작은 습관 
-						</h3>
-					</div>
-					<div class="trand-box-in">
-						<p>
-							혈당을 안정시키기 위해서는 ‘기본’만 지키면 된다. ‘적당히 먹고 꾸준히 움직이는 것’이 가장 중요하다. 탄수화물 섭취를 조절하고, 식이섬유가 풍부한 음식을 선택하며, 식사 후 가벼운 산책이나 규칙적인 유산소 운동을 하는 것이 도움이 된다. 최근에는 혈당 측정기를 통해 실시간 변화를 확인하고, 그 데이터를 바탕으로 식단을 조정하는 ‘데이터 기반 건강 관리’도 늘고 있다.
-						</p>
+					<div class="trand-box orange">
 						<figure>
 							<img src="contents/sub_20_image_1.png">
 						</figure>
-						<div class="trand-section">
-							<div class="trand-section-title">
-								<h4>01</h4>
-								<div>
-									균형 잡힌 식단
-								</div>
-							</div>
-							<div class="trand-section-in">
-								<p>
-									혈당 관리를 위해서는 탄수화물, 단백질, 지방이 고르게 균형을 이룬 식단이 기본이다. 특히 탄수화물은 흰쌀밥보다는 현미·보리·잡곡 등 정제되지 않은 곡류가 좋으며, 정제당이나 가공 밀가루, 설탕이 많이 들어간 음식은 피하는 것이 바람직하다. 지방은 동물성 지방이나 트랜스지방보다 식물성 지방을 선택하는 것이 좋다. 대표적으로 등푸른 생선에 풍부한 오메가-3 지방산, 올리브유, 들기름 등이 있다. 단백질은 콩이나 두부 같은 식물성 단백질 또는 기름기가 적은 살코기로 섭취하고, 여기에 채소나 해조류 등 식이섬유가 풍부한 식품을 충분히 곁들이면 좋다.
-								</p>
-								<div class="trand-tag">
-									<span>식이섬유가 풍부한 식품</span>
-									<span>정제되지 않은 곡류</span>
-									<span>식물성 지방</span>
-								</div>
-								<figure>
-									<img src="contents/sub_20_image_2.png">
-								</figure>
-							</div>
+						<div class="trand-box-text">
+							<span>KEYWORD <b>01</b></span>
+							<h2>
+								건강 기능 식품의 다음 키워드<br>
+								<b>‘섬유질’이 뜬다!</b>
+							</h2>
+							<p>
+								유기농 식품 기업 ‘홀푸드 마켓(Whole Foods Market)’ 이 발표한 2026 식품 트렌드의 핵심 키워드는 바로 ‘섬유질(Fiber)’이다. 단백질
+								중심
+								식단이
+								한 시대를 이끌었다면, 이제는 장 건강이 그 자리를 이어받고 있다.
+							</p>
+							<p>
+								<em>섬유질은 장내 환경을 개선하고 소화를 돕는 기본 요소지만, 최근에는 유익균의 먹이가 되는 ‘프리바이오틱스(prebiotics)’ 기능이 강화된 식품이
+									빠르게
+									늘고
+									있다.</em>
+								장을 건강하게 해 포만감을 오래 유지하고, 전반적인 소화기 리듬을 균형 있게 맞추려는 소비자의 니즈가 반영된 흐름이다. 2026년, 건강을 말할 때 ‘단백질
+								다음은
+								섬유질’이라는 공식이 굳어지고 있다.
+							</p>
 						</div>
-						<div class="trand-section section-2">
-							<div class="trand-section-title">
-								<h4>02</h4>
-								<div>
-									식후 15분의 기적!<br>가벼운 운동이 만드는 혈당 안정 효과
-								</div>
-							</div>
-							<div class="trand-section-in">
-								<p>
-									혈당은 음식을 섭취한 뒤 상승하기 때문에 식후 30분에서 1시간 사이에 가장 높은 수치를 보인다. 이때 가벼운 운동만으로도 혈당이 급격하게 오르는 ‘혈당 스파이크’를 예방할 수 있다. 미국당뇨병학회 학술지 DIABETES CARE에 따르면, 식사 후 15분간 걷는 것이 식사 전 아침에 45분간 걷는 것보다 혈당 개선 효과가 더 크다고 보고된 바 있다. 
-								</p>
-								<p>
-									운동은 무리한 고강도 운동보다는 산책과 같은 저강도 운동이 적합하다. 이때 근육이 움직이면서 음식으로 섭취한 포도당을 에너지원으로 사용하기 때문에, 혈당이 자연스럽게 조절되는 효과가 나타난다. 특히 혈중 포도당이 소비되지 않고 남으면 간에서 중성지방으로 전환되어 체내에 축적되는데, 식후 가벼운 운동은 이 과정을 미리 차단해 지방 축적을 예방하는 데도 도움이 된다.
-								</p>
-								<div class="trand-tag">
-									<span>고강도 운동 X</span>
-									<span>저강도 운동 O</span>
-								</div>
-								<figure>
-									<img src="contents/sub_20_image_3.png">
-								</figure>
-							</div>
+					</div>
+					<div class="trand-box pink">
+						<figure>
+							<img src="contents/sub_20_image_2.png">
+						</figure>
+						<div class="trand-box-text">
+							<span>KEYWORD <b>02</b></span>
+							<h2>
+								농업의 미래를 바꾸는 변화의 신호<br>
+								<b>2026년은 ‘세계 여성 농부의 해’</b>
+							</h2>
+							<p>
+								UN 총회가 2026년을 ‘세계 여성 농민의 해(International Year of the Woman Farmer)’로 공식 지정했다. 이는 전 세계 여성
+								농민들이
+								농식품 분야에서 겪고 있는 구조적 어려움과 장벽을 해결하고, 이들의 역할을 재조명하기 위한 국제적 선언이다.
+							</p>
+							<p>
+								이번 결의안은 여성 농민에 대한 정책적 배려와 사회적 인식 개선을 촉진하고, 각국 정부가 농업 분야의 성차별을 해소하는 정책을 적극 추진하도록 독려하는 의미를
+								담고
+								있다.
+								나아가 <em>농업 현장에서 활동하는 모든 여성들의 역량과 참여를 높여, 지속가능한 농업의 미래를 구축하기 위한 글로벌 움직임이 본격화되고 있다.</em>
+								이로써
+								2026년, 세계는 여성 농부의 목소리에 더 크게 귀를 기울이게 될 것이다.
+							</p>
+						</div>
+					</div>
+					<div class="trand-box green">
+						<figure>
+							<img src="contents/sub_20_image_3.png">
+						</figure>
+						<div class="trand-box-text">
+							<span>KEYWORD <b>03</b></span>
+							<h2>
+								2026년을 이끌 새로운 역량 <br>
+								<b>‘건강지능 HQ’</b>
+							</h2>
+							<p>
+								한 시대를 규정하던 지능지수(IQ), 감성지능(EQ)에 이어, 이제는 더 오래 건강하게 살기 위한 ‘건강지능(HQ, Health Intelligence
+								Quotient)’이
+								새로운 삶의 필수 역량으로 떠오르고 있다. 『트렌드코리아 2026』이 제시한 핵심 키워드 중 하나인 <em>건강지능은 단순히 몸을 관리하거나 질병을 치료하는
+									수준을
+									넘어,
+									스스로 건강 정보를 탐색하고 판단해 최적의 관리 전략을 실행하는 능력을 의미한다.</em>
+							</p>
+							<p>
+								건강지능 시대의 자기관리 방식은 크게 세 방향으로 확장된다. 첫째, 식단·운동·멘탈케어 등 일상을 과학적으로 관리하는 라이프 헬스케어가 기본이 된다. 둘째,
+								필요에
+								따라
+								성장호르몬 주사나 비만 주사처럼 의약품·시술·수술을 적극 활용하는 의료적 관리가 증가한다. 마지막으로, 삶의 선택 전반에서 수면·식습관·정신건강 등 건강을
+								최우선
+								기준으로
+								삼는 총체적 관리가 일상화된다.
+							<p>
+								2026년, 건강은 더 이상 ‘관리의 문제’가 아니라 스스로 설계하고 실행하는 지능의 영역이 되고 있다.
+								<i class="icon_last"></i>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -379,4 +230,5 @@ br.mobile {
 	</main>
 	<footer class="footer black" id="footer"></footer>
 </body>
+
 </html>
