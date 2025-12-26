@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>그린매거진</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="그린매거진">
 	<meta property="og:description" content="그린매거진 웹진을 만나보세요.">
@@ -14,184 +15,217 @@
 	<link rel="stylesheet" type="text/css" href="css/sub.css?ver=202502" />
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/script2.js?ver202502"></script>
-<style>
-	:root {
-		--main-color: #4F76A2;
-		--text-color-small: #000;
-		--text-color-title: #EB6042;
-		--text-color-title2: #706F70;
-	}
+	<style>
+		:root {
+			--main-color: #C67493;
+			--text-color-small: #000;
+			--text-color-title: #7491BA;
+			--text-color-title2: #706F70;
+		}
 
-.article-header {
-	background-color: #fff;
-}
-.article-header-text h2 {
-	margin-bottom: 1rem;
-}
-.article-header-text h3 {
-	font-family: pretendard;
-	font-size: 2rem;
-	text-align: center;
-}
-.header-mono .article-header-text p {
-	width: 60%;
-}
-.article-body {
-	margin-bottom: 15rem;
-	position: relative;
-}
-.article-job {
-	width: 100%;
-	max-width: 60rem;
-	margin: 5rem auto 5rem;
-	position: relative;
-}
-.article-job .article-image {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 50%;
-	transform: translateX(-110%);
-	margin: 0;
-}
-.article-job .article-image.right {
-	position: absolute;
-	left: auto;
-	right: 0;
-	top: 0;
-	transform: translateX(110%);
-	margin: 0;
-}
-.article-job-text {
-	width: 60rem;
-	margin: 0 auto;
-}
-.article-job-text h4 {
-	color: var(--text-color-title);
-	font-family: YUniverse-B;
-	font-size: 2.5rem;
-	margin-bottom: 1rem;
-}
-.article-job-text h5 {
-	font-size: 1.5rem;
-}
-.article-job-text p {
-	font-size: 1.6rem;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-    color: #2a2a2a;
-}
-.article-job-box {
-	width: 60rem;
-	margin: 0 auto 4rem;
-	position: relative;
-	border-top: 1px solid var(--main-color);
-	padding-top: 0.5rem;
-}
-.article-job-box::before {
-	content: '';
-	display: block;
-	width: 4rem;
-	height: 4rem;
-	background-image: url(contents/sub_32_icon_megaphone.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(1rem) translateY(-50%);
-}
-.article-job-box.job-box-book::before {
-	background-image: url(contents/sub_32_icon_memo.png);
-}
-.article-job-box.job-box-light::before {
-	background-image: url(contents/sub_32_icon_bulb.png);
-}
-.article-job-box.job-box-house::before {
-	background-image: url(contents/sub_32_icon_4.png);
-}
-.article-job-box h5 {
-	font-family: S-CoreDream-3Light;
-	font-size: 2rem;
-	color: var(--main-color);
-	font-weight: 700;
-	margin-bottom: 2rem;
-}
-.article-job-box h6 {
-	font-size: 1.8rem;
-	font-weight: 500;
-}
-.article-job-box p {
-	font-size: 1.6rem;
-    line-height: 1.6;
-    color: #2a2a2a;
-}
-.article-job-box li {
-	font-size: 1.6rem;
-	line-height: 1.6;
-	color: #2a2a2a;
-}
-.article-job-box ul li {
-	font-weight: 600;
-}
-.article-job-box ol {
-	counter-reset: list-counter;
-}
-.article-job-box ol li {
-	counter-increment: list-counter;
-    position: relative;
-    padding-left: 2.3rem;
-}
-.article-job-box ol li::before {
-    content: counter(list-counter);
-    position: absolute;
-    left: 0.1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2rem;
-    width: 1.6rem;
-    height: 1.6rem;
-    border: 1px solid black;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.article-job-box .mgb {
-	margin-bottom: 2rem;
-}
+		.article-header {
+			background-color: #fff;
+		}
+
+		.article-header-text h2 {
+			margin-bottom: 1rem;
+		}
+
+		.article-header-text h3 {
+			font-family: pretendard;
+			font-size: 2rem;
+			text-align: center;
+		}
+
+		.header-mono .article-header-text p {
+			width: 60%;
+		}
+
+		.article-body {
+			margin-bottom: 15rem;
+			position: relative;
+		}
+
+		.article-job {
+			width: 100%;
+			max-width: 60rem;
+			margin: 5rem auto 5rem;
+			position: relative;
+		}
+
+		.article-job .article-image {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 50%;
+			transform: translateX(-110%);
+			margin: 0;
+		}
+
+		.article-job .article-image.right {
+			position: absolute;
+			left: auto;
+			right: 0;
+			top: 0;
+			transform: translateX(110%);
+			margin: 0;
+		}
+
+		.article-job-text {
+			width: 60rem;
+			margin: 0 auto;
+		}
+
+		.article-job-text h4 {
+			color: var(--text-color-title);
+			font-family: YUniverse-B;
+			font-size: 2.5rem;
+			margin-bottom: 1rem;
+		}
+
+		.article-job-text h5 {
+			font-size: 1.5rem;
+		}
+
+		.article-job-text p {
+			font-size: 1.6rem;
+			margin-bottom: 2rem;
+			line-height: 1.6;
+			color: #2a2a2a;
+		}
+
+		.article-job-box {
+			width: 60rem;
+			margin: 0 auto 4rem;
+			position: relative;
+			border-top: 1px solid var(--main-color);
+			padding-top: 0.5rem;
+		}
+
+		.article-job-box::before {
+			content: '';
+			display: block;
+			width: 4rem;
+			height: 4rem;
+			background-image: url(contents/sub_32_icon_megaphone.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform: translateX(1rem) translateY(-50%);
+		}
+
+		.article-job-box.job-box-book::before {
+			background-image: url(contents/sub_32_icon_memo.png);
+		}
+
+		.article-job-box.job-box-light::before {
+			background-image: url(contents/sub_32_icon_bulb.png);
+		}
+
+		.article-job-box.job-box-house::before {
+			background-image: url(contents/sub_32_icon_4.png);
+		}
+
+		.article-job-box h5 {
+			font-family: S-CoreDream-3Light;
+			font-size: 2rem;
+			color: var(--main-color);
+			font-weight: 700;
+			margin-bottom: 2rem;
+		}
+
+		.article-job-box h6 {
+			font-size: 1.8rem;
+			font-weight: 500;
+		}
+
+		.article-job-box p {
+			font-size: 1.6rem;
+			line-height: 1.6;
+			color: #2a2a2a;
+		}
+
+		.article-job-box li {
+			font-size: 1.6rem;
+			line-height: 1.6;
+			color: #2a2a2a;
+		}
+
+		.article-job-box ul li {
+			font-weight: 600;
+		}
+
+		.article-job-box ol {
+			counter-reset: list-counter;
+		}
+
+		.article-job-box ol li {
+			counter-increment: list-counter;
+			position: relative;
+			padding-left: 2.3rem;
+		}
+
+		.article-job-box ol li::before {
+			content: counter(list-counter);
+			position: absolute;
+			left: 0.1rem;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 1.2rem;
+			width: 1.6rem;
+			height: 1.6rem;
+			border: 1px solid black;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.article-job-box .mgb {
+			margin-bottom: 2rem;
+		}
 
 
-@media (max-width:767px) {
-	.article-body {
-		margin-bottom: 5rem;
-	}
-	.header-mono .article-header-image figure {
-		width: 50%;
-	}
-	.article-job {
-		margin: 0 auto;
-	}
-	.article-job-text, .article-job-box {
-		width: calc(100% - 4rem);
-		margin: 0 2rem 3rem;
-	}
-	.article-job .article-image {
-		position: relative;
-		transform: translateX(2rem);
-		margin-bottom: 2rem;
-	}
-	.article-job .article-image.right {
-		transform: translateX(90%);
-		position: relative;
-		margin-bottom: 2rem;
-	}
-	.article-job-box::before {
-		transform: translateX(0) translateY(-50%);
-	}
-}
-</style>
+		@media (max-width:767px) {
+			.article-body {
+				margin-bottom: 5rem;
+			}
+
+			.header-mono .article-header-image figure {
+				width: 50%;
+			}
+
+			.article-job {
+				margin: 0 auto;
+			}
+
+			.article-job-text,
+			.article-job-box {
+				width: calc(100% - 4rem);
+				margin: 0 2rem 3rem;
+			}
+
+			.article-job .article-image {
+				position: relative;
+				transform: translateX(2rem);
+				margin-bottom: 2rem;
+			}
+
+			.article-job .article-image.right {
+				transform: translateX(90%);
+				position: relative;
+				margin-bottom: 2rem;
+			}
+
+			.article-job-box::before {
+				transform: translateX(0) translateY(-50%);
+			}
+		}
+	</style>
 </head>
+
 <body>
 	<header class="header" id="header"></header>
 	<main>
@@ -205,13 +239,14 @@
 					</div>
 					<div class="article-header-text">
 						<h2>
-							인류의 건강한 미래를 설계하는 숨은 주역들
+							새로운 동물 생태계를 만드는 사람들
 						</h2>
 						<h3>
-							유전체 분석가 & 바이오 데이터 분석가
+							동물교감치유사 & 수의테크니션
 						</h3>
 						<p>
-							질병의 원인을 밝히고, 개인 맞춤 치료와 신약 개발로 이어지는 과정의 중심에는 ‘데이터’를 다루는 과학자들이 있다. ‘바이오 데이터 분석가’와 ‘유전체 분석가’는 생명과학과 정보기술을 결합해 인류의 건강한 미래를 설계하는 숨은 주역들이다.
+							사람과 동물이 함께 만드는 치유의 방식이 다양해지면서, 관련 전문 직업의 역할도 커지고 있다. 동물과의 교감을 통해 정서·인지·신체 회복을 돕는 동물교감치유사,
+							그리고 동물의 검사·치료·응급처치를 지원하는 수의테크니션은 그 흐름의 중심에 서 있다.
 						</p>
 						<div class="article-meta">
 							<span class="b">글</span>
@@ -225,7 +260,7 @@
 			</div>
 		</section>
 		<section class="article-body">
-			
+
 			<div class="article-job">
 				<div class="article-image">
 					<div class="article-image-container">
@@ -235,34 +270,38 @@
 					</div>
 				</div>
 				<div class="article-job-text">
-					<!-- <h5>
-						쓰레기에 새로운 생명을 불어넣다 
-					</h5> -->
+					<h5>
+						동물과 사람을 잇는 치유의 직업
+					</h5>
 					<h4>
-						유전체 분석가
+						동물교감치유사
 					</h4>
 					<p>
-						유전자 재조합과 개인 유전체 분석을 통해 인류 질병의 원인을 밝히고, 줄기세포의 해석 및 기능 연구를 바탕으로 맞춤의학 구현을 위한 신약 개발과 생체재생기술을 수행한다. 
+						동물교감치유는 사람이 동물과 교감하며 정서적·인지적·사회적·신체적 어려움을 예방하거나 회복하는 활동을 말한다. 이 과정에서 치유가 필요한 사람의 상태를 파악하고, 그에 맞는
+						동물을 선택해 치유를 돕는 전문가가 바로 동물교감치유사다.
 					</p>
 					<p>
-						유전체 관련 업무에는 유전체 해독, 분석, 해석이 포함되며, 각종 데이터를 비교·분석하여 유전자 간 상호작용과 환경적 요인이 질병에 미치는 영향을 알아낸다. 이를 위해 데이터마이닝과 통계 프로그램을 활용해 유전자 정보 데이터를 정밀하게 처리한다.	
+						유사 직종으로는 재활승마치료사가 있으며, 장애 아동을 대상으로 승마를 통해 치료를 지원하고 말의 건강 관리까지 담당한다.
 					</p>
 					<p>
-						맞춤의학은 개인의 유전적 특성에 따라 최적의 치료법을 제공하는 첨단 의학 분야로, 줄기세포를 활용한 치료기술과 신약 개발의 중요성이 커짐에 따라 이에 대한 전문 인력의 수요도 지속적으로 증가할 전망이다.
+						동물교감치유사는 동물교감치유센터를 비롯해 학교(초·중·고·특수학교), 복지관, 보육시설, 병원, 장애인 생활시설, 노인요양시설 등 다양한 곳에서 활동할 수 있다.
 					</p>
 				</div>
 			</div>
 			<div class="article-job-box job-box-book">
-				<h5>역량과 교육</h5>
+				<h5>현황과 전망</h5>
 				<p>
-					유전자공학이나 생물학 관련 학과에 진학하거나 연계 전공을 이수해야 하며, 연구 분야에서 활동하려면 석사 이상의 학위를 갖추는 것이 바람직하다. 줄기세포의 작용 기전 규명, 세포 운명 제어, 리프로그래밍 기술, 질환 관련 유전자 기능 검증, 3차원 세포 기반 질환 모델 개발 등 전문 지식이 필요하다. 또한 혈액·유전자 검사 및 줄기세포 분리·배양 등 실험·분석 역량을 갖춰야 한다. 
+					국내에서도 동물을 활용한 치유 프로그램을 도입하는 기관이 꾸준히 증가하고 있다. 사회 변화 속에서 정서적 스트레스가 높아지는 만큼, 동물과의 교감으로 회복을 돕는 치유 활동은
+					앞으로 더 확대될 전망이다. 이에 따라 동물교감치유사에 대한 수요 역시 꾸준히 늘 것으로 기대된다.
 				</p>
 			</div>
 			<div class="article-job-box job-box-light">
-				
-				<h5>진출 가능 분야</h5>
+
+				<h5>필요 역량과 교육</h5>
 				<p>
-					농촌진흥청 소속 연구기관(국립농업과학원, 국립식량과학원, 국립원예특작과학원, 국립축산과학원)을 비롯해 국립생명유전연구원, 대학 및 의과대학 연구실 등에서 연구원으로 활동할 수 있다. 줄기세포·유전자 연구와 관련된 국내외 생명과학 연구소, 제약회사, 바이오벤처 기업으로의 진출도 가능하다.
+					동물교감치유사는 다양한 동물의 특성·행동·건강 관리에 대한 이해가 필수적이다. 관련 협회에서는 전문 인력 양성을 위한 교육 프로그램을 운영하고 있으며, 민간 자격을 취득해
+					동물교감심리사로 활동할 수도 있다. 연관 전공으로는 수의학, 심리학, 동물 관련 학문이 있으며, 전문 교육을 통해 사람과 동물의 상호작용을 치유로 이어갈 수 있는 능력을 길러야
+					한다.
 				</p>
 			</div>
 		</section>
@@ -276,44 +315,46 @@
 					</div>
 				</div>
 				<div class="article-job-text">
-					<!-- <h5>
-						쓰레기를 자원으로 바꾸는 전문가
-					</h5> -->
+					<h5>
+						동물 진료의 든든한 파트너
+					</h5>
 					<h4>
-						바이오 데이터 분석가
+						수의테크니션
 					</h4>
 					<p>
-						바이오 데이터 분석가는 바이오 관련 데이터를 목적에 따라 체계적으로 수집·처리·가공하고, 연구 및 개발 업무를 수행하는 전문가이다.
+						수의테크니션은 동물 병원과 연구 현장에서 진료·검사·간호 전반을 보조하는 전문가다. 이들은 동물의 소변 검사·혈액 검사·X-ray 촬영 등 각종 검사 업무를 수행하고,
+						수의사의 치료 및 처치를 지원하며 임상병리·실험실 검사까지 담당한다.
 					</p>
 					<p>
-						바이오 데이터 분석을 통해 얻은 정보는 의학과 보건, 그리고 생명과학의 다양한 영역에서 폭넓게 활용된다. 
+						또한 동물의 행동과 상태를 관찰해 진단에 필요한 정보를 제공하고, 응급 상황 시에는 응급처치와 간호 업무를 신속하게 수행해야 한다. 최근 구제역·AI(조류인플루엔자) 등
+						가축전염병이 빈번하게 발생하면서, 수의테크니션의 역할은 더욱 중요해지고 있다.
 					</p>
 					<p>
-						우선 의료 현장에서는 환자의 진료기록과 임상 데이터를 분석해 질병의 원인과 발병 패턴을 밝히고, 이를 바탕으로 보다 정확한 진단과 예측이 가능하도록 돕는다. 또한 의료 분야를 넘어, 생활습관과 환경 요인을 반영한 건강관리 연구에서도 그 역할이 중요하다. 식습관, 수면 패턴, 신체 활동량 등 개인의 일상적 데이터를 통합 분석해, 질병 예방과 건강 증진을 위한 데이터 기반 관리 시스템을 구축하는 것이다. 
-					</p>
-					<p>
-						이러한 연구 결과는 개인의 건강관리 서비스뿐 아니라 공공보건 정책 수립에도 활용되어, 사회 전체의 건강 수준을 높이는 데 기여한다.
-					</p>
-					<p>
-						다른 데이터 분석가와 달리, 개인 건강정보를 포함한 의료 임상 데이터를 다루기 때문에 데이터를 정확하고 신중하게 처리할 능력과 윤리 의식이 중요하다.
+						유사 직종으로는 동물의 재활을 담당하는 동물물리치료전문가가 있다. 이들은 인간의 물리치료 기법을 적용해 근육 기능 회복·통증 완화·수술 전후 관리, 비만·노화 질환 예방
+						등을 돕는다.
 					</p>
 				</div>
 			</div>
 			<div class="article-job-box job-box-book">
-				<h5>역량 및 교육</h5>
+				<h5>현황과 전망</h5>
 				<p>
-					첨단 생물산업 분야에서는 생물 관련 기초학문과 생·의약, 천연물 제제, 대체의약 개발과 관련된 학문을 폭넓게 연마해야 한다. 또한 생명과학 관련 산업체 및 제약회사 등과의 연계 활동, 혹은 생명산업 현장 체험을 통해 실무 역량을 기르는 것도 중요하다.
+					2016년 기준 수의학과 졸업생 592명 중 569명(96.1%)이 수의사 면허에 합격했지만, 현재 실제로 동물간호복지사 자격을 갖추고 활동하는 수의간호사는 약 300명 수준으로
+					추정된다. 반려동물 양육가구 증가와 함께 가축질병 대응의 중요성이 커지면서 수의테크니션에 대한 수요는 앞으로도 꾸준히 증가할 전망이다.
 				</p>
 			</div>
 			<div class="article-job-box job-box-light">
-				<h5>진출 가능 분야</h5>
+				<h5>필요 역량과 교육</h5>
 				<p>
-					제약회사, 의과대학 및 약학대학 대학원, 건강식품 관련 기업, 국가직·지방직·행정직 공무원 등 다양한 분야에서 활동할 수 있다. 또한 소정의 교직과목을 이수하면 중등 2급 정교사(생명과학) 자격증 취득도 가능하다. 이 밖에도 농촌진흥청 및 소속 연구기관, 한국과학기술원(KAIST) 동물자원 분야, 국·공립 독성 연구소, 한국화학연구원, 식품의약품안전처, 농업협동조합, 농약회사, 바이오벤처기업, 국내외 대학원(미국·일본 유학 포함), 병원 및 의과대학 연구실 등 폭넓은 진로에서 전문성을 발휘할 수 있다. 
+					수의테크니션으로 활동하기 위해서는 동물의 해부·생리·병리 등 기초 수의학 지식을 바탕으로 임상병리 검사와 영상진단을 수행할 수 있는 전문성이 필요하다. 진료 보조와 응급 상황
+					대응을 위해 동물의 행동을 세심하게 관찰하는 능력, 수의사와 협업할 소통 능력도 중요한 역량이다. 국내에서 수의사가 되기 위해서는 수의예과 2년과 수의학과 4년을 포함한 총 6년의
+					교육과정을 거치며, 초반에는 기초 교양과 과학 지식을, 이후 본과에서는 본격적인 수의학 이론과 실습을 익힌다. 현재 국내에는 국립대 9개교와 건국대학교 등 총 10개 대학에서
+					수의학 교육이 이뤄지고 있다.
 					<i class="icon_last"></i>
-				</p>				
+				</p>
 			</div>
 		</section>
 	</main>
 	<footer class="footer" id="footer"></footer>
 </body>
+
 </html>
