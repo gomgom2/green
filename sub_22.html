@@ -1,9 +1,9 @@
-
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>그린매거진</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="그린매거진">
 	<meta property="og:description" content="그린매거진 웹진을 만나보세요.">
@@ -15,139 +15,210 @@
 	<link rel="stylesheet" type="text/css" href="css/sub.css?ver=202502" />
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/script2.js?ver202502"></script>
-<style>
-	:root {
-		--main-color: #E8F3E9; /* 메인배경, 비포애프터제목 */
-		--text-color-small: #000; /* 라벨, 부제목 */
-		--text-color-title: #00B09A; /* 제목 */
-	}
-.article-header-container {
-	grid-template-columns: 1fr 1.5fr;
-}
-.article-header-text h2 {
-	font-family: 'InkLipquid';
-}
-.article-header-text h2 i {
-	font-family: Pretendard;
-}
-.article-text h4 {
-	margin-top: 2rem;
-	text-align: center;
-	color: var(--text-color-title);
-}
-.article-prologue p {
-	color: var(--text-color-small);
-}
-.article-image {
-	margin-bottom: 0;
-}
-.house-box {
-	display: flex;
-	position: relative;
-	z-index: 2;
-	margin-bottom: 5rem;
-}
-.house-box div {
-	width: 65%;
-}
-.house-box h5 {
-	margin: 0;
-	text-decoration: none;
-	font-family: 'Cafe24Shiningstar';
-	font-size: 3rem;
-	color: var(--text-color-title);
-}
-.house-box p {
-	font-size: 2rem;
-	line-height: 1.8;
-	text-decoration: underline;
-    text-decoration-color: var(--text-color-title);
-    text-underline-offset: 5px;
-    text-decoration-thickness: 1px;
-    word-break: keep-all;
-}
-.house-box.right {
-	justify-content: end;
-}
-.article-link {
-	display: flex;
-	gap: 3rem;
-	margin-top: 3rem;
-	justify-content: center;
-}
-.article-link-in {
-	display: flex;
-	gap: 1rem;
-}
-.article-link-left {
-	width: 4.5rem;
-}
-.article-link-right {
-	display: flex;
-	flex-direction: columnl;
-	justify-content: center;
-}
-.article-link-right p {
-	font-size: 1.4rem;
-}
-.article-link-right p span {
-	font-weight: 600;
-}
-.small-image2 {
-	width: 50%;
-	transform: translateX(-100%);
-	margin-bottom: -1rem;
-}
-.dual-house {
-	display: grid;
-	grid-template-columns: 1.2fr 1fr;
-	gap: 1rem;
-	width: 110%;
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	margin: 4rem 0;
-}
-.dual-house .house-box {
-	align-items: flex-end;
-	margin-bottom: 0;
-}
-.dual-house .house-box div {
-	width: 90%;
-}
-@media (max-width:767px) {
-	.house-box div {
-		width: 70%;
-	}
-	.house-box p {
-		font-size: 1.3rem;
-		letter-spacing: -0.05rem;
-	}
-}
+	<style>
+		:root {
+			--main-color: #E2E0F0;
+			/* 메인배경, 비포애프터제목 */
+			--text-color-small: #000;
+			/* 라벨, 부제목 */
+			--text-color-title: #7878B5;
+			/* 제목 */
+		}
 
+		.article-header-wrap {
+			position: relative;
+			height: 80vh;
+		}
 
-</style>
+		.article-header-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			z-index: 1;
+		}
+
+		.article-header-bg figure {
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			/* filter: brightness(0.7); */
+		}
+
+		.article-header-container {
+			grid-template-columns: 1fr .5fr;
+			position: absolute;
+			z-index: 2;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%) translateY(40%);
+			width: 70%;
+			max-width: 1000px;
+			padding: 0;
+		}
+
+		.article-header-image figure {
+			width: 100%;
+			border-radius: 0;
+			overflow: hidden;
+			transform: translateY(30px);
+			position: relative;
+			border: .5rem solid #fff;
+			z-index: 2;
+		}
+
+		.article-header-text h2 {
+			font-family: 'InkLipquid';
+		}
+
+		.article-header-text h2 i {
+			font-family: Pretendard;
+		}
+
+		.article-text h4 {
+			margin-top: 2rem;
+			text-align: center;
+			color: var(--text-color-title);
+		}
+
+		.article-prologue p {
+			color: var(--text-color-small);
+		}
+
+		.article-image {
+			margin-bottom: 0;
+		}
+
+		.house-box {
+			display: flex;
+			position: relative;
+			z-index: 2;
+			margin-bottom: 5rem;
+		}
+
+		.house-box div {
+			width: 65%;
+		}
+
+		.house-box h5 {
+			margin: 0;
+			text-decoration: none;
+			font-family: 'Cafe24Shiningstar';
+			font-size: 3rem;
+			color: var(--text-color-title);
+		}
+
+		.house-box p {
+			font-size: 2rem;
+			line-height: 1.8;
+			text-decoration: underline;
+			text-decoration-color: var(--text-color-title);
+			text-underline-offset: 5px;
+			text-decoration-thickness: 1px;
+			word-break: keep-all;
+		}
+
+		.house-box.right {
+			justify-content: end;
+		}
+
+		.article-link {
+			display: flex;
+			gap: 3rem;
+			margin-top: 3rem;
+			justify-content: center;
+		}
+
+		.article-link-in {
+			display: flex;
+			gap: 1rem;
+		}
+
+		.article-link-left {
+			width: 4.5rem;
+		}
+
+		.article-link-right {
+			display: flex;
+			flex-direction: columnl;
+			justify-content: center;
+		}
+
+		.article-link-right p {
+			font-size: 1.4rem;
+		}
+
+		.article-link-right p span {
+			font-weight: 600;
+		}
+
+		.small-image2 {
+			width: 50%;
+			transform: translateX(-100%);
+			margin-bottom: -1rem;
+		}
+
+		.dual-house {
+			display: grid;
+			grid-template-columns: 1.2fr 1fr;
+			gap: 1rem;
+			width: 110%;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			margin: 4rem 0;
+		}
+
+		.dual-house .house-box {
+			align-items: flex-end;
+			margin-bottom: 0;
+		}
+
+		.dual-house .house-box div {
+			width: 90%;
+		}
+
+		@media (max-width:767px) {
+			.house-box div {
+				width: 70%;
+			}
+
+			.house-box p {
+				font-size: 1.3rem;
+				letter-spacing: -0.05rem;
+			}
+		}
+	</style>
 </head>
+
 <body>
 	<header class="header black" id="header"></header>
 	<main>
 		<section class="article-header">
 			<div class="article-header-wrap">
+
+				<div class="article-header-bg">
+					<figure>
+						<img src="contents/sub_22_top_bg.jpg" />
+					</figure>
+				</div>
 				<div class="article-header-container header-normal">
 					<div class="article-header-text">
 						<span>시골집꾸 라이프</span>
-						<!-- <h4>
-							햇살과 바람을 닮은 집에서
-						</h4> -->
+						<h4>
+							도시와 자연 사이에서 찾은 자리!
+						</h4>
 						<h2>
-							자연의 숨결을 품은 연화의 리틀포레스트
+							흙 위에 그린 두 세대의 꿈
 						</h2>
 						<div class="article-meta">
 							<span class="b">글</span>
 							<span>장희주</span>
 							<span class="pipe">ㅣ</span>
 							<span class="b">사진제공</span>
-							<span>연화</span>
+							<span>삼공일하우스</span>
 						</div>
 					</div>
 					<div class="article-header-image">
@@ -162,60 +233,42 @@
 			<div class="article-body-wrap">
 				<div class="article-prologue">
 					<p>
-						도시와 시골을 오가며 자연과 함께 살아가는 연화. 영화 <리틀 포레스트> 속 주인공처럼, 그녀는 스스로 흙을 만지고 집을 고쳐가며 삶의 온도를 되찾았다. 대나무 숲이 집을 감싸고, 강아지 포비가 뛰노는 마당이 있는 이곳. 그녀의 손끝에서 다시 태어난 ‘초록나무집’은 그야말로 한 편의 동화다. 
+						강화도에 자리한 듀플렉스 주택 ‘삼공일(3空1)’은 단순한 전원주택이 아니다. 서울에서의 직장 생활을 유지하면서도, 시골이 주는 속도와 온도를 놓치고 싶지 않았던 한 부부와
+						부모님의 듀얼 라이프 실험이 담긴 집이다. 자연을 좋아하는 남편, 손으로 만드는 것을 즐기는 아내. 취향부터 삶의 리듬까지 닮아 있는 두 사람이 오래 품어온 꿈을 현실로
+						꺼내 만든 곳, 바로 삼공일하우스다.
 					</p>
 				</div>
 				<div class="article-link">
 					<div class="article-link-in">
 						<div class="article-link-left">
 							<figure>
-								<a href="https://instagram.com/yeonhwa.bby" target="_blank"><img src="contents/sub_22_qr_1.png"></a>
+								<a href="https://instagram.com/301.house" target="_blank"><img
+										src="contents/sub_22_qr_1.png"></a>
 							</figure>
 						</div>
 						<div class="article-link-right">
 							<p>
 								<span>인스타그램</span><br>
-								<a href="https://instagram.com/yeonhwa.bby" target="_blank">instagram.com/yeonhwa.bby</a>
+								<a href="https://instagram.com/301.house" target="_blank">instagram.com/301.house</a>
 							</p>
 						</div>
 					</div>
 					<div class="article-link-in">
 						<div class="article-link-left">
 							<figure>
-								<a href="https://www.youtube.com/@chonacottage" target="_blank"><img src="contents/sub_22_qr_2.png"></a>
+								<a href="https://blog.naver.com/art_heals" target="_blank"><img
+										src="contents/sub_22_qr_2.png"></a>
 							</figure>
 						</div>
 						<div class="article-link-right">
 							<p>
-								<span>유튜브</span><br>
-								<a href="https://www.youtube.com/@chonacottage" target="_blank">youtube.com/@chonacottage</a>
+								<span>블로그</span><br>
+								<a href="https://blog.naver.com/art_heals" target="_blank">blog.naver.com/art_heals</a>
 							</p>
 						</div>
 					</div>
 				</div>
 				<div class="article-text">
-					<h4>
-						흐름에 몸을 맡긴 리모델링의 시간
-					</h4>
-					<p>
-						연화는 건축을 전공한 적도, 관련 일을 해본 적도 없었다. 그럼에도 70년 된 한옥을 직접 고쳐 살겠다는 결심을 하게 된 건, 오랜 꿈을 현실로 옮기고 싶은 용기에서 비롯됐다.
-					</p>
-					<p>
-						셀프로 집을 고치는 과정은 결코 쉽지 않았다. 몸도 마음도 지치는 순간이 많았고, 몇 번이나 포기하고 싶었던 때도 있었다. 그러나 그럴 때마다 주변의 작은 도움과 응원이 힘이 되어, 결국 지금의 따뜻한 집이 완성될 수 있었다.
-					</p>
-					<p>
-						1년이 넘는 공사 기간 동안 계획대로 되지 않은 일은 셀 수 없었다. 처음에는 예기치 못한 변수 하나하나에 흔들리고, 모든 걸 통제하려 애쓰며 스스로를 몰아붙이기도 했다. 하지만 시간이 흐르면서 연화는 서서히 깨달았다. ‘모든 걸 완벽히 조종할 수는 없어도, 그저 흘러가는 대로 두면 괜찮다’는 것을. 오는 건 오는 대로, 가는 건 가는 대로 받아들이는 법. 흐르는 물을 손으로 막을 수 없듯, 삶도 그렇게 흘러야 비로소 제 빛을 낸다는 사실을. 이제 그녀에게 그 흐름은 두렵지 않다. 오히려 그 속에서 새로운 길이 열리고, 그 길 위에서 삶의 진짜 재미를 다시 발견하고 있다.
-					</p>
-
-					<h4 style="margin-top:5rem">
-						대나무 숲이 품은 집
-					</h4>
-					<p>
-						집주인 할머니가 세상을 떠난 뒤, 수년간 비어 있던 이 집은 오랜 세월의 흔적을 고스란히 간직하고 있었다. 처음에는 단단해 보이는 기둥과 지붕이 마음에 들었다. 무엇보다 집 뒤편에 펼쳐진 대나무 숲이 연화를 사로잡았다. 바람이 불면 대나무 잎이 서로 스치며 내는 ‘사각사각’ 소리, 그 고요하고 평화로운 리듬이 도시의 소음을 대신했다.
-					</p>
-					<p>
-						리모델링은 골조만 남기고 전면 철거하는 방식으로 진행됐다. 천장을 뜯자 드러난 서까래는 마치 시간의 뼈대 같았다. 바닥을 깨자 구들장이 나왔고, 그 모든 잔해를 직접 들어냈다. 흙먼지와 돌가루 속에서 조금씩 집의 본모습이 드러났다. 현관문은 나무로 제작해 청록색으로 칠하고, 민트빛 지붕과 어우러지게 했다. 마당에는 배롱나무를 심고 반려가족인 포비가 마음껏 뛰어놀 수 있도록 잔디를 깔았다. 여름마다 활짝 피어날 배롱꽃을 기다리는 마음으로, 연화는 이 작은 집의 사계절을 설계했다.
-					</p>
 					<div class="article-image">
 						<div class="article-image-container">
 							<figure>
@@ -224,31 +277,62 @@
 						</div>
 					</div>
 					<div class="house-box" style="margin-top: -1rem;margin-bottom: 0;">
-						<div style="margin-left:35%">
-							<h5>마당</h5>
+						<div style="margin-left:7%">
+							<h5>외관</h5>
 							<p>
-								마당은 반려가족인 포비와 함께하는 공간이기 때문에, 포비가 신나게 뛰어놀 수 있도록 잔디를 심었어요. 포비가 좋아하는 모습을 보면 저도 행복하답니다.
+								기초공사가 끝나면 벽 골조를 세우고, 서까래와 합판을 올리며 비로소 집의 형태가 잡혀가기 시작합니다. 이때는 창문이나 문의 위치를 조정할 수 있는 거의 마지막
+								시기라, 현장을 자주 찾아가 확인해야 합니다. 목구조가 하나둘 세워지는 과정은 볼수록 신기했습니다.
 							</p>
 						</div>
 					</div>
-					<div class="article-image" style="margin-top: -1rem;margin-bottom: 8rem;">
+					<h4>
+						도시와 시골 사이, 우리에게 맞는 속도를 찾다
+					</h4>
+					<p>
+						이제 결혼 10년 차가 된 삼공일하우스 부부는, 연애 시절부터 마음 한쪽에 ‘언젠가 자연 가까이 살기’라는 같은 꿈을 품고 있었다. 비록 현재는 서울에서 일을 해야 해 당장
+						전원으로 옮기기엔 여러 제약이 있었지만, 먼 미래를 향한 발걸음만큼은 멈추지 않았다. 두 사람은 주말마다 남양주·양평·용인 등 전원 마을이 많은 지역을 둘러보며 가능성을
+						하나씩 좇았다.
+					</p>
+					<p>
+						그 무렵, 남편이 자주 산행하던 강화도가 자연스럽게 눈에 들어왔다. 조용하고 단단한 자연의 결이 두 사람을 천천히 끌어당긴 것이다. 마침 부모님도 시골살이에 마음이 열리던
+						시기였다. “그럼 두 집이 함께 지낼 듀플렉스는 어떨까?”라는 아이디어가 스쳤고, 그렇게 네 사람의 삶을 잇는 2세대 주택의 밑그림이 그려지기 시작했다.
+					</p>
+					<p>
+						서울의 일상을 완전히 정리할 수도 없고, 부모님에게 갑작스러운 귀촌을 권하기도 어렵던 상황에서, 해답은 자연스레 ‘둘 다’라는 결론에 닿았다. 도시의 일과 시골의 쉼을 함께
+						품는 듀얼 라이프. 두 집이 땅과 건물을 공유해 효율을 높이되, 각자의 리듬을 지키면서 서로 가까이 지내는 새로운 생활 방식이었다. 그렇게 부부는 어느새 오래 꿈꿔온
+						전원생활에, 생각보다 한 발 더 가까이 다가가 있었다.
+					</p>
+					<div class="article-image">
 						<div class="article-image-container">
 							<figure>
 								<img src="contents/sub_22_image_2.png">
 							</figure>
 						</div>
 					</div>
-
+					<div class="house-box" style="margin-top: -1rem;">
+						<div style="margin-left:35%">
+							<h5>공간</h5>
+							<p>
+								강화도에서 ‘건강한 집 짓기’ 시공사 대표님을 만나 강의를 듣는 순간 “이분과 지어야겠다”는 확신이 들었어요. 토지 선택부터 함께하며 조언을 받았고, 제가
+								그린 초안에 대표님의 손길이 더해져 삼공일하우스가 완성됐습니다.
+							</p>
+						</div>
+					</div>
 					<h4>
-						자연을 바라보는 주방   
+						세 공간이 하나의 삶을 만들다
 					</h4>
 					<p>
-						주방은 가장 많은 시간과 정성을 들인 공간이다. 옛날 주방에는 기둥과 기둥 사이에 커다란 그릇장이 자리하고 있었지만, 공간 활용을 위해 과감히 철거했다. 대신 대나무 숲을 마주보는 방향으로 싱크대를 배치했다. 무엇보다 요리하면서도 답답하지 않게, 자연을 바라보며 숨 쉴 수 있는 주방을 만들고 싶었다.
+						집 이름 ‘삼공일(3空1)’은 말 그대로 세 개의 공간이 하나로 이어지는 구조를 뜻한다. 부모님의 집, 부부의 집, 그리고 두 세대를 자연스럽게 잇고 떼어내는 파벽돌
+						다이닝룸. 이 다이닝룸은 식사 공간이자 작은 라운지, 그리고 두 세대가 모였다 흩어지는 ‘숨 통’ 같은 자리를 맡는다.
 					</p>
 					<p>
-						나무로 다리를 짜고 원목 상판을 얹은 싱크대는 그녀의 손으로 완성됐다. 천을 달아 투박하지만 따뜻한 감성을 더했다. ‘이렇게 만들어도 될까?’ 싶었지만, 지금까지도 멀쩡히 제 역할을 하고 있다. 예전 그릇장이 있던 자리에는 빈티지 찬장을 들였다. 벽에는 유럽풍 미장 마감으로 흙의 질감을 살리고, 작은 찻잔과 오래된 그릇들이 선반 위를 채웠다. 세월의 흔적이 묻은 소품들이 주방의 분위기를 한층 더 깊고 아늑하게 만들어준다.
+						부부의 주거 공간은 1·2층 28평에 다락을 더한 구성이다. 1층에는 주방과 다용도실, 작은 서재가 자리하고, 2층에는 침실·욕실·드레스룸이 하나의 원룸처럼 이어진다. 딱
+						필요한 만큼만 두고, 불필요한 것은 과감히 걷어낸 ‘부부 맞춤형 설계’다.
 					</p>
-
+					<p>
+						특히 이 집이 더 특별한 이유는 건축가 없이 집주인이 직접 도면을 그리고, 시공사 대표가 조언하며 완성해 낸 셀프 설계 주택이라는 점이다. 완벽함보다 ‘내 손이 닿은 집’을
+						원했던 부부의 선택은 과정에서는 도전이었지만, 완공 후에는 무엇과도 바꿀 수 없는 큰 기쁨으로 돌아왔다.
+					</p>
 					<div class="article-image">
 						<div class="article-image-container">
 							<figure>
@@ -256,22 +340,43 @@
 							</figure>
 						</div>
 					</div>
-					<div class="house-box" style="margin-top: -3rem;">
-						<div>
+					<div class="house-box">
+						<div style="margin-left:5%">
 							<h5>주방</h5>
 							<p>
-								싱크대 위쪽으로 창을 내야 했기에 상부장을 둘 수 없었어요. 그래서 부족한 수납 공간은 아일랜드 식탁을 만들어서 해결했어요.
+								따뜻한 주방을 꿈꾸며 원목 싱크대를 알아봤지만 비용이 너무 높아 좌절….<br>
+								그때 만난 이케아 해킹!<br>
+								메토드 셀프 조립에 자작나무 앞판까지 더해,<br>
+								예산은 아끼고 감성은 살린 나만의 주방을<br>
+								완성했어요.
 							</p>
 						</div>
 					</div>
 
-					<h4>서까래 아래, 삶이 머무는 거실</h4>
+					<h4>
+						집이 자라는 순간들을 함께 바라보다
+					</h4>
 					<p>
-						거실과 마루를 가르던 벽을 허물자, 집은 훨씬 넓고 열린 공간을 가지게 됐다. 작지만 답답하지 않은 집, 연화가 꿈꾸던 공간의 첫걸음이었다.
+						기초 공사가 끝나자 드디어 집의 윤곽이 모습을 드러내기 시작했다. 개구부 위치를 조정하려고 현장을 자주 오가며 살폈고, 서까래가 하나씩 올라가는 순간들을 숨죽여 지켜보았다.
+						“저 가느다란 나무가 정말 2층을 떠받칠 수 있을까?” 싶으면서도, 놀라움과 설렘이 뒤섞인 시간이 길게 이어졌다.
 					</p>
 					<p>
-						안방과 거실 사이에는 작은 문 하나만 남겨 자연스러운 경계를 두었다. 오래된 자개장은 당근마켓에서 나눔 받은 것이고, 비단 방석은 할머니 댁에서 가져온 것이다. 세월의 결이 다른 물건들이 한 공간 안에서 조용히 어우러진다. 소파에 앉으면 천장의 서까래가 시선을 붙든다. 연화가 손수 닦고 오일 스테인을 입힌 나무는, 구불구불한 결이 그대로 살아 있다. 삐뚤삐뚤한 모습이 오히려 자연스럽다는 연화는, 이 집의 아름다움은 완벽함보다는 ‘살아 있음’에 있다고 말한다. 내벽은 유럽식 미장으로, 흙빛의 질감이 공간에 깊이를 더한다. 바닥은 미끄럽지 않은 포세린 타일로 마감해 포비가 마음껏 뛰어다닐 수 있도록 했다. 
+						외장재부터 창호, 합판, 지붕까지. 집을 이루는 거의 모든 요소가 부부의 선택과 고민을 거쳐 하나씩 자리를 잡아갔다.
 					</p>
+					<p>
+						가장 정성이 들어간 공간은 단연 주방이다. 원목 싱크대를 꿈꿨지만 견적이 너무 높아 포기하려던 순간, 이른바 ‘이케아 해킹’을 발견했다. 셀프로 조립한 메토드 수납장에
+						자작나무 앞판을 더해, 비용은 낮추고 만족도는 높인 맞춤형 우드 주방이 완성된 것이다. 아침마다 동쪽 창으로 들어오는 빛을 오래 붙잡고 싶어 베이지 톤의 와플 커튼도
+						달아주었다.
+					</p>
+					<p>
+						이 집의 인테리어는 ‘트렌드’라기보다 ‘삶의 기록’에 가깝다. 작은 화방은 그 기록을 가장 잘 드러내는 공간으로, 전시 엽서와 명화책, 친구들의 그림 등 부부의 취향과
+						시간이 고스란히 걸려 있다.
+					</p>
+					<p>
+						다이닝룸은 시공사에 맡기지 않고 집주인이 직접 공정별 전문가를 섭외해 완성한 공간이다. 특히 파벽돌 시공은 4박 5일 동안 이어진 체력전이었는데, 뒤돌아보면 그 시기가
+						‘부부애가 한층 더 단단해진 시간’이기도 했다.
+					</p>
+
 					<div class="article-image">
 						<div class="article-image-container">
 							<figure>
@@ -279,51 +384,75 @@
 							</figure>
 						</div>
 					</div>
-					<div class="house-box">
-						<div>
-							<h5>거실</h5>
+					<div class="house-box" style="margin-top: -1rem; margin-bottom: 0;">
+						<div style="margin-left:0%">
+							<h5>다이닝룸</h5>
 							<p>
-								마루에서 작은 문을 열고 들어가면 침실이 나왔어요. 공간이 아기자기하게 나뉘어있었는데, 실생활을 하기에는 불편할 것 같았어요. 그래서 결국은 거실과 침실 사이의 벽을 철거했는데, 대신에 안방으로 들어가는 작은 문은 남겨뒀어요. 나름대로 침실과 거실을 구분하는 파티션 역할을 하고 있답니다.
+								인테리어를 전부 시공사에 맡기지 않고, 이 다이닝룸만큼은 제가 직접 준비했어요. 필요한 전문가를 섭외하고 공정별 일정까지 조율하며 하나씩 완성했죠. 쉽진
+								않았지만 입주까지 시간이 넉넉했던 덕분에 가능했어요. 전체 공사는 약 10개월, 농담처럼 “집 하나 낳았다”고 말하곤 했답니다.
 							</p>
 						</div>
 					</div>
-
-					<h4>온기가 느껴지는 마당</h4>
-					<p>
-						마당은 ‘초록나무집’의 마지막 퍼즐이자, 가장 따뜻한 공간이다. 연화는 싱크대를 만들고 남은 나무로 직접 대문을 짜고, 그 위에 강아지 모양 우체통을 달았다. 그녀가 바란 건 거창한 조형물이 아니라, 일상 속에서 스며드는 온기였다.
-					</p>
-					<p>
-						철거 과정에서 나온 구들장은 현관 앞 디딤돌로 다시 태어났고, 크고 작은 돌들은 뒷마당의 돌담으로 쌓였다. 버려질 뻔한 것들이 제자리를 찾아가며, 집은 점점 더 단단해졌다.
-					</p>
-					<p>
-						돌과 나뭇가지로 둘러싼 작은 화단에는 봄이면 라일락 향기가 번지고, 여름이면 목수국이 피어난다. 뒤편에는 새로 심은 능소화 한 그루가 자리 잡았다. 올여름, 그 능소화가 드디어 첫 꽃을 피웠다. 그 순간, 연화는 집이 완성되었음을 느꼈다.
-					</p>
-					<p>
-						1년이 넘는 시간 동안의 리모델링 끝에, 그녀는 집과 함께 자신 또한 단단해졌음을 깨달았다. 지금 연화는 그 모든 경험을 전자책에 담고 있다. 공사비와 자재, 시행착오, 그리고 마음의 변화까지. 그녀의 ‘초록나무집’ 이야기는 오늘도 유튜브 초록나무집, 인스타그램 @yeonhwa.bby에서 조용히 이어지고 있다. 
-						<i class="icon_last"></i>
-					</p>
-					<div class="article-image">
+					<div class="article-image big-image" style="margin-top: 0;">
 						<div class="article-image-container">
 							<figure>
 								<img src="contents/sub_22_image_5.png">
 							</figure>
 						</div>
 					</div>
-					<div class="house-box">
-						<div>
-							<h5>마당</h5>
-							<p>
-								돌과 나뭇가지로 자그마한 화단을 만들었어요. 봄에는 라일락 향기가 나고 여름에는 목수국이 그 자리를 빛내주는 화단이에요. 무엇보다 집을 꾸미면서 오는 건 오는 대로, 가는 건 가는 대로 받아들이고 나아가는 법을 배웠어요. 흐르는 물은 손으로 막아도 흘러가고야 말잖아요. 몸을 맡기고 기꺼이 흘러가기로 하니 그런 삶도 나름의 재미가 있네요.
-							</p>
-						</div>
-					</div>
-					<div class="article-image big-image">
+
+					<div class="article-image">
 						<div class="article-image-container">
 							<figure>
 								<img src="contents/sub_22_image_6.png">
 							</figure>
 						</div>
 					</div>
+					<div class="house-box" style="margin-top: -3rem;">
+						<div>
+							<h5>정원</h5>
+							<p>
+								정원을 상상하며 설렘이 컸고, 그 과정에서 파이어 피트라는 존재를 알게 되었어요. 불멍도 바비큐도 가능한 정원의 핫 아이템이랍니다.
+							</p>
+						</div>
+					</div>
+					<div class="article-image big-image" style="margin-top: 0; margin-bottom: 5rem;">
+						<div class="article-image-container">
+							<figure>
+								<img src="contents/sub_22_image_7.png">
+							</figure>
+						</div>
+					</div>
+
+					<h4>마음을 돌보는 작은 쉼터, 정원</h4>
+					<p>
+						마당은 ‘초록나무집’의 마지막 퍼즐이자, 가장 따뜻한 공간이다. 연화는 싱크대를 만들고 남은 나무로 직접 대문을 짜고, 그 위에 강아지 모양 우체통을 달았다. 그녀가 바란
+						건 거창한 조형물이 아니라, 일상 속에서 스며드는 온기였다.
+					</p>
+					<p>
+						정원은 단순한 외부 공간이 아니라, 이 집의 성격을 완성하는 또 하나의 방이다. 배수와 전기, 동선, 콘센트까지. 생각보다 챙길 것이 많았고 시행착오도 여러 번이었다.
+						그래도 식물이 자라는 속도에 맞춰 천천히 스케치하듯 가꾸고 있다. 주중에는 비워두는 날이 많아 실패한 파종도 있었지만, 몇몇은 건강히 자라 천일홍 꽃을 피워 올렸다.
+						씨앗부터 키운 꽃이라 더 애틋했다.
+					</p>
+					<p>
+						그렇게 완성된 정원은 부부에게 마음을 돌보는 작은 쉼터가 됐다. 작은 씨앗이 꽃으로 자라는 과정을 지켜보며 그들은 일상의 균형을 자연에게서 배워간다. 처음에는 정원에 큰
+						관심이 없던 남편도 이제는 누구보다 적극적이다. 잔디를 파내고 꽃을 더 심자고 제안하며, 정원을 향한 애정을 서슴없이 드러낸다. 특히 잡초를 뽑는 시간을 마음챙김의 순간으로
+						여겨, 어지러운 생각을 식물과 함께 정리하며 한결 가벼워진다고 말한다. 부인은 그런 모습을 보고 ‘잡초 명상’이라 이름 붙였다. 그녀가 꽃을 심고 채우는 일을 맡는다면,
+						남편은 비우고 정돈하는 일을 맡아 정원은 두 사람의 손끝에서 조용히 완성되어 간다. 자연을 돌보는 일은 결국 서로를 돌보는 일과 닮아 있었다.
+					</p>
+					<p>
+						정원의 백미는 단연 ‘파이어 피트(Fire pit)’. 낮에는 싱그러움이 머물고, 밤에는 불멍의 고요가 내려앉는 곳이다. 이 집에서 계절과 시간을 가장 생생하게 느낄 수
+						있는 자리이기도 하다. 특별한 날이면 조카들을 위해 바비큐 장비를 꺼내 들고, 정원은 작은 캠핑장으로 변하기도 한다. 전원생활을 동경하는 이들이 말하는 ‘바비큐 로망’은
+						사실 꽤 번거로운 일이지만, 누군가를 위한 마음이 얹혀지는 순간 그 수고마저 기꺼운 풍경이 된다.
+					</p>
+					<p>
+						삼공일하우스는 ‘예쁜 전원 풍경’에 머무르지 않는다. 도시와 시골 사이에서 자신들에게 맞는 삶의 속도를 찾아가는 부부의 기록 그 자체다. 직접 설계한 집, 손으로 붙인
+						파벽돌, 실패와 성공이 뒤섞인 정원, 두 세대를 자연스럽게 이어주는 다이닝룸까지. 이 집에는 ‘완벽함’ 대신 삶의 온도가 고요히 배어 있다.
+					</p>
+					<p>
+						삼공일하우스는 오늘도 그렇게, 천천히 그리고 단단하게 부부의 시간을 키워가고 있다.
+						<i class="icon_last"></i>
+					</p>
 				</div>
 			</div>
 		</section>
@@ -331,4 +460,5 @@
 	</main>
 	<footer class="footer black" id="footer"></footer>
 </body>
+
 </html>
