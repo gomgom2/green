@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>그린매거진</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="그린매거진">
 	<meta property="og:description" content="그린매거진 웹진을 만나보세요.">
@@ -14,91 +15,109 @@
 	<link rel="stylesheet" type="text/css" href="css/sub.css?ver=202502" />
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/script2.js?ver202502"></script>
-<style>
-	:root {
-		--main-color: #fff;
-		--text-color-title: #113975;
-		--text-color-title2: #94C152;
-		--text-color-title3: #9E5BA3;
-	}
+	<style>
+		:root {
+			--main-color: #fff;
+			--text-color-title: #113975;
+			--text-color-title2: #94C152;
+			--text-color-title3: #9E5BA3;
+		}
 
-.header-mono .article-header-text h2,
-.article-meta span {
-	color: var(--text-color-title);
-}
-.farm-top h6 {
-	font-size: 1.2rem;
-}
-.circle-farm {
-	line-height: 1.1;
-	font-size: 1.1rem;
-	padding-bottom: 1rem;
-}
-.farm-box h3 {
-	margin-bottom: 0rem;
-}
-.farm-box h4 {
-    font-size: 4rem;
-    font-family: 'Paperlogy-6SemiBold';
-    color: var(--text-color-title2);
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    margin: 0 0 5rem 3rem;
-    letter-spacing: -1px;
-}
-.farm-image-last {
-	margin-top: 1rem;
-	display: flex;
-	justify-content: space-between;
-	gap: 1rem;
-}
-.farm-qr span {
-	margin-top: 1.5rem;
-}
-.farm-qr figure {
-	border: 0;
-}
-@media (max-width:767px) {
-	.article-meta {
-		text-align: center;
-		padding: 1rem 0 3rem;
-	}
-	.article-meta span {
-		margin-bottom: 0;
-		line-height: 1.8rem;
-	}
-	.article-meta span.dot {
-		display: block;
-		font-size: 0;
-		line-height: 0.1rem;
-	}
-	.farm-top {
-		width: calc(100% - 4rem);
-	}
-	.farm-box::before {
-		right: 2rem;
-	}
-	.farm-box h3, .farm-box h4 {
-		font-size: 2rem;
-		margin-left: 2rem;
-	}
-	.farm-grid {
-		gap: 2rem;
-	}
-	.farm-info {
-		border-left: 0;
-	}
-	.farm-text {
-		padding-right: 2rem;
-	}
-	.quote-farm {
-		font-size: 1.6rem;
-	}
-}
+		.header-mono .article-header-text h2,
+		.article-meta span {
+			color: var(--text-color-title);
+		}
 
-</style>
+		.farm-top h6 {
+			font-size: 1.2rem;
+		}
+
+		.circle-farm {
+			line-height: 1.1;
+			font-size: 1.1rem;
+			padding-bottom: 1rem;
+		}
+
+		.farm-box h3 {
+			margin-bottom: 0rem;
+		}
+
+		.farm-box h4 {
+			font-size: 4rem;
+			font-family: 'Paperlogy-6SemiBold';
+			color: var(--text-color-title2);
+			padding: 0;
+			border: 0;
+			border-radius: 0;
+			margin: 0 0 5rem 3rem;
+			letter-spacing: -1px;
+		}
+
+		.farm-image-last {
+			margin-top: 1rem;
+			display: flex;
+			justify-content: space-between;
+			gap: 1rem;
+		}
+
+		.farm-qr span {
+			margin-top: 1.5rem;
+		}
+
+		.farm-qr figure {
+			border: 0;
+		}
+
+		@media (max-width:767px) {
+			.article-meta {
+				text-align: center;
+				padding: 1rem 0 3rem;
+			}
+
+			.article-meta span {
+				margin-bottom: 0;
+				line-height: 1.8rem;
+			}
+
+			.article-meta span.dot {
+				display: block;
+				font-size: 0;
+				line-height: 0.1rem;
+			}
+
+			.farm-top {
+				width: calc(100% - 4rem);
+			}
+
+			.farm-box::before {
+				right: 2rem;
+			}
+
+			.farm-box h3,
+			.farm-box h4 {
+				font-size: 2rem;
+				margin-left: 2rem;
+			}
+
+			.farm-grid {
+				gap: 2rem;
+			}
+
+			.farm-info {
+				border-left: 0;
+			}
+
+			.farm-text {
+				padding-right: 2rem;
+			}
+
+			.quote-farm {
+				font-size: 1.6rem;
+			}
+		}
+	</style>
 </head>
+
 <body>
 	<header class="header black" id="header"></header>
 	<main>
@@ -109,13 +128,11 @@
 						<h2>치유농장</h2>
 						<div class="article-meta">
 							<span class="b">글</span>
-							<span>구혜진</span>
-							<!-- <span class="pipe">ㅣ</span> --><br>
+							<span>구혜진</span><br>
 							<span class="b">사진 제공</span>
-							<span>제주특별자치도 농업기술센터, 강원특별자치도 농업기술원</span>
-							<!-- <span class="pipe">ㅣ</span> --><br>
+							<span>경기도농업기술원, 서울특별시 치유농업센터</span><br>
 							<span class="b">자료 도움</span>
-							<span>농촌자원과 전영삼 농촌지도관, 김진주 농촌지도사</span>
+							<span>농촌자원과 김진주 농촌지도사</span>
 						</div>
 					</div>
 				</div>
@@ -124,17 +141,15 @@
 		<section class="article-body">
 			<div class="farm-top">
 				<h4>치유농업센터</h4>
-				<!-- <h5>치유농업 정보가 한곳에 <span>치유농업 <em>ON</em></span></h5> -->
 				<h6>몸이 쉬고 마음이 자라는 곳<br>치유농업의 모든 이야기를 한곳에서</h6>
-				<!-- <a href="https://www.agrohealing.go.kr/sf/main/main.do" target="_blank"><span>www.agrohealing.go.kr</span></a> -->
 				<div class="circle-farm">HEALING<br>AGRICULTURE<br>CENTER</div>
 			</div>
 			<div class="farm-box headling-farm">
 				<h3>
-					제주특별자치도 치유농업센터
+					경기도농업기술원 치유농업센터
 				</h3>
 				<h4>
-					제주에서 전하는 맞춤형 초록 프로그램
+					자연이 건네는 위로
 				</h4>
 				<div class="farm-image-top">
 					<figure>
@@ -156,19 +171,21 @@
 							다양한 체험을 통해 자연과 교감하는 시간을 갖는다.
 						</blockquote>
 						<h6>
-							제주의 자연에서 만나는 치유의 시간
+							농업이 만드는 새로운 치유의 길
 						</h6>
 						<p>
-							제주 서귀포시 남원읍에 위치한 제주특별자치도 치유농업센터에서는 제주의 자연을 그대로 담은 치유 프로그램이 운영되고 있다. 잔디밭 위에서 어르신들이 맨발로 풀을 밟으며 직접 심은 꽃이 얼마나 자랐는지 살펴보고, 꽃잎으로 자신의 이름을 써보는 풍경이 일상처럼 펼쳐진다.
+							경기도는 전국에서 가장 먼저 치유농업의 가능성을 알아본 곳이다. 2019년 전국 최초로 ‘경기도 치유농업 육성 및 지원 조례’를 제정하며 제도적 기반을 마련했고,
+							2023년에는 전국 최초로 치유농업 전담 조직을 구성하고 전문 인력을 배치했다. 현재 경기도 31개 시·군 중 24곳이 치유농업 조례를 제정하며 함께 이 길을 걷고
+							있다.
 						</p>
 						<p>
-							제주특별자치도 농업기술원은 2023년부터 ‘제주치유농업센터’를 본격적으로 운영 중이다. 서귀포 농업기술센터 내 499㎡ 규모로 조성된 이곳은 치유농업 서비스 제공, 전문가 양성 교육, 사회복지시설 협업 등 인적·물적 네트워크의 구심점 역할을 맡고 있다.
+							경기도농업기술원 치유농업센터는 6,560㎡ 규모의 치유 쉼터와 정원, 실내 교육시설과 치유 온실을 갖추고 있다. 이곳에서는 농촌진흥청이 개발한 검증된 프로그램을
+							바탕으로 노인, 장애인, 스트레스 성인 등 대상별 맞춤 프로그램을 운영한다. 참여자들은 콩과 보리를 활용한 작물 프로그램, 호랑나비와 귀뚜라미를 만나는 곤충
+							프로그램, 텃밭 정원 가꾸기 등을 통해 몸과 마음의 변화를 경험한다.
 						</p>
 						<p>
-							센터는 텃밭과 실습 체험장을 갖추고 대상별 맞춤형 프로그램을 다양하게 운영한다. 치매 노인을 위한 ‘초록쉼터’, 장애 아동과 함께하는 ‘텃밭 정원 이야기’, 학교 밖 청소년 대상의 ‘초록노트–식물관찰의 미학’, 모두를 위한 ‘초록다방’ 등 참여자의 특성에 맞춘 세심한 프로그램이 준비되어 있다. 
-						</p>
-						<p>
-							제주만의 청정한 자연환경과 농업 자원을 활용한 치유 프로그램은 지역 농업과 관광 산업에 새로운 활력을 불어넣고 있다.
+							경기도는 치유 농업을 확산하기 위해 광역 치매센터, 사회서비스원, 국민건강보험공단 등 다양한 기관과 협력하고 있다. 도내 89개 치유농장이 46곳의 치매안심센터,
+							10곳의 사회서비스원과 연계하여 프로그램을 운영하며, 2024년 한 해에만 2만 명 이상이 치유농업 프로그램에 참여했다.
 							<i class="icon_last"></i>
 						</p>
 						<div class="farm-image-last">
@@ -185,24 +202,13 @@
 							<h6>Information</h6>
 							<p>
 								<span>주소</span><br>
-								제주특별자치도 서귀포시 남원읍 중산간동로 7433-23
+								경기도 화성시 봉담읍 와우안길 202-56
 							</p>
 							<p>
 								<span>문의</span><br>
-								064-760-7523
+								031-229-5821
 							</p>
-							<!-- <p>
-								<span>프로그램 가격(예상)</span><br>
-								1인 10,000원 <br>
-								(프로그램별 상이)
-							</p> -->
 						</div>
-						<!-- <div class="farm-qr">							
-							<span>네이버 블로그</span>
-							<figure>
-								<a href="https://blog.naver.com/oak0940" target="_blank"><img src="contents/sub_43_qr_11.png"></a>
-							</figure>
-						</div> -->
 					</div>
 				</div>
 			</div>
@@ -213,10 +219,10 @@
 			</div>
 			<div class="farm-box pet-farm">
 				<h3>
-					강원특별자치도 농업기술원
+					서울특별시 치유농업센터
 				</h3>
 				<h4>
-					강원의 자연과 먹거리가 전하는 치유의 시간
+					도심 속에서 만나는 농업의 치유
 				</h4>
 				<div class="farm-image-top">
 					<figure>
@@ -238,16 +244,20 @@
 							자연 속에서 몸과 마음의 균형을 회복하도록 돕는다.
 						</blockquote>
 						<h6>
-							강원 청정 자연이 선물하는 치유의 힘
+							전국 최초, 도시형 치유농업을 열다
 						</h6>
 						<p>
-							강원도 하면 떠오르는 것은 맑은 공기, 시원한 바람, 그리고 푸른 산이다. 이러한 강원의 청정 자연이 곧 치유의 자원이 되었다. 태백산맥의 깨끗한 공기와 숲길을 활용한 ‘호흡기 건강 치유 프로그램’은 참여자들이 숲을 거닐며 깊은 숨을 들이쉬고, 자연 속에서 몸과 마음의 균형을 회복하도록 돕는다.
+							풀내음 치유농업센터는 전국 최초로 도시형 치유농업을 실현한 공간이다. 고독사와 우울증, 불안증 환자 증가 등으로 치유의 중요성이 대두되는 가운데, 서울시는
+							2021년부터 2022까지 농촌진흥청 국고보조사업으로 6,490㎡ 규모의 치유농업센터를 조성했다.
 						</p>
 						<p>
-							강원특별자치도는 2017년 전국 최초로 치유농업 조례를 제정한 뒤 치매안심센터, 복지센터 등 다양한 기관과 협력해 치유 서비스를 꾸준히 확장해오고 있다. 현재 강원특별자치도 농업기술원은 ‘치유농업 광역거점센터’를 건립 중이며, 프로그램 개발·운영·보급, 전문가 양성, 유관기관 협력, 플랫폼 구축 등 치유농업의 전 과정을 포괄하는 거점기관으로 발전하고 있다.
+							경작지나 농장 부지를 활용하는 ‘농장형 치유 농장’에서는 치유농업 실습 텃밭과 허브·야생화· 정원을 만날 수 있다. 건물 옥상이나 자투리 공간을 활용하는 ‘시설형
+							치유 농장’은 상자 텃밭과 옥상정원으로 조성되어 어르신, 장애인, 어린이 등 누구나 쉽게 접근할 수 있다. 그리고 스마트팜과 수경재배를 적용한 ‘미래 농업형 치유
+							농장’은 사계절 내내 치유농업 체험이 가능하다.
 						</p>
 						<p>
-							또한 지역 특산물인 옥수수를 활용한 프로그램도 개발 중이다. 60세 이상 어르신들이 옥수수를 이용한 다양한 활동을 통해 인지 능력을 높이고 손 근육을 강화하는 등, 지역 농산물이 치유의 도구로 활용되고 있다. 강원특별자치도 농업기술원은 농업이 단순히 먹거리를 생산하는 단계를 넘어, 사람들의 건강과 행복을 돌보는 ‘치유농업’의 중심지로 자리매김하고 있다. 
+							치유농업센터에서는 청소년의 자아존중감 향상, 청장년의 스트레스 완화, 중·노년의 자아통합감 증진, 치매·어르신의 인지 기능 유지 등 대상자별 맞춤형 프로그램을
+							운영한다. 작물의 생애주기를 통해 지나온 삶에 긍정적 의미를 부여하고, 심리극과 연계한 자아 탐색 활동으로 참여자들의 마음을 돌본다.
 							<i class="icon_last"></i>
 						</p>
 						<div class="farm-image-last">
@@ -264,24 +274,13 @@
 							<h6>Information</h6>
 							<p>
 								<span>주소</span><br>
-								강원도 춘천시 신북읍 장본길 40
+								서울특별시 강동구 상일동 467-9
 							</p>
 							<p>
-								<span>문의</span><br>
-								033-248-6154
+								<span>예약 문의</span><br>
+								02-6959-9350
 							</p>
-							<!-- <p>
-								<span>프로그램 가격(예상)</span><br>
-								1인 40,000원<br>
-								(프로그램별 상이)
-							</p> -->
 						</div>
-						<!-- <div class="farm-qr">
-							<span>네이버 블로그</span>
-							<figure>
-								<a href="https://blog.naver.com/slowfarmers" target="_blank"><img src="contents/sub_43_qr_21.png"></a>
-							</figure>
-						</div> -->
 					</div>
 				</div>
 			</div>
@@ -289,4 +288,5 @@
 	</main>
 	<footer class="footer black" id="footer"></footer>
 </body>
+
 </html>
