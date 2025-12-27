@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>그린매거진</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="그린매거진">
 	<meta property="og:description" content="그린매거진 웹진을 만나보세요.">
@@ -15,111 +16,134 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/script.js?ver202502"></script>
 	<!-- Slick CSS -->
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 	<!-- Slick JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 	<script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function () {
-    const popup = document.getElementById("popup");
-    const closeBtn = document.getElementById("closeBtn");
-    const dontShowAgain = document.getElementById("dontShowAgain");
+		document.addEventListener("DOMContentLoaded", function () {
+			const popup = document.getElementById("popup");
+			const closeBtn = document.getElementById("closeBtn");
+			const dontShowAgain = document.getElementById("dontShowAgain");
 
-    const hidePopup = localStorage.getItem("hidePopup");
-    const hidePopupExpires = localStorage.getItem("hidePopupExpires");
+			const hidePopup = localStorage.getItem("hidePopup");
+			const hidePopupExpires = localStorage.getItem("hidePopupExpires");
 
-    if (hidePopup === "true" && hidePopupExpires) {
-        const expirationTime = new Date(parseInt(hidePopupExpires, 10));
-        if (new Date() < expirationTime) {
-            popup.style.display = "none";
-        } else {
-            // 만료 시간이 지났다면 localStorage 초기화
-            localStorage.removeItem("hidePopup");
-            localStorage.removeItem("hidePopupExpires");
-        }
-    }
+			if (hidePopup === "true" && hidePopupExpires) {
+				const expirationTime = new Date(parseInt(hidePopupExpires, 10));
+				if (new Date() < expirationTime) {
+					popup.style.display = "none";
+				} else {
+					// 만료 시간이 지났다면 localStorage 초기화
+					localStorage.removeItem("hidePopup");
+					localStorage.removeItem("hidePopupExpires");
+				}
+			}
 
-    closeBtn.addEventListener("click", function () {
-        popup.style.display = "none";
+			closeBtn.addEventListener("click", function () {
+				popup.style.display = "none";
 
-        if (dontShowAgain.checked) {
-            const expirationTime = new Date().getTime() + 24 * 60 * 60 * 1000; // 현재 시간 + 24시간
-            localStorage.setItem("hidePopup", "true");
-            localStorage.setItem("hidePopupExpires", expirationTime.toString());
-        }
-    });
-});
+				if (dontShowAgain.checked) {
+					const expirationTime = new Date().getTime() + 24 * 60 * 60 * 1000; // 현재 시간 + 24시간
+					localStorage.setItem("hidePopup", "true");
+					localStorage.setItem("hidePopupExpires", expirationTime.toString());
+				}
+			});
+		});
 	</script>
-<style>
-:root {
-	--main-color: #396237;
-}
-.dream-right-bottom figure img {
-	max-height: 30rem;
-}
-.popup {
-	width: 55rem;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	border: 3px solid #000;
-	background-color: #fff;
-	z-index: 1000;
-}
-.popup-footer {
-	padding: 1rem 1.5rem;
-	font-size: 1.3rem;
-	display: flex;
-	gap: 1rem;
-	justify-content: flex-end;
-}
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    gap: 0.9rem;
-    cursor: pointer;
-}
-.popup-footer span {
-	cursor: pointer;
-	border: 1px solid #999;
-	padding: 0.2rem 0.5rem;
-	border-radius: 0.5rem;
-}
-.life-image h5 {
-	display: block;
-	width: fit-content;
-	padding: 0.5rem 1rem;
-	background-color: var(--main-color);
-	border-radius: 0 0 1rem 1rem;
-	top:0;
-}
-br.mobile {
-	display: none;
-}
-@media (max-width:767px) {
-	.popup {
-		width: 90%;
-	}
-	br.mobile {
-		display: block;
-	}
-	.theme-text h4 {
-	    font-size: 2.8rem;
-	}
-	.dream-left-top figure img {
-        height: 100%;
-        width: auto;
-        max-width: 200vw;
-        position: absolute;
-         right: 0; 
-        bottom: 0;
-        object-fit: contain;
-    }
-}
+	<style>
+		:root {
+			--main-color: #910000;
+		}
 
-</style>
+		.dream-right-bottom figure img {
+			max-height: 30rem;
+		}
+
+		.popup {
+			width: 55rem;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-45%);
+			border: 3px solid #000;
+			background-color: #fff;
+			z-index: 1000;
+		}
+
+		.popup-footer {
+			padding: 1rem 1.5rem;
+			font-size: 1.3rem;
+			display: flex;
+			gap: 1rem;
+			justify-content: flex-end;
+		}
+
+		.checkbox-container {
+			display: flex;
+			align-items: center;
+			gap: 0.9rem;
+			cursor: pointer;
+		}
+
+		.popup-footer span {
+			cursor: pointer;
+			border: 1px solid #999;
+			padding: 0.2rem 0.5rem;
+			border-radius: 0.5rem;
+		}
+
+		.life-image h5 {
+			display: block;
+			width: fit-content;
+			padding: 0.5rem 1rem;
+			background-color: var(--main-color);
+			border-radius: 0 0 1rem 1rem;
+			top: 0;
+		}
+
+		.healing-text.healing2 h4 {
+			font-size: 2rem;
+		}
+
+		.bottom:after {
+
+			height: 80%;
+			background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+		}
+
+		br.mobile {
+			display: none;
+		}
+
+		@media (max-width:767px) {
+			.popup {
+				width: 90%;
+			}
+
+			br.mobile {
+				display: block;
+			}
+
+			.theme-text h4 {
+				font-size: 2.8rem;
+			}
+
+			.dream-left-top figure img {
+				height: 100%;
+				width: auto;
+				max-width: 200vw;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				object-fit: contain;
+			}
+		}
+	</style>
 </head>
+
 <body>
 	<header class="header" id="header"></header>
 	<main>
@@ -128,28 +152,28 @@ br.mobile {
 				<div class="story-flex">
 					<div class="story-image">
 						<div class="photo-slider">
-						    <div><img src="contents/main_slide_image_2.jpg"></div>
-						    <div><img src="contents/main_slide_image_1.jpg"></div>
+							<div><img src="contents/main_slide_image_2.jpg"></div>
+							<div><img src="contents/main_slide_image_1.jpg"></div>
 						</div>
 					</div>
 					<div class="story-text">
 						<h2>
 							<span>
-								우리 농산물로 여는<br>기능성 식의약 소재의 미래
+								말이 자라는 자연의 리듬 위에<br>농업과학을 더하다
 							</span>
 						</h2>
 						<div class="story-desc">
 							<p>
-기능성 식의약 소재의 시작은 <br>
-우리 땅에서 자란 한 알의 씨앗입니다.<br>
-농촌진흥청은 우리 농산물에 담긴 성분을 과학으로 풀어내,<br>
-건강을 지키는 원료로, <br>
-미래 산업을 키우는 토대로 길러내고 있습니다. <br>
-참당귀와 팥순 그리고 흑삼이 약이 되고,<br>
-감초와 황기가 산업이 됩니다.<br>
-연구실에서 밭으로, 밭에서 다시 식탁으로.<br>
-농업과학의 연구가 모여 국민의 건강과 산업의 자립을 이끄는 길,<br>
-그 길의 이름은 ‘기능성 식의약 소재 국산화’입니다.
+								제주 초지의 바람 속을 달리는 RDA승용마는 <br>
+								자연과 과학이 함께 빚어낸 작은 기적입니다. <br>
+								농촌진흥청은 우리 고유 품종을 토대로 <br>
+								한국인의 체형과 생활 승마 환경에 맞는 말을 만들기 위해 <br>
+								오랜 시간 연구를 이어왔습니다. <br>
+								방목 사육에서의 변화, 공공부문 첫 도입, 성장 과정까지. <br>
+								세심히 살핀 과학적 기록들은 <br>
+								국산 승용마의 미래를 단단하게 비춰주고 있습니다. <br>
+								말과 사람이 조화롭게 살아가는 새로운 승마 문화를 향해, <br>
+								농촌진흥청의 여정은 오늘도 계속되고 있습니다.
 							</p>
 						</div>
 					</div>
@@ -165,9 +189,9 @@ br.mobile {
 								<img src="contents/main_theme_1.jpg" />
 							</figure>
 							<div class="theme-text">
-								<span style="background-color: #000; color: #fff">테마 인사이트</span>
-								<h4>
-									국산 농산물로 여는<br>기능성 식의약 소재의 미래
+								<span>테마 인사이트</span>
+								<h4 style="color:#fff">
+									RDA승용마,<br>과학과 현장이 만든<br>새로운 가능성
 								</h4>
 								<!-- <h5>
 									밥상 위의 작은 혁명
@@ -183,10 +207,12 @@ br.mobile {
 							<div class="theme-text">
 								<span>테마 인터뷰</span>
 								<h4>
-									우리 땅의 약초로 여는<br>K-허브의 시대!
+									RDA승용마<br>국산 말 산업의<br>새로운 기준을 만들다
+
 								</h4>
 								<h5>
-									㈜서흥헬스케어 박금덕 대표
+									국립축산과학원 난지축산연구센터<br>
+									최재영 농업연구사
 								</h5>
 							</div>
 						</div>
@@ -198,11 +224,8 @@ br.mobile {
 							</figure>
 							<div class="theme-text">
 								<span style="background-color: #000; color: #fff">트렌드 탐구</span>
-								<h5>
-									혈당 관리!
-								</h5>
 								<h4>
-									건강을 넘어<br>몸의 리듬을 세우는 문화로
+									한 눈에 보는<br>2026년 트렌드 키워드
 								</h4>
 							</div>
 						</div>
@@ -224,11 +247,11 @@ br.mobile {
 							</div>
 							<div class="life-text">
 								<h4>
-									조선의 조리서
+									조선시대 종합조리서
 								</h4>
 								<span>
 									음식디미방
-								</span>								
+								</span>
 							</div>
 						</div>
 					</a>
@@ -242,10 +265,10 @@ br.mobile {
 							</div>
 							<div class="life-text">
 								<h4>
-									자연의 숨결을 품은
+									도시와 자연 사이에서 찾은 자리!
 								</h4>
 								<span>
-									연화의 리틀포레스트
+									흙 위에 그린 두 세대의 꿈
 								</span>
 							</div>
 						</div>
@@ -260,10 +283,10 @@ br.mobile {
 							</div>
 							<div class="life-text">
 								<h4>
-									상상과 현실 사이의 요리를 빚는 셰프
+									사람의 사연을, 권리를, 자리를 변호하는 사람
 								</h4>
 								<span>
-									조광효 셰프
+									신민영 대표변호사
 								</span>
 							</div>
 						</div>
@@ -278,14 +301,14 @@ br.mobile {
 					<div class="dream-left">
 						<div class="dream-box dream-left-top">
 							<a href="sub_32.html">
-								<div class="dream-box-container" style="background-color: #8fead9;">
+								<div class="dream-box-container" style="background-color: #d46f94;">
 									<figure>
 										<img src="contents/main_dream_1.png">
 									</figure>
 									<div class="dream-text black">
 										<span>알쓸농잡(JOB)</span>
 										<h4>
-											인류의 건강한 미래를 <br>설계하는 숨은 주역들
+											새로운 동물 생태계를<br>만드는 사람들
 										</h4>
 									</div>
 								</div>
@@ -300,13 +323,13 @@ br.mobile {
 									<div class="dream-text">
 										<span>책 읽는 농업과학자</span>
 										<h4>
-											얼어붙은 땅 위에서,<br>꽃의 가능성을 피워내는 연구자
+											미래농업의 전환점에서,<br>농업인을 향한 약속
 										</h4>
 										<h6>
-											국립원예특작과학원 북부원예시험장
+											농촌진흥청
 										</h6>
 										<h5>
-											권오현 농업연구사
+											이승돈 청장
 										</h5>
 									</div>
 								</div>
@@ -323,13 +346,13 @@ br.mobile {
 									<div class="dream-text">
 										<span>이로운 맛, 농업이 미래다</span>
 										<h4>
-											해발 600m에서 익어가는 것들
+											땅에서 일어나 사람에게 닿기까지,<br>한 사람의 진심이 만든 농산물 유통의 길
 										</h4>
 										<h6>
-											지리산피아골식품
+											농업회사법인㈜ 스톤
 										</h6>
 										<h5>
-											김미선 대표
+											양예나 대표
 										</h5>
 									</div>
 								</div>
@@ -337,20 +360,20 @@ br.mobile {
 						</div>
 						<div class="dream-box dream-right-bottom">
 							<a href="sub_31.html">
-								<div class="dream-box-container" style="background-color: #97835e;">
+								<div class="dream-box-container" style="background-color: #366a50;">
 									<figure>
 										<img src="contents/main_dream_4.png">
 									</figure>
 									<div class="dream-text">
 										<span>청년농UP 청년꿈UP</span>
 										<h4>
-											첼리스트에서 농부로,<br>인생의 선율을 바꾸다
+											농촌에서<br>배우고, 자라고, 나누다
 										</h4>
 										<h6>
-											농부와 첼리스트
+											팜큐베이터 농장
 										</h6>
 										<h5>
-											임보람 대표
+											김기현 대표
 										</h5>
 									</div>
 								</div>
@@ -374,7 +397,7 @@ br.mobile {
 								<div class="healing-text">
 									<span>워케이션 & 런케이션 핫플</span>
 									<h4>
-										부산・울산・대구・경북
+										서울・경기・경남・제주
 									</h4>
 								</div>
 							</div>
@@ -384,11 +407,11 @@ br.mobile {
 								<figure>
 									<img src="contents/main_healing_2.jpg" />
 								</figure>
-								<div class="healing-text">
+								<div class="healing-text healing2">
 									<span>치유농장</span>
 									<h4>
-										제주특별자치도 치유농업센터<br>
-										강원특별자치도 농업기술원
+										경기도농업기술원 치유농업센터<br>
+										서울특별시 치유농업센터
 									</h4>
 								</div>
 							</div>
@@ -401,10 +424,10 @@ br.mobile {
 								<div class="healing-text">
 									<span>방구석 시골 영화관</span>
 									<h5>
-										글자를 배우고,<br>인생을 시로 다시 쓰다
+										사라지는 바다에서<br>이어지는 숨의 기록
 									</h5>
 									<h4>
-										칠곡 가시나들
+										물꽃의 전설
 									</h4>
 								</div>
 							</div>
@@ -419,7 +442,7 @@ br.mobile {
 								<div class="healing-text">
 									<span>푸드테라피</span>
 									<h4>
-										겨울철 비타민 덩어리 감귤
+										미래의 밥상을 여는 가루쌀
 									</h4>
 								</div>
 							</div>
@@ -432,10 +455,10 @@ br.mobile {
 								<div class="healing-text">
 									<span>힙한 맛남</span>
 									<h4>
-										겨울의 상큼함,<br>비타민 가득한 한 알의 행복
+										우리 쌀로 만드는<br>새로운 식탁
 									</h4>
 									<h5>
-										Feat. 감귤
+										Feat. 가루쌀
 									</h5>
 								</div>
 							</div>
@@ -447,16 +470,17 @@ br.mobile {
 		<section class="popup-zone">
 			<div class="popup" id="popup">
 				<div class="popup-container">
-					<a href="https://docs.google.com/forms/d/e/1FAIpQLSfHIjdI8uSfllKq0w9QfkZ7rMY5aLBtATJO6AChZQh3LN7wIA/viewform" target="_blank">
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLSfHIjdI8uSfllKq0w9QfkZ7rMY5aLBtATJO6AChZQh3LN7wIA/viewform"
+						target="_blank">
 						<figure>
 							<img src="contents/main_popup.jpg">
 						</figure>
 					</a>
 				</div>
 				<div class="popup-footer">
-					 <label class="checkbox-container">
-				        <input type="checkbox" id="dontShowAgain"> 하루 동안 뜨지 않기
-				    </label>
+					<label class="checkbox-container">
+						<input type="checkbox" id="dontShowAgain"> 하루 동안 뜨지 않기
+					</label>
 					<span id="closeBtn">닫기</span>
 				</div>
 			</div>
@@ -464,4 +488,5 @@ br.mobile {
 	</main>
 	<footer class="footer" id="footer"></footer>
 </body>
+
 </html>
