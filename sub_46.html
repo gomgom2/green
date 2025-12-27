@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>그린매거진</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="그린매거진">
 	<meta property="og:description" content="그린매거진 웹진을 만나보세요.">
@@ -14,146 +15,169 @@
 	<link rel="stylesheet" type="text/css" href="css/sub.css?ver=202502" />
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/script2.js?ver202502"></script>
-<style>
-	:root {
-		--main-color: #f9e6da;
-		--text-color-small: #000;
-		--text-color-title: #ce5822;
-		--text-color-title2: #ce5822;
-	}
-body {
-	background-color: var(--main-color);
-}
-.article-header-text h2 {
-	font-size: 4.5rem;
-}
-.article-header-text h2 b {
-	line-height: 1.5;
-	margin-left: 0;
-	display: block;
-	color: var(--text-color-title);
-}
-.article-body-wrap {
-	padding-top: 10rem;
-}
-.quote-normal,
-.quote-normal::before,
-.quote-normal::after,
-.article-text p {
-	color: var(--text-color-title);
-}
-.quote-normal {
-	margin-top: 3rem;
-	margin-bottom: 10rem;
-	text-align: left;
-	width: 70%;
-}
-/*.quote-normal::before,
+	<style>
+		:root {
+			--main-color: #E9E7E2;
+			--text-color-small: #000;
+			--text-color-title: #5F6A4D;
+			--text-color-title2: #5F6A4D;
+		}
+
+		body {
+			background-color: var(--main-color);
+		}
+
+		.article-header-text h2 {
+			font-size: 4.5rem;
+		}
+
+		.article-header-text h2 b {
+			line-height: 1.5;
+			margin-left: 0;
+			display: block;
+			color: var(--text-color-title);
+		}
+
+		.article-body-wrap {
+			padding-top: 10rem;
+		}
+
+		.quote-normal,
+		.quote-normal::before,
+		.quote-normal::after,
+		.article-text p {
+			color: var(--text-color-title);
+		}
+
+		.quote-normal {
+			margin-top: 3rem;
+			margin-bottom: 10rem;
+			text-align: left;
+			width: 70%;
+		}
+
+		/*.quote-normal::before,
 .quote-normal::after {
 	left: 50%;
 	transform: translateX(-50%);
 }*/
-.article-text h4 {
-	color: var(--text-color-title);
-}
-.hip-recipe {
-	margin-top: 2rem;
-	position: relative;
-	width: 100%;
-	border-top: 1px solid;
-	border-image: repeating-linear-gradient(90deg, var(--text-color-title2) 0, var(--text-color-title2) 3px, transparent 3px, transparent 4px) 1;
-	padding-top: 0.8rem;
-	color: var(--text-color-title);
-}
-.hip-recipe::before {
-	content: '';
-	display: block;
-	width: 3rem;
-	height: 3rem;
-	background: url(contents/sub_46_icon.png) 0 0 no-repeat;
-	background-size: 100% 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: translateY(-100%);
-}
-.hip-recipe h6 {
-	font-size: 2rem;
-	font-family: 'Paperlogy-3Light';
-	color: var(--text-color-title);
-}
-.hip-recipe h6 b {
-	font-family: 'Paperlogy-7Bold';
-}
-.hip-recipe h6 span {
-	font-size: 1.5rem;
-	font-family: 'Paperlogy-2ExtraLight';
-	margin-left: 1rem;
-}
-.hip-recipe p {
-	font-size: 1.5rem;
-	margin-top: 1rem;
-	margin-bottom: 0;
-	line-height: 1.6;
-	color: var(--text-color-title);
-}
-.hip-recipe p + p {
-	margin-top: 0.5rem;
-}
-.hip-recipe p span {
-	font-weight: 600;
-	margin-right: 0.5rem;
-}
-.hip-recipe ul {
-	margin-top: 1rem;
-}
-.hip-recipe li {
-	font-size: 1.5rem;
-	display: flex;
-	gap: 0.5rem;
-	margin-top: 0.5rem;
-	color: var(--text-color-title);
-	word-break: keep-all;
-}
-.hip-recipe li span {
-	display: block;
-	font-size: 1rem;
-	width: 1.5rem;
-	height: 1.5rem;
-	color: var(--main-color);
-	background-color: var(--text-color-title);
-	border-radius: 50%;
-	text-align: center;
-	margin-top: 0.4rem;
-	flex-shrink: 0;
-}
-.hip-recipe-image {
-	display: flex;
-	justify-content: flex-end;
-	margin-top: 7rem;
-}
-.hip-recipe-image figure {
-	width: 40%;
-	text-align: right;
-	transform: translateY(20%);
-	position: relative;
-	z-index: 10;
-}
-.htp-recipe-image figcaption {
-	text-align: right;
-}
-.article-image.small-image {
-	width: 50%;
-	margin-bottom: 0;
-}
-@media (max-width:767px) {
-	.article-image-text {
-		width: 80%;
-	}
-}
+		.article-text h4 {
+			color: var(--text-color-title);
+		}
 
-</style>
+		.hip-recipe {
+			margin-top: 2rem;
+			position: relative;
+			width: 100%;
+			border-top: 1px solid;
+			border-image: repeating-linear-gradient(90deg, var(--text-color-title2) 0, var(--text-color-title2) 3px, transparent 3px, transparent 4px) 1;
+			padding-top: 0.8rem;
+			color: var(--text-color-title);
+		}
+
+		.hip-recipe::before {
+			content: '';
+			display: block;
+			width: 3rem;
+			height: 3rem;
+			background: url(contents/sub_46_icon.png) 0 0 no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			transform: translateY(-100%);
+		}
+
+		.hip-recipe h6 {
+			font-size: 2rem;
+			font-family: 'Paperlogy-3Light';
+			color: var(--text-color-title);
+		}
+
+		.hip-recipe h6 b {
+			font-family: 'Paperlogy-7Bold';
+		}
+
+		.hip-recipe h6 span {
+			font-size: 1.5rem;
+			font-family: 'Paperlogy-2ExtraLight';
+			margin-left: 1rem;
+		}
+
+		.hip-recipe p {
+			font-size: 1.5rem;
+			margin-top: 1rem;
+			margin-bottom: 0;
+			line-height: 1.6;
+			color: var(--text-color-title);
+		}
+
+		.hip-recipe p+p {
+			margin-top: 0.5rem;
+		}
+
+		.hip-recipe p span {
+			font-weight: 600;
+			margin-right: 0.5rem;
+		}
+
+		.hip-recipe ul {
+			margin-top: 1rem;
+		}
+
+		.hip-recipe li {
+			font-size: 1.5rem;
+			display: flex;
+			gap: 0.5rem;
+			margin-top: 0.5rem;
+			color: var(--text-color-title);
+			word-break: keep-all;
+		}
+
+		.hip-recipe li span {
+			display: block;
+			font-size: 1rem;
+			width: 1.5rem;
+			height: 1.5rem;
+			color: var(--main-color);
+			background-color: var(--text-color-title);
+			border-radius: 50%;
+			text-align: center;
+			margin-top: 0.4rem;
+			flex-shrink: 0;
+		}
+
+		.hip-recipe-image {
+			display: flex;
+			justify-content: flex-end;
+			margin-top: 7rem;
+		}
+
+		.hip-recipe-image figure {
+			width: 40%;
+			text-align: right;
+			transform: translateY(20%);
+			position: relative;
+			z-index: 10;
+		}
+
+		.htp-recipe-image figcaption {
+			text-align: right;
+		}
+
+		.article-image.small-image {
+			width: 50%;
+			margin-bottom: 0;
+		}
+
+		@media (max-width:767px) {
+			.article-image-text {
+				width: 80%;
+			}
+		}
+	</style>
 </head>
+
 <body>
 	<header class="header black" id="header"></header>
 	<main>
@@ -163,13 +187,14 @@ body {
 					<div class="article-header-text">
 						<span>힙한 맛남</span>
 						<h2>
-							겨울의 상큼함,<br>비타민 가득한 한 알의 행복
+							우리 쌀로 만드는 새로운 식탁
 							<b>
-								Feat. 감귤
+								Feat. 가루쌀
 							</b>
 						</h2>
 						<p>
-							제주의 따뜻한 햇살을 듬뿍 머금고 자란 감귤. 껍질을 벗겨 바로 먹어도 충분히 맛있지만, 이제는 그 상큼한 색과 향을 살려 다양한 방식으로 즐길 수 있는 식재료로 주목받고 있다. 음료와 디저트는 물론, 색다른 요리로까지 확장된 감귤 레시피의 새로운 변화를 만나본다.
+							국내 쌀 소비는 줄어드는데 밀 수입은 늘어나는 지금, 가루쌀은 우리 식탁에 큰 변화를 가져왔다. 물에 불릴 필요 없이 바로 가루로 만들 수 있는 가루쌀 ‘바로미2’.
+							제과·제빵부터 면류, 튀김가루까지 밀가루를 대신하며 우리 농업의 미래를 밝히고 있다. 소화도 잘 되고 영양도 풍부한 가루쌀로 만드는 힙한 레시피를 만나보자.
 						</p>
 						<div class="article-meta">
 							<span class="b">글</span>
@@ -191,19 +216,20 @@ body {
 			<div class="article-body-wrap">
 				<div class="article-text">
 					<p>
-						제주 감귤의 역사는 삼국시대까지 거슬러 올라간다. 《고려사》에는 백제 문무왕 2년(476년) 탐라국에서 감귤을 진상했다는 기록이 있으며, 조선시대에는 임금에게 바치는 귀한 과일로 여겨졌다. 《조선왕조실록》에도 감자, 유자, 동정귤 등 다양한 감귤 품종이 등장한다.
+						가루쌀에 가장 큰 관심을 보이는 분야는 제과·제빵이다. 밀가루 대신 소화가 잘 되는 쌀빵에 대한 수요가 커지면서 전국 유명 베이커리에서 가루쌀로 만든 다양한 쌀빵을 개발하고
+						있다. 가루쌀 빵은 식감이 부드러워 쌀로 만들었다고 말하지 않으면 눈치채기 어려울 정도로 밀가루로 만든 빵과 맛이 비슷하고 소화가 잘 된다는 평가를 받는다
 					</p>
 					<p>
-						1960년대 들어 본격적인 재배가 시작되면서 감귤은 제주를 대표하는 농산물로 자리 잡았다. 이후 품종 개량과 재배 기술의 발전으로 한라봉, 천혜향, 레드향, 황금향 등 다양한 만감류가 개발되며, 제주 감귤은 계절과 취향에 따라 선택할 수 있는 풍성한 과일로 거듭났다.
+						가루쌀은 제과·제빵뿐 아니라 면류, 튀김가루, 음료, 발효식품 등 다양한 식품에 활용하고 있다. 쌀국수, 쌀라면은 물론 튀김가루로 사용하면 바삭한 식감과 깔끔한 맛을
+						제공한다. 어묵 제조 시 전분 원료로 사용하면 지방함량이 감소하고 식감과 결합력 유지에 효과가 있다고 알려져 있다. 쌀 우유, 막걸리, 쌀 맥주와 같은 음료 및
+						발효식품으로도 개발되어 그 활용 폭이 점차 확대되고 있다.
 					</p>
 					<p>
-						감귤에는 비타민 C가 풍부해 면역력 강화, 피로 해소, 피부 미용에 탁월한 효능이 있으며, 노빌레틴과 헤스페리딘 같은 플라보노이드 성분은 감귤류에만 함유된 특별한 물질로 항염·항암· 항비만 효과를 지닌다. 한방에서는 감귤 껍질을 말린 진피(陳皮)를 소화 촉진과 가래 억제에 사용하는 귀한 약재로 여긴다.
-					</p>
-					<p>
-						전통적으로는 생과나 귤 주스로 즐겨왔지만, 최근에는 감귤 에이드, 감귤 탕후루, 귤 샌드위치, 귤 칩, 귤 타르트 등 트렌디한 레시피로 활용 범위가 더욱 넓어지고 있다. 제주의 겨울 햇살을 머금은 감귤, 그 달콤하고 상큼한 변신을 지금 만나보자.
+						가루쌀은 단순히 식재료를 넘어 우리 농업의 지속가능성을 높이는 핵심 소재다. 쌀 소비 감소와 밀 수입 증가라는 두 가지 문제를 동시에 해결하면서, 건강과 환경을 생각하는
+						현명한 선택이 되고 있다. 가루쌀로 만드는 건강하고 맛있는 레시피로 우리 식탁에 새로운 변화를 만들어보자.
 					</p>
 					<blockquote class="quote-normal">
-						감귤에는 비타민 C가 풍부해 면역력 강화, 피로 해소, 피부 미용에 탁월한 효능이 있다. 
+						가루쌀은 단순히 식재료를 넘어 우리 농업의 지속가능성을 높이는 핵심 소재다.
 					</blockquote>
 					<article>
 						<div class="hip-recipe-image">
@@ -213,28 +239,32 @@ body {
 						</div>
 						<div class="hip-recipe">
 							<h6>
-								말랑 쫀득 귤말랭이와 따듯한 물에 띄워 귤차까지!<br>
+								2024 우리쌀빵 기능경진대회 대상 수상작<br>
 								<b>
-									감귤 칩
+									유자 오렌지 쌀 피낭시에
 								</b>
 								<span>RECIPE</span>
 							</h6>
 							<p>
 								<span>재료</span>
-								감귤 3개, 베이킹소다 1큰술, 식초 2큰술
+								흰자 100g, 무염버터 150g, 설탕 140g, 꿀 35g, 아몬드 분말 70g, 가루쌀(박력) 50g, 유자청 50g, 오렌지필 20개 분량
 							</p>
 							<ul>
 								<li>
 									<span>1</span>
-									감귤 껍질은 베이킹소다와 식초로 깨끗이 세척한다. 
+									흰자, 설탕, 꿀을 그릇에 넣고 저어준 뒤, 아몬드 분말, 가루쌀을 체쳐 넣는다.
 								</li>
 								<li>
 									<span>2</span>
-									물기를 닦아내고 양 끝부분은 잘라내 5mm~1cm 간격으로 자른다.
+									약간 태운 버터를 2~3번에 나누어 섞는다.
 								</li>
 								<li>
 									<span>3</span>
-									에어프라이어나 식품 건조기에 70~100℃로 2~4시간 구워 완성한다.
+									유자청을 넣고, 틀에 넣은 후 오렌지 필 1개를 넣는다.
+								</li>
+								<li>
+									<span>4</span>
+									170℃로 예열한 오븐에서 12분 굽는다.
 								</li>
 							</ul>
 						</div>
@@ -245,32 +275,37 @@ body {
 						</div>
 						<div class="hip-recipe">
 							<h6>
-								감귤의 상큼함이 일품!<br>
+								간식, 브런치로 안성맞춤<br>
 								<b>
-									감귤 파스타
+									쌀 와플
 								</b>
 								<span>RECIPE</span>
 							</h6>
 							<p>
 								<span>재료</span>
-								파스타 120g, 미니 파프리카 4개, 마늘 2쪽, 새우 5마리,  감귤 1개, 소금 1작은술, 후춧가루 조금, 올리브유 적당량
+								쌀가루 100g, 우유 50ml, 달걀 1개, 흑설탕 20g, 버터 15g, 베이킹 파우더 2g, 베이킹 소다 2g, 시나몬 가루 5g, 과일, 슈가 파우더,
+								꿀 적당량
 							</p>
 							<ul>
 								<li>
 									<span>1</span>
-									파스타는 끓는 물에 소금을 적당량 넣어 삶아 준비한다.
+									그릇에 우유, 달걀, 녹인 버터를 넣고 섞는다.
 								</li>
 								<li>
 									<span>2</span>
-									감귤은 겉껍질을 얇게 채를 썰어 1큰술 준비하고, 즙을 내 준비한다.
+									쌀가루, 베이킹파우더, 베이킹 소다를 체치고 골고루 섞는다.
 								</li>
 								<li>
 									<span>3</span>
-									팬에 올리브유를 두르고 다진 마늘과 채를 썬 파프리카, 새우를 넣어 볶은 다음 파스타 면을 넣어 볶는다. 
+									반죽에 흑설탕과 시나몬 가루를 넣고
 								</li>
 								<li>
 									<span>4</span>
-									소금과 후춧가루로 간을 하고 감귤즙을 적당량 뿌리고, 채를 썬 껍질로 장식한다.
+									와플 팬에 반죽을 올리고 노릇하게 굽는다.
+								</li>
+								<li>
+									<span>5</span>
+									접시에 와플을 올리고 과일, 슈가 파우더, 꿀을 적당량 곁들여 먹는다.
 								</li>
 							</ul>
 						</div>
@@ -282,37 +317,35 @@ body {
 						</div>
 						<div class="hip-recipe">
 							<h6>
-								생크림과 귤, 기분 좋은 한 입<br>
+								고소한 우리 쌀 그대로!<br>
 								<b>
-									귤 샌드위치
+									쌀 쿠키
 								</b>
 								<span>RECIPE</span>
 							</h6>
 							<p>
 								<span>재료</span>
-								귤 3개, 식빵 2쪽, 생크림 200ml, 설탕 20g
+								가루쌀(박력) 75g, 아몬드 가루 56g, 슈가 파우더 52g, 구운 소금 1g, 버터 63g, 전란 35g
 							</p>
 							<ul>
 								<li>
 									<span>1</span>
-									생크림은 냉장고에서 차갑게 보관 후 설탕과 함께 단단하게 휘핑한다.
+									푸드 프로세서에 차갑게 준비한 가루쌀, 아몬드 가루, 슈가 파우더, 구운 소금, 버터를 넣고 고운 가루 느낌이 날 때까지 갈아준다.
 								</li>
 								<li>
 									<span>2</span>
-									귤은 껍질을 까고, 식빵은 가장자리를 자른다. 
+									전란을 넣어 같이 갈아준 후 한 덩어리로 뭉치면 손으로 치대 날가루가 보이지 않게 한 덩어리로 만든다.
 								</li>
 								<li>
 									<span>3</span>
-									식빵에 생크림을 골고루 바르고, 귤을 올린다. 
+									밀대로 밀어 평평하게 만들고 냉동실에서 얼린다.
 								</li>
 								<li>
 									<span>4</span>
-									귤 사이에 생크림으로 꼼꼼하게 채우고 식빵으로 덮는다. 
-								</li>
-								<li>
-									<span>5</span>
-									<div>랩으로 싸서 냉장고에서 30분 숙성하고, 귤 단면이 강조되도록 절반을 자른다.
-									<i class="icon_last"></i></div>
+									<div>
+										원하는 모양을 찍어 170℃로 예열한 오븐에서 7~8분 굽는다.
+										<i class="icon_last"></i>
+									</div>
 								</li>
 							</ul>
 						</div>
@@ -324,4 +357,5 @@ body {
 	</main>
 	<footer class="footer black" id="footer"></footer>
 </body>
+
 </html>

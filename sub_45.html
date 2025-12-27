@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<title>그린매거진</title>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="그린매거진">
 	<meta property="og:description" content="그린매거진 웹진을 만나보세요.">
@@ -14,138 +15,102 @@
 	<link rel="stylesheet" type="text/css" href="css/sub.css?ver=202502" />
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="js/script2.js?ver202502"></script>
-<style>
-:root {
-	--main-color: #D57A3E;
-	--text-color-small: #fff;
-	--text-color-title: #fff;
-	--text-color-title2: #fff;
-}
-.article-header-text h2 {
-	font-family: 'YUniverse-B';
-	font-size: 4.8rem;
-	font-weight: 600;
-	letter-spacing: -0.1rem;
-}
-.article-text {
-	position: relative;
-}
-.article-image-container {
-	position: relative;
-}
-figure.absolute {
-	position: absolute;
-	width: 40%;
-	bottom: 0;
-	right: 0;
-	transform: translateX(50%) translateY(50%);
-}
-.article-text p em {
-	background-color: #F0F4CF;
-}
-.article-text h5 {
-	text-align: center;
-	margin-top: 5rem;
-}
-.article-text h6 {
-    color: var(--main-color);
-    font-family: Paperlogy-5Medium;
-    font-size: 1.5rem;
-    line-height: 1.3;
-    letter-spacing: -0.01rem;
-    margin: 2rem 0 1rem;
-    text-align: center;
-}
-p.description {
-	font-size: 1.2rem;
-	text-align: right;
-}
-p.description b {
-	font-weight: 700;
-}
-.nutri-grid-text {
-	display: block;
-	text-align: right;
-}
-.nutri-grid {
-  display:grid;
-  border-bottom: 1px solid var(--main-color);
-}
-.grid-1 {
-  grid-template-columns:repeat(6, minmax(0,1fr));
-}
-.grid-2 {
-  grid-template-columns:repeat(4, minmax(0,1fr));
-  margin-bottom: 2rem;
-}
-.nutri-grid .cell {
-  background:#fff;
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-}
-.nutri-grid .cell-title {
-  background:var(--main-color);
-  color:#fff;
-  font-weight:700;
-  font-size:1.2rem;
-  padding: 1rem 0;
-  border-right: 1px solid #fff;
-}
-.cell .cell-value {
-	border-right: 1px solid var(--main-color);
-	height: 100%;
-	word-break: keep-all;
-}
-.grid-1 .cell:nth-child(6n) .cell-title,
-.grid-1 .cell:nth-child(6n) .cell-value {
-	border: 0;
-}
-.grid-2 .cell:nth-child(4n) .cell-title,
-.grid-2 .cell:nth-child(4n) .cell-value {
-	border-color: #fff;
-}
-.grid-1 .cell-value {
-  padding:1rem 0;
-  font-size:1.2rem;
-}
-.grid-2 .cell-value {
-  padding: 0;
-}
-.grid-2 .cell-value p {
-	font-size: 1.3rem;
-	line-height: 1.4;
-	padding: 0.8rem;
-	margin: 0;
-}
+	<style>
+		:root {
+			--main-color: #D3A659;
+			--text-color-small: #fff;
+			--text-color-title: #fff;
+			--text-color-title2: #fff;
+		}
 
-@media (max-width:767px) {
-	.article-image {
-        width: 100%;
-    }
-    figure.absolute {
-    	transform: translateX(0) translateY(90%);
-    }
-    .nutri-grid.grid-1 {
-    	grid-template-columns:repeat(3, minmax(0,1fr));
-    	border-bottom: 0;
-    }
-    .nutri-grid.grid-2 {
-    	grid-template-columns:repeat(2, minmax(0,1fr));
-    }
-    .grid-1 .cell-value {
-    	border-right: 0;
-    }
-    .grid-2 .cell-value {
-    	border-right-color: #fff;
-    }
-    .grid-2 .cell:last-child .cell-title,
-    .grid-2 .cell:last-child .cell-value {
-    	border-right: 1px solid #fff;
-    }
-}
-</style>
+		.article-header-text h2 {
+			font-family: 'YUniverse-B';
+			font-size: 4.8rem;
+			font-weight: 600;
+			letter-spacing: -0.1rem;
+		}
+
+		.article-text {
+			position: relative;
+		}
+
+		.article-image-container {
+			position: relative;
+		}
+
+		.article-text h5 {
+			text-align: center;
+			margin-top: 5rem;
+		}
+
+		.article-text h6 {
+			color: var(--main-color);
+			font-family: Paperlogy-5Medium;
+			font-size: 1.5rem;
+			line-height: 1.3;
+			letter-spacing: -0.01rem;
+			margin: 2rem 0 1rem;
+			text-align: center;
+		}
+
+		.nutri-grid {
+			display: grid;
+			grid-template-columns: 1.2fr 1fr;
+			margin-top: 2rem;
+		}
+
+		.nutri-grid .left {
+			border-bottom: 1px solid var(--main-color);
+		}
+
+		.nutri-grid .right {
+			padding: 2rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			border: 1px solid var(--main-color);
+		}
+
+		.nutri-grid .left-cell {
+			display: grid;
+			grid-template-columns: 1.2fr 1fr;
+			border-top: 1px solid var(--main-color);
+			border-left: 1px solid var(--main-color);
+		}
+
+		.nutri-grid .left-cell span {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 1rem;
+			text-align: center;
+		}
+
+		.nutri-grid span {
+			font-size: 1.4rem;
+		}
+
+		.nutri-grid .right span {
+			font-weight: bold;
+			margin-bottom: 1rem;
+		}
+
+		.nutri-grid .right p {
+			font-size: 1.4rem;
+			line-height: 1.5;
+			margin-bottom: 0;
+		}
+
+		@media (max-width:767px) {
+			.article-image {
+				width: 100%;
+			}
+
+
+		}
+	</style>
 </head>
+
 <body>
 	<header class="header" id="header"></header>
 	<main>
@@ -155,10 +120,8 @@ p.description b {
 					<div class="article-header-text">
 						<span>푸드테라피</span>
 						<h2>
-							겨울철 비타민 덩어리 감귤
+							미래의 밥상을 여는 가루쌀
 						</h2>
-						<!-- <h4>부토 오너 셰프</h4> -->
-						<!-- <h3>땅의 여자</h3> -->
 						<div class="article-meta">
 							<span class="b">글</span>
 							<span>구혜진</span>
@@ -179,111 +142,75 @@ p.description b {
 			<div class="article-body-wrap">
 				<div class="article-prologue">
 					<p>
-						겨울이 깊어질수록 더욱 짙은 노란빛으로 물드는 감귤. 새콤달콤한 맛과 상큼한 향으로 추운 계절을 환하게 밝혀주는 감귤은 단순한 간식을 넘어 겨울철 건강을 지켜주는 과일이다. 껍질을 벗기는 순간 퍼지는 향긋한 향은 마음을 따뜻하게 감싸고, 한 알 한 알 터지는 과육은 입안 가득 생기를 불어넣는다. 레드향, 천혜향, 한라봉 등 다양한 만감류가 등장했지만, 감귤은 여전히 누구나 부담 없이 어디서나 즐길 수 있는 겨울의 대표 과일로 사랑받고 있다.
+						몸과 마음을 부드럽게 채우는 미래의 쌀, ‘가루쌀’. 가루쌀은 기존의 멥쌀과 달리 알갱이가 쉽게 부서져 별도의 제분 과정 없이 가루로 활용할 수 있는 신품종 쌀이다.
+						농촌진흥청이 개발한 품종으로 가공 효율이 높고 소화가 잘되며, 글루텐이 없어 건강한 식생활을 원하는 현대인들에게 주목받고 있다.
 					</p>
 				</div>
 				<div class="article-text">
 					<h5>
-						새콤달콤 감귤로 채우는 겨울철 에너지
+						우리 쌀로 채우는 건강한 포만감
 					</h5>
 					<p>
-						추운 겨울, 손으로 감귤 껍질을 벗기는 순간 퍼지는 상큼한 향과 입안 가득 터지는 달콤한 과즙은 얼어붙은 몸과 마음을 녹여준다. 감귤에는 비타민을 비롯해 무기염류, 식이섬유 등 건강 유지와 질병 예방에 도움이 되는 영양소가 풍부하다. 특히 비타민 C 함량이 100g당 약 36mg으로, 감귤 2~3개면 성인 하루 권장 섭취량을 충족할 수 있다. 비타민 C는 유해 산소로부터 세포를 보호하는 항산화 작용을 통해 피부를 매끄럽게 하고 혈색을 좋게 하며, 신진대사를 촉진해 겨울철 감기 예방에도 효과적이다. 또한 감귤에 함유된 구연산은 피로의 원인 물질인 젖산을 분해하고, 산성화된 체질을 약알칼리성으로 개선해 성인병 예방에 도움을 준다. 감귤 100g의 열량은 약 47kcal에 불과해 저칼로리 간식으로도 손색이 없다.
+						포도당을 주 에너지원으로 사용하는 우리 뇌. 쌀의 탄수화물은 소화 과정에서 포도당으로 분해되며 뇌에 영양을 공급한다. 특히 아침밥을 섭취하는 것은 청소년들의 학습 능력을
+						높일 뿐 아니라 정서적 안정과 신체적 건강에도 긍정적인 영향을 주며, 비만과 성인병을 예방하는 데 도움이 된다는 과학적 근거도 있다.
+					</p>
+					<p>
+						쌀밥은 탄수화물이 풍부하지만, 국, 생선, 나물, 김치 등을 곁들여 먹기 때문에 식사를 하는 과정에서 식이섬유를 풍부하게 섭취할 수 있고, 이러한 식단은 지방 함량이 낮은
+						반면, 불포화지방은 높아 영양소를 균형있게 섭취할 수 있다. 쌀에는 ‘제3의 식이섬유’로 불리는 저항전분의 함량이 높다. 저항전분은 소화 속도를 늦추어 급격한 혈당 상승을
+						막아주며, 비만은 물론 고혈압과 당뇨병 등 대사성 질환을 예방하는데 중요한 역할을 한다.
+					</p>
+					<h5>
+						가공용으로 최적화된 ‘가루쌀’ 선보이다
+					</h5>
+					<p>
+						농촌진흥청은 늘어나는 밀가루 수요를 대체할 수 있는 가루쌀 ‘바로미2’ 품종을 개발했다. 가루쌀은 물에 불리지 않고 바로 빻아서 가루로 만들 수 있어 제과·제빵, 국수,
+						파스타로 가공하기 쉽다. 일반 쌀보다 제분 비용이 50% 저렴하고, 습식제분 과정에서 발생하는 쌀뜨물도 없어 친환경적이다.
 					</p>
 					<h6>
-						< 감귤(온주밀감) 영양성분 >
+						&lt; 세계 최초 재배품종 실용화 가루쌀 바로미2 &gt;
 					</h6>
-					<span class="nutri-grid-text">
-						(100g 기준)
-					</span>
-					<div class="nutri-grid grid-1">
-					  <div class="cell">
-					    <div class="cell-title">열량</div>
-					    <div class="cell-value">47Kcal</div>
-					  </div>
-					  <div class="cell">
-					    <div class="cell-title">수분</div>
-					    <div class="cell-value">86.5%</div>
-					  </div>
-					  <div class="cell">
-					    <div class="cell-title">섬유질</div>
-					    <div class="cell-value">0.3g</div>
-					  </div>
-					  <div class="cell">
-					    <div class="cell-title">비타민C</div>
-					    <div class="cell-value">36㎎</div>
-					  </div>
-					  <div class="cell">
-					    <div class="cell-title">비타민A</div>
-					    <div class="cell-value">8.2IU</div>
-					  </div>
-					  <div class="cell">
-					    <div class="cell-title">비타민B1</div>
-					    <div class="cell-value">8.2㎎</div>
-					  </div>
+					<div class="nutri-grid">
+						<div class="left">
+							<div class="left-cell">
+								<figure>
+									<img src="contents/sub_45_image_1.jpg">
+								</figure>
+								<span>
+									배유와 배유 절단면
+								</span>
+							</div>
+							<div class="left-cell">
+								<figure>
+									<img src="contents/sub_45_image_2.jpg">
+								</figure>
+								<span>
+									배유 절단면의 가운데 부분을 확대한 모습
+								</span>
+							</div>
+						</div>
+						<div class="right">
+							<div>
+								<span>바로미2</span>
+								<p>
+									일반 쌀과 똑같이 생겼지만 훨씬 부드러워 바로 빻아 사용할 수 있다. 세계 최초로 가루쌀 실용화에 성공했다. 가루쌀은 일반 멥쌀과 달리 전분 구조가
+									성글게 배열되어 물에 불리지 않고 건식으로도 쉽게 제분할 수 있다.
+								</p>
+							</div>
+						</div>
 					</div>
-					<p class="description">* 출처: 국립식량과학원</p> 
-
-					<h5>
-						‘국산’ 감귤의 탄생
-					</h5>
-					<p>
-						농촌진흥청은 오랫동안 외국 품종에 의존하던 감귤 산업의 한계를 극복하고자, 우리 품종 개발에 힘써왔다. 그 결과 ‘윈터프린스’, ‘미니향’, ‘하례조생’ 등 국산 감귤 품종을 선보였다. 새로운 품종들은 맛과 식감은 물론, 재배 편의성까지 고려해 개발·보급되고 있으며, 앞으로도 우리 땅에서 자란 고품질 감귤의 다양성을 넓혀갈 예정이다.
-					</p>
-
-					<h6>
-						< 감귤 신품종 >
-					</h6>
-					<div class="nutri-grid grid-2">
-					  <div class="cell">
-					    <div class="cell-title">윈터프린스</div>
-					    <div class="cell-value">
-					    	<figure>
-					    		<img src="contents/sub_45_image_1.jpg">
-					    	</figure>
-					    	<p>
-					    		11월 말에서 12월 초 성숙하는 품종으로, 부드러운 식감과 풍부한 과즙이 특징이다. 껍질이 잘 벗겨져 먹기 편하다.
-					    	</p>
-					    </div>
-					  </div>
-					  <div class="cell">
-					    <div class="cell-title">미니향</div>
-					    <div class="cell-value">
-					    	<figure>
-					    		<img src="contents/sub_45_image_2.jpg">
-					    	</figure>
-					    	<p>
-					    		이름처럼 작은 크기의 감귤로, 11월 중순에서 12월 중순에 출하된다. 당도가 15브릭스에 달할 정도로 달고, 소과형이라 소포장 판매나 선물용으로 인기가 높다.
-					    	</p>
-					    </div>
-					  </div>
-					  <div class="cell">
-					    <div class="cell-title">하례조생</div>
-					    <div class="cell-value">
-					    	<figure>
-					    		<img src="contents/sub_45_image_3.jpg">
-					    	</figure>
-					    	<p>
-					    		11월 중순에 수확되며, 노지 재배에서 당도가 높고 신맛이 적다. 껍질이 매끄럽고 착색이 빠르다.
-					    	</p>
-					    </div>
-					  </div>
-					  <div class="cell">
-					    <div class="cell-title">노을향</div>
-					    <div class="cell-value">
-					    	<figure>
-					    		<img src="contents/sub_45_image_4.jpg">
-					    	</figure>
-					    	<p>
-					    		11월 말부터 12월에 출하되는 품종으로, 과즙이 풍부하고 식감이 우수하다. 11월 성숙하는 품종 중 당도가 가장 높다.
-					    	</p>
-					    </div>
-					  </div>
+					<div class="article-image">
+						<div class="article-image-container">
+							<figure>
+								<img src="contents/sub_45_image_3.jpg">
+							</figure>
+						</div>
 					</div>
 					<h5>
-						감귤 더 맛있게 즐기기
+						가루쌀로 만든 다양한 가공품
 					</h5>
 					<p>
-						맛있는 감귤을 고르려면 꼭지가 단단하고 푸른색을 띠는 것이 수확 후 신선도가 높은 상태이다. 껍질이 얇고 매끄러우며, 손에 쥐었을 때 탄력이 느껴지는 것이 좋다. 껍질이 지나치게 말랑하거나 곰팡이가 핀 것은 빨리 골라내는 것이 좋다. 감귤은 껍질을 까서 바로 먹는 것이 가장 간편하지만, 한 박스씩 구매해 빠르게 소비해야 하므로 다양한 조리법으로 감귤을 즐길 수 있다. 청이나 잼을 만들어 저장하면 오래 두고 먹을 수 있고, 과육을 먹고 남은 껍질을 말려 차로 즐길 수 있다. 
+						가루쌀은 밀가루처럼 활용할 수 있어 빵, 과자, 면, 케이크 등 다양한 식품을 만들 수 있다. 글루텐이 없어 글루텐 알레르기나, 소화가 잘 안되는 사람에게 좋으며 현재
+						가루쌀로 만든 식빵, 라면, 과자 등이 시중에 출시되어 있다.
 						<i class="icon_last"></i>
 					</p>
 				</div>
@@ -292,4 +219,5 @@ p.description b {
 	</main>
 	<footer class="footer" id="footer"></footer>
 </body>
+
 </html>
