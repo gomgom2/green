@@ -131,15 +131,31 @@
 				font-size: 2.8rem;
 			}
 
-			.dream-left-top figure img {
-				height: 100%;
-				width: auto;
-				max-width: 200vw;
-				position: absolute;
-				right: 0;
-				bottom: 0;
-				object-fit: contain;
+			.dream-left {
+				display: flex;
+				flex-direction: column;
 			}
+
+			.dream-right {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.dream-right-bottom .dream-text {
+				width: fit-content;
+				word-break: keep-all;
+			}
+		}
+
+		.dream-left-top figure img {
+			height: 100%;
+			width: auto;
+			max-width: 200vw;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			object-fit: contain;
+		}
 		}
 	</style>
 </head>
